@@ -7,6 +7,13 @@ const Home = () => {
         askldnalsda
         a,mnsdknasdm,nc,bxvnc,v .c,mv,
         ,aksdnklasd
+
+
+
+
+
+
+        <h2>Sanjar aka nima gap tinchmi</h2>
 <h1>asdasdasda</h1>
     </div>
   )
