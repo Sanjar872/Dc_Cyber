@@ -1,8 +1,9 @@
 import React from 'react'
+import { MainDiv } from './style'
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <MainDiv>Sanjar aka </MainDiv>
   )
 }
 
