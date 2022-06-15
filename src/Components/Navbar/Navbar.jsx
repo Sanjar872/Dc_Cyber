@@ -18,6 +18,7 @@ const Navbar = () => {
           <LI>Турниры</LI>
           <LI>Счёты</LI>
           <LI>Фото</LI>
+          <p>uka davay zor ketyapsiz gazini boisng</p>
         </UL>
           <MuiButton variant='contained' >Регистрация</MuiButton>
         </Contener>
