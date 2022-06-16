@@ -81,4 +81,11 @@ export const MuiButton = styled(Button)`
     
 `
 
+export const Hamburger = styled(HamburgerBars)`
+    display: none !important;
 
+    @media screen and (max-width:835px) {
+        display:block !important;
+    }
+
+`
