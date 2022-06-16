@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import HamburgerBars from './MenuBars/MenuBars'
 
 // import mui
 import Button from '@mui/material/Button';
+// import MenuIcon from '@mui/icons-material/Menu';
 
 //bgc img
 import Bgcimg from './../F-image/Navbar-bgc-img.png'
+import { IconButton } from "@mui/material";
 
 export const MainDiv = styled.div`
     width: 100%;
@@ -13,6 +14,8 @@ export const MainDiv = styled.div`
     border: 1px solid red;
     background-image: url(${Bgcimg});
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 `
 
 export const NavbarDiv = styled.div`
@@ -81,11 +84,23 @@ export const MuiButton = styled(Button)`
     
 `
 
-export const Hamburger = styled(HamburgerBars)`
-    display: none !important;
 
-    @media screen and (max-width:835px) {
-        display:block !important;
+export const Btnwrap = styled.div`
+    display: none;
+    
+    @media (max-width:835px){
+        display: block;
     }
+`
 
+    export const MenuBtn = styled(IconButton)`
+        color: red !important;
+        font-size: 40px !important;
+    `
+
+
+export const CenterText = styled.div`
+    width: 100%;
+    height: 300px;
+    border: 2px solid blue;
 `
