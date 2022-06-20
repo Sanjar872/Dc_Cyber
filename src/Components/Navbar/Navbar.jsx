@@ -1,6 +1,6 @@
 import React from 'react'
 import { Contener,  LI, LogoDiv, LogoImg, MainDiv, MenuIcon, MuiButton, NavbarDiv, UL, 
-  MenuBtn, Btnwrap, CenterText } from './style'
+  MenuBtn, Btnwrap, CenterText, TextDiv, SpanText, Text } from './style'
 
 //img
 import LogotipImg from './../F-image/Logotip-img.png'
@@ -51,7 +51,11 @@ const Navbar = () => {
          </Btnwrap>
          </NavbarDiv>
       <TemporaryDrawer state={state} setState={setState}/>
-        <CenterText>n</CenterText>
+        <CenterText>
+          <TextDiv>
+            <Text>ДОБРО ПОЖАЛОВАТЬ В ИГРУ <SpanText>DC cyber</SpanText> В <br /> КИБЕРСПОРТИВНЫХ ИГРАХ</Text>
+          </TextDiv>
+        </CenterText>
     </MainDiv>
   )
 }

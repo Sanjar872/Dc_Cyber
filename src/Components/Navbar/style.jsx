@@ -5,13 +5,13 @@ import Button from '@mui/material/Button';
 // import MenuIcon from '@mui/icons-material/Menu';
 
 //bgc img
-import Bgcimg from './../F-image/Navbar-bgc-img.png'
+import Bgcimg from './../F-image/Bgc-img.jpg'
 import { IconButton } from "@mui/material";
 
 export const MainDiv = styled.div`
     width: 100%;
-    height: 100vh;
-    border: 1px solid red;
+    height: 100vh;  
+    /* border: 1px solid red; */
     background-image: url(${Bgcimg});
     background-size: cover;
     display: flex;
@@ -21,7 +21,7 @@ export const MainDiv = styled.div`
 export const NavbarDiv = styled.div`
     width: 100%;
     height: 100px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +35,7 @@ export const NavbarDiv = styled.div`
 export const LogoDiv = styled.div`
     width: 195px;
     height: 45px;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     
 `
 
@@ -47,7 +47,7 @@ export const LogoImg = styled.img`
 export const Contener = styled.div`
     width: 550px;
     height: 80px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,7 +61,7 @@ export const Contener = styled.div`
 export const UL = styled.ul`
     width: 380px;
     height: 70px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -70,7 +70,7 @@ export const UL = styled.ul`
 export const LI = styled.li`
     width: 80px;
     height: 30px;
-    border: 1px solid blueviolet;
+    /* border: 1px solid blueviolet; */
     list-style: none;
     display: flex;
     justify-content: center;
@@ -78,10 +78,20 @@ export const LI = styled.li`
     font-weight: 500;
     font-size: 16px;
     color: white;
+
+    &:hover{
+        cursor: pointer;
+        color: #7000E0 ;
+    }
 `
 
 export const MuiButton = styled(Button)`
-    
+    background-color: #8F00FF !important;
+
+
+    &:hover{
+        background-color:#7000E0 !important;
+    }
 `
 
 
@@ -101,6 +111,47 @@ export const Btnwrap = styled.div`
 
 export const CenterText = styled.div`
     width: 100%;
-    height: 300px;
-    border: 2px solid blue;
+    height: 600px;
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const TextDiv = styled.div`
+    width: 70%;
+    height: 270px;
+    /* border:1px solid white; */
+    box-sizing: border-box;
+`
+export const Text = styled.h1`
+    color: white;
+    font-size: 60px;
+    text-align: center;
+
+    @media screen and (max-width:1033px) {
+        font-size: 50px;
+    }
+
+    @media screen and (max-width:832px) {
+        font-size: 40px;
+    }
+
+    @media screen and (max-width:665px) {
+        font-size: 35px;
+    }
+
+    @media screen and (max-width:598px) {
+        font-size: 30px;
+    }
+
+    @media screen and (max-width:517px) {
+        font-size: 25px;
+    }
+    @media screen and (max-width:427px) {
+        font-size: 20px;
+    }
+`
+export const SpanText = styled.span`
+    color: #8F00FF;
 `
