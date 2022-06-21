@@ -4,25 +4,55 @@ import rasm1 from "../S-image/zapis_img.png"
 export const Container = styled.div`
     width:100%;
     height:50vh;
-    border:1px solid red;
     background-image:url(${rasm1});
-    background-position:center;
     background-repeat:no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: start;
     
+  
+
+    @media (max-width:391px) {
+        text-align:center;
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
 
     h2 {
         color:white;
         width:65%;
-        border:1px solid red;
-        /* height:200px; */
         font-size: 36px;
         letter-spacing: 5px;
-        font-weight: 400;
-        /* font-family: 'Russo One'; */
+        font-weight: 500;
+        font-family:"Russo One";
+        
+
+        @media (max-width:820px) {
+            text-align:center;
+            display:flex;
+            width:100% !important;
+            justify-content:center;
+        }
+        }
+
+        @media (max-width:517px) {
+            text-align:center;
+            height: 600px;
+            width:100% !important;
+        }
+
+        @media (max-width:391px) {
+        text-align:center;
+        width:100%;
+        height:auto;
+        display:flex;
+        padding:0 5%;
+        font-size: 24px;
+        justify-content:center;
+
+          
 
     }
 
@@ -31,15 +61,13 @@ export const Container = styled.div`
 export const BO = styled.div`
     width: 100%;
     height: auto;
-    height: 280px;
-    border: 1px solid green;
-    padding-left:4%;
+    padding:0 5%;
 
     button {
         height:40px;
         width: 150px;
         background:none;
-        margin-top:50px;
+        margin-top:30px;
         font-weight: 500;
         color: white;
         opacity: 0.89;
