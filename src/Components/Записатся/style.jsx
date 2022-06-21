@@ -25,8 +25,7 @@ export const Container = styled.div`
         width:65%;
         font-size: 36px;
         letter-spacing: 5px;
-        font-weight: 500;
-        font-family:"Russo One";
+        font-weight: 700;
         
 
         @media (max-width:820px) {

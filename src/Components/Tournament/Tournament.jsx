@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import { Box1, Box2, BoxImg1, BoxImg2, Conteyner1, Conteyner2, LI, MainDiv, Name, NameText, NavbarDiv, Para, Ul, ULdiv, VS } from './style'
+import { Box1, Box2, BoxImg1, BoxImg2, Comands, Conteyner1, Conteyner2, Data, GroupName, LI, MainDiv, Name, NameText, NavbarDiv, Para, Ul, ULdiv, VS } from './style'
 
 import BoxImg11 from '../S-image/game1.png'
 import BoxImg22 from '../S-image/game2.png'
@@ -25,20 +25,84 @@ const Tournament = () => {
         </ULdiv>
       </NavbarDiv>
       
-      <Para>
+{/* ================================================= */}
 
-        <Conteyner1>
+      <Comands>
+        <Para>
+          <Conteyner1>
           <Box1>
-            <BoxImg1 src={BoxImg11} />
+             <BoxImg1 src={BoxImg11} />
           </Box1>
-          <VS>sss</VS>
-          <Box2>
-            <BoxImg2 src={BoxImg22} />
-          </Box2>
-        </Conteyner1>
+          <VS>VS</VS>
+           <Box2>
+             <BoxImg2 src={BoxImg22} />
+           </Box2>
+          </Conteyner1>
+        
+          <Conteyner2>
+          <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
+          <Data>03 Марта 2022  13:20</Data>
+          </Conteyner2>
+        </Para>
 
-        <Conteyner2></Conteyner2>
-      </Para>
+{/* ================================================================= */}
+
+        <Para>
+          <Conteyner1>
+          <Box1>
+             <BoxImg1 src={BoxImg11} />
+          </Box1>
+          <VS>VS</VS>
+           <Box2>
+             <BoxImg2 src={BoxImg22} />
+           </Box2>
+          </Conteyner1>
+        
+          <Conteyner2>
+          <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
+          <Data>03 Марта 2022  13:20</Data>
+          </Conteyner2>
+        </Para>
+
+{/* ========================================================= */}
+
+        <Para>
+          <Conteyner1>
+          <Box1>
+             <BoxImg1 src={BoxImg11} />
+          </Box1>
+          <VS>VS</VS>
+           <Box2>
+             <BoxImg2 src={BoxImg22} />
+           </Box2>
+          </Conteyner1>
+        
+          <Conteyner2>
+          <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
+          <Data>03 Марта 2022  13:20</Data>
+          </Conteyner2>
+        </Para>
+
+{/* ============================================================== */}
+
+        <Para>
+          <Conteyner1>
+          <Box1>
+             <BoxImg1 src={BoxImg11} />
+          </Box1>
+          <VS>VS</VS>
+           <Box2>
+             <BoxImg2 src={BoxImg22} />
+           </Box2>
+          </Conteyner1>
+        
+          <Conteyner2>
+          <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
+          <Data>03 Марта 2022  13:20</Data>
+          </Conteyner2>
+        </Para>
+
+      </Comands>
 
     </MainDiv>
   )

@@ -4,6 +4,9 @@ import styled from "styled-components";
 import BgcImg from '../S-image/Bgc-Image.png'
 import InfoCardimg from './../S-image/Subtract.png'
 
+import SSS from './../F-image/Subtract.svg'
+
+
 export const MainDiv = styled.div`
     width: 100%;
     height: auto;
@@ -66,19 +69,19 @@ export const CardDiv = styled.div`
 export const InfoCard = styled.div`
     width: 400px;
     height: 300px;
-    background-image: url(${InfoCardimg});
+    background-image: url(${InfoCardimg });
     background-size: cover;
     border: 1px solid red;
     background-repeat: no-repeat;
 
 
-    @media (max-width:1202px) {
-        margin: 50px;
-    }
-    
-    @media (max-width:620px) {
-        margin: 50px;
-    }
+        @media (max-width:1202px) {
+            margin: 50px;
+        }
+        
+        @media (max-width:620px) {
+            margin: 50px;
+        }
 `
 
 export const Image = styled.img`
@@ -90,7 +93,7 @@ export const Image = styled.img`
     bottom: 65px;
     border: 1px solid white;
 
-    @media screen and (max-width:500px) {
+    /* @media screen and (max-width:500px) {
         width: 120px;
         height: 120px;
         position: relative;
@@ -100,7 +103,7 @@ export const Image = styled.img`
     @media screen and (max-width:467px) {
         position: relative;
         left: 150px;
-    }
+    } */
 `
 
 export const Name = styled.h2`
