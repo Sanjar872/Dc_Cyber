@@ -14,8 +14,6 @@ const App = () => {
     <Home/>
     <запис/>
     <Tournament />
-
-
     </>
   )
 }
