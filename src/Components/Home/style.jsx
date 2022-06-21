@@ -53,6 +53,7 @@ export const CardDiv = styled.div`
     width: 100%;
     /* height: 500px;    */
     margin-top: 100px;
+    margin-bottom: 100px;
     border: 1px solid blue;
     display: flex;
     flex-wrap: wrap;
@@ -66,7 +67,7 @@ export const InfoCard = styled.div`
     width: 400px;
     height: 300px;
     background-image: url(${InfoCardimg});
-    background-size: contain;
+    background-size: cover;
     border: 1px solid red;
     background-repeat: no-repeat;
 
@@ -93,7 +94,12 @@ export const Image = styled.img`
         width: 120px;
         height: 120px;
         position: relative;
-        top: -40px;
+        top: -45px;
+    }
+
+    @media screen and (max-width:467px) {
+        position: relative;
+        left: 150px;
     }
 `
 
