@@ -3,6 +3,9 @@ import styled from "styled-components";
 // image
 import TurnirBgc from '../S-image/Turnir.bgc-img.png'
 
+//Mui import 
+import Button from '@mui/material/Button';
+
 export const MainDiv = styled.div`
     width: 100%;
     height: auto;
@@ -15,8 +18,17 @@ export const MainDiv = styled.div`
 export const NavbarDiv = styled.div`
     width: 100%;
     height: 100px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
+
+    @media screen and (max-width:674px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 150px;
+
+    }
 `
 
 export const NameText = styled.div`
@@ -26,11 +38,25 @@ export const NameText = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width:650px){
+        width: 100%;
+    }
 `
 
 export const Name = styled.h1`
     color: white;
-    /* font-weight: 300; */
+
+
+    @media screen and (max-width:1028px){
+        font-size: 25px;
+    }
+
+    @media screen and (max-width:815px){
+        font-size: 20px;
+    }
+
+    
 `
 
 export const ULdiv = styled.div`
@@ -39,7 +65,11 @@ export const ULdiv = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
+
+    @media screen and (max-width:543px) {
+        width: 100%;
+    }
 `
 
 
@@ -49,13 +79,19 @@ export const Ul = styled.ul`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+
+    @media (max-width:413px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 `
 
 export const LI = styled.li`
     width: 70px;
     height: 30px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     color: white;
     list-style: none;
     display: flex;
@@ -64,11 +100,17 @@ export const LI = styled.li`
     border: none;
     cursor: pointer;
 
+    
     &:active{
         opacity: 0.89;
         border-bottom: 3px solid ;
         border-image-slice: 1;
         border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
+    }
+
+    @media screen and (max-width:363px) {
+        font-size: 13px;
+        width: 59px;
     }
    
 `
@@ -78,35 +120,94 @@ export const LI = styled.li`
 export const Comands = styled.div`
     width: 100%;
     height: 1000px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-top: 150px;
 
+    @media screen and (max-width:950px) {
+        height: 1400px;
+    }
+
 `
 
 export const Para = styled.div`
     width: 100%;
     height: 214px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
+    justify-content: space-around;
+
+    @media screen and (max-width:950px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+    }
 `
 
 export const Conteyner1 = styled.div`
-    width: 50%;
+    width: 750px;
     height: 100%;
     /* border: 1px solid white; */
     display: flex;
     justify-content: center;
     align-items: center;
+
+
+
+    @media screen and (max-width:753px){
+        width: 650px;
+    }
+
+    @media screen and (max-width:652px){
+        width: 600px;
+    }
+
+    @media screen and (max-width:607px) {
+        padding: 0px 20px 0px 20px;
+    }
+
+    @media screen and (max-width:602px) {
+        width:500px ;
+    }
+
+    @media screen and (max-width:503px) {
+        width:450px;
+    }
+
+    @media screen and (max-width:454px) {
+        width: 400px;
+        height: 200px;
+    }
+
+    @media screen and (max-width:408px) {
+        width:350px;
+    }
 `
 
 export const Box1 = styled.div`
-    width: 216px;
-    height: 214px;
-    /* border: 1px solid yellow; */
+    width: 200px;
+    /* height: 214px; */
+
+    @media screen and (max-width:602px) {
+        height: 190px;
+    }
+
+    @media screen and (max-width:503px) {
+        height: 170px;
+    }
+
+    @media screen and (max-width:454px) {
+        height: 150px;
+    }
+
+    @media screen and (max-width:408px) {
+        height:130px;
+    }
 `
 
 export const VS = styled.div`
@@ -119,12 +220,48 @@ export const VS = styled.div`
     align-items: center;
     font-size: 35px;
     font-weight: 700;
+
+    @media screen and (max-width:599px) {
+        width: 100px;
+    }
+
+    @media screen and (max-width:602px) {
+        height: 190px;
+    }
+
+    @media screen and (max-width:503px) {
+        height: 170px;
+    }
+
+    @media screen and (max-width:454px) {
+        height: 150px;
+    }
+
+    @media screen and (max-width:408px) {
+        height:130px;
+    }
 `
 
 export const Box2 = styled.div`
-    width: 216px;
-    height: 214px;
-    /* border: 1px solid yellow; */
+    width: 200px;
+    /* height: 214px; */
+
+    @media screen and (max-width:602px) {
+        height: 190px;
+    }
+
+    @media screen and (max-width:503px) {
+        height: 170px;
+    }
+
+    @media screen and (max-width:454px) {
+        height: 150px;
+    }
+
+    @media screen and (max-width:408px) {
+        height:130px;
+    }
+    
 `
 
 export const BoxImg1 = styled.img`
@@ -137,21 +274,237 @@ export const BoxImg2 = styled.img`
 `
 
 export const Conteyner2 = styled.div`
-    width: 50%;
+    width: 750px;
     height: 100%;
     /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    @media screen and (max-width:950px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media screen and (max-width:753px){
+        width: 650px;
+    }
+
+    @media screen and (max-width:652px){
+        width: 600px;
+    }
+
+    @media screen and (max-width:604px) {
+        width: 500px;
+        height: 150px;
+    }
+
+    @media screen and (max-width:503px) {
+        width:450px;
+    }
+
+    @media screen and (max-width:454px) {
+        width: 400px;
+        height: 120px;
+    }
+
+    @media screen and (max-width:408px) {
+        width:350px;
+    }
+
 `
 
 export const GroupName = styled.h1`
     color: white;
     font-weight: 300;
+
+    @media screen and (max-width:604px) {
+        font-size: 26px;
+    }
+
+    @media screen and (max-width:503px) {
+        font-size: 23px;
+    } 
+
+    @media screen and (max-width:454px) {
+        font-size: 20px;
+    }
+
+    @media screen and (max-width:408px) {
+        font-size: 17px;
+    }
+
+
 `
 
 export const Data = styled.p`
     color: gray;
 `
 
+export const ButtonDiv = styled.div`
+    width: 100%;
+    height: 40px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 80px 0px 0px;
+`
+
+export const MuiButton = styled(Button)`
+    color: white !important;
+    font-weight: 500 !important;
+    opacity: 0.89 !important;
+    border: 2px solid !important;
+    border-image-slice: 1 !important;
+    border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1)) !important;
+`
+
+///======== Photo albom ================================================================================================
+
+export const PhotoAlbum = styled.div`
+    width: 100%;
+    height: 850px;
+    border: 1px solid white;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+export const CardText = styled.div`
+    width: 100%;
+    height: 70px;
+    /* border: 1px solid yellow;  */
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 0px 0px 50px;
+`
+
+export const AllPhotoDiv = styled.div`
+    width: 1410px;
+    height: 771px;
+    opacity: 0.89;
+    border: 3px solid ;
+    border-image-slice: 1;
+    border-radius: 8px;
+    border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
+`
+
+export const ForstDiv = styled.div`
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+`
+
+export const Card1 = styled.div`
+    width: 401px;
+    height: 383px;
+    /* border: 1px solid black; */
+`
+export const CardImg = styled.img`
+    width: 100%;
+    height: 100%;
+`
+
+//====
+export const Card2 = styled.div`
+    width: 401px;
+    height: 383px;
+    /* border: 1px solid red; */
+`
+
+export const CardIn1 = styled.div`
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid white; */
+`
+export const CardIn2 = styled.div`
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid white; */
+`
+
+export const CardImgIn1 = styled.img`
+    width: 100%;
+    height: 100%;
+`
+
+export const CardImgIn2 = styled.img`
+    width: 100%;
+    height: 100%;
+`
+
+//============
+
+export const Card3 = styled.div`
+    width: 278px;
+    height: 382px;
+    /* border: 1px solid gray; */
+`
+export const CardImg3 = styled.img`
+    width: 100%;
+    height: 100%;
+`
+
+//===============
+
+export const Card4 = styled.div`
+    width: 320px;
+    height: 382px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+`
+
+export const CardIn11 = styled.div`
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid white; */
+`
+
+
+export const CardIn22 = styled.div`
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid black; */
+`
+export const CardImg11 = styled.img`
+    width: 100%;
+    height: 100%;
+`
+export const CardImg22 = styled.img`
+    width: 100%;
+    height: 100%;
+`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const SecondDiv = styled.div`
+    width: 100%;
+    height: 50%;
+    border: 1px solid gray;
+`

@@ -24,6 +24,10 @@ export const TextDiv = styled.div`
     justify-content: center;
     align-items: center;
     padding: 80px 0px 0px 0px;
+
+    @media screen and (max-width:900px) {
+        padding: 0px 20px 0px 20px;
+    }
 `
 
 export const Bio = styled.h1`
@@ -81,6 +85,11 @@ export const InfoCard = styled.div`
         
         @media (max-width:620px) {
             margin: 50px;
+        }
+
+        @media (max-width:500px) {
+            width: 350px;
+            height: 266px;
         }
 `
 
