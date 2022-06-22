@@ -487,24 +487,240 @@ export const CardImg22 = styled.img`
     height: 100%;
 `
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Second div start ======================================
 
 
 export const SecondDiv = styled.div`
     width: 100%;
     height: 50%;
     border: 1px solid gray;
+    display: flex;
 `
+
+export const CardDiv1 = styled.div`
+    width: 401px;
+    height: 383px;
+    border: 1px solid blue;
+`
+
+export const CardDivIn1 = styled.div`
+    width: 100%;
+    height: 50%;
+    border: 1px solid yellow;
+`
+
+export const CardDivIn2 = styled.div`
+    width: 100%;
+    height: 50%;
+    border: 1px solid red;
+`
+
+export const CardDivInImg1 = styled.img`
+    width: 100%;
+    height: 100%;
+`
+
+export const CardDivInImg2 = styled.img`
+    width: 100%;
+    height: 100%;
+`
+
+//========================
+
+export const CardDiv2 = styled.div`
+    width: 679px;
+    height: 382px;
+    border: 1px solid green;
+`
+export const CardDivImg2 = styled.img`
+    width: 100%;
+    height: 100%;
+`
+
+// ==========================
+
+export const CardDiv3 = styled.div`
+    width:320px;
+    height: 382px;
+    border: 1px solid blue;
+`
+
+export const CardDivImg3 = styled.img`
+    width: 100%;
+    height: 100%;
+`
+
+// CardDiv start ================================================
+
+export const Square = styled.div`
+    width: 100%;
+    height: 300px;
+    border: 2px solid green;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+    padding:0px 40px;
+`
+
+export const Boxs = styled.div`
+    width: 335px;
+    height: 100%;
+    opacity: 0.89;
+    border: 3px solid ;
+    border-image-slice: 1;
+    border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0px;
+`
+
+
+export const Number = styled.h1`
+    color: white;
+    font-size: 50px;
+`
+
+export const GameNaem = styled.h2`
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+`
+
+
+// Start Input registr page
+
+export const InpDiv = styled.div`
+    width: 100%;
+    height: 899px;
+    border: 1px solid white;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const InputDiv = styled.div`
+    width: 1160px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.89;
+    border: 3px solid ;
+    border-image-slice: 1;
+    border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(44px);
+`
+
+export const TopDIv = styled.div`
+    width: 100%;
+    height: 172px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
+
+
+export const RegisterText = styled.div`
+    width: 100%;
+    height: 100px;
+    border: 1px solid blue;
+    text-align: center;
+    color: white;
+    font-size: 33px;
+    font-weight: 600;
+    padding-top: 20px;
+`
+
+export const ButonsDiv = styled.div`
+    width: 85%;
+    height: 70px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
+
+export const MuiButtons1 = styled(Button)`
+    width: 236px !important;
+    height: 70px !important;
+    color: white !important;
+    font-size: 23px !important;
+    font-weight: 600 !important;
+    opacity: 0.89 !important;
+    border: 3px solid !important ;
+    border-image-slice: 1 !important;
+    border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1)) !important;
+`
+export const MuiButtons2 = styled(Button)`
+    width: 236px !important;
+    height: 70px !important;
+    font-size: 23px !important;
+    font-weight: 600 !important;
+    color: white !important;
+`
+
+export const BotomDIv = styled.div`
+    width: 85%;
+    height: calc(100% - 172px);
+    border: 1px solid brown;
+    display: flex;
+    /* flex-direction: column;/ */
+    /* justify-content: space-between; */
+`
+
+
+export const OneInpDiv = styled.div`
+    width: 50%;
+    height: 430px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+`
+
+
+export const TwoInpDiv = styled.div`
+    width: 50%;
+    height: 550px;
+    border: 1px solid yellow;
+    
+`
+
+export const LabelVSInputDiv = styled.div`
+    width: 100%;
+    height: 80px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`
+
+export const LabelText = styled.label`
+    color: gray;
+    font-size: 19px;
+`
+
+export const Input = styled.input`
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    outline: none;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+`
+
+
+
+
+
