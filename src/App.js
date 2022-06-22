@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar/Navbar'
 import Home from './Components/Home/Home'
 import запис from './Components/Записатся/запис'
 import Tournament from './Components/Tournament/Tournament'
+import Footer from './Components/Footer/Footer'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
     <Home/>
     <запис/>
     <Tournament />
+    <Footer/>
     </>
   )
 }
