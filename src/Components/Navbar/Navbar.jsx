@@ -9,6 +9,8 @@ import LogotipImg from './../F-image/Logotip-img.png'
 import {Menu} from '@mui/icons-material'
 
 import TemporaryDrawer from './Drawer'
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 const Navbar = () => {
 
@@ -28,9 +30,28 @@ const Navbar = () => {
     setState({ ...state, [anchor]: open });
   };
 
+
+  const [navSize, setnavSize] = useState("10rem")
+  const [navColor, setnavColor] = useState("transparent")
+  const listenScrollEvent = ()=> {
+    window.scrollY > 10 ? setnavColor("#252734") : setnavColor("transparent");
+    window.scrollY > 10 ? setnavSize("5rem") : setnavSize("10rem");
+   };
+   useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => {
+      window.removeEventListener("scroll",listenScrollEvent)
+    }
+  }, [])
+
+
   return (
     <MainDiv>
-      <NavbarDiv>
+      <NavbarDiv style={{
+        backgroundColor:navColor,
+        height: navSize,
+        transition:"all 1s"
+      }}>
         <LogoDiv>
           <LogoImg src={LogotipImg} />
         </LogoDiv>
