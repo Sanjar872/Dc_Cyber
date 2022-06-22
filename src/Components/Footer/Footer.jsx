@@ -1,12 +1,12 @@
 import React from 'react'
+import { Container } from './style'
 
-const Запись = () => {
+const Footer = () => {
   return (
     <Container>
-        
         
     </Container>
   )
 }
 
-export default Запись
+export default Footer
