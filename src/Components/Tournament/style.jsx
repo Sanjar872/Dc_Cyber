@@ -38,6 +38,7 @@ export const NameText = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0px  0px 0px 25px;
 
     @media screen and (max-width:650px){
         width: 100%;
@@ -372,35 +373,66 @@ export const PhotoAlbum = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
 `
 
 export const CardText = styled.div`
     width: 100%;
     height: 70px;
-    /* border: 1px solid yellow;  */
+    border: 1px solid yellow; 
     color: white;
     font-size: 25px;
     font-weight: 600;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0px 0px 0px 50px;
+    padding: 0px 0px 0px 107px;
+    
+
+    @media (max-width:1376px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
 `
 
 export const AllPhotoDiv = styled.div`
-    width: 1410px;
-    height: 771px;
+    width: 1300px;
+    height: auto;
     opacity: 0.89;
     border: 3px solid ;
     border-image-slice: 1;
     border-radius: 8px;
     border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
+
+
+    @media  (max-width:1420px) {
+        transform: scale(0.9);
+
+    }
+
+    @media (max-width:1280px) {
+        transform: scale(0.8);
+    }
+
+    @media (max-width:1113px) {
+        transform: scale(0.7);
+    }
+
+    @media (max-width:993px) {
+        transform: scale(0.6);
+    }
+
+    @media (max-width:785px) {
+        display: none;
+    }
 `
 
 export const ForstDiv = styled.div`
     width: 100%;
     height: 50%;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -495,10 +527,11 @@ export const SecondDiv = styled.div`
     height: 50%;
     border: 1px solid gray;
     display: flex;
+    flex-wrap: wrap;
 `
 
 export const CardDiv1 = styled.div`
-    width: 401px;
+    width: 370px;
     height: 383px;
     border: 1px solid blue;
 `
@@ -528,7 +561,7 @@ export const CardDivInImg2 = styled.img`
 //========================
 
 export const CardDiv2 = styled.div`
-    width: 679px;
+    width: 600px;
     height: 382px;
     border: 1px solid green;
 `
@@ -593,7 +626,7 @@ export const GameNaem = styled.h2`
 
 export const InpDiv = styled.div`
     width: 100%;
-    height: 899px;
+    height: 800px;
     border: 1px solid white;
     margin-top: 200px;
     display: flex;
@@ -618,11 +651,11 @@ export const InputDiv = styled.div`
 
 export const TopDIv = styled.div`
     width: 100%;
-    height: 172px;
+    height: 200px;
     border: 1px solid red;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 `
 
@@ -640,7 +673,7 @@ export const RegisterText = styled.div`
 
 export const ButonsDiv = styled.div`
     width: 85%;
-    height: 70px;
+    height: 60px;
     border: 1px solid white;
     display: flex;
     justify-content: space-between;
@@ -648,8 +681,8 @@ export const ButonsDiv = styled.div`
 `
 
 export const MuiButtons1 = styled(Button)`
-    width: 236px !important;
-    height: 70px !important;
+    width: 220px !important;
+    height: 60px !important;
     color: white !important;
     font-size: 23px !important;
     font-weight: 600 !important;
@@ -671,8 +704,16 @@ export const BotomDIv = styled.div`
     height: calc(100% - 172px);
     border: 1px solid brown;
     display: flex;
-    /* flex-direction: column;/ */
-    /* justify-content: space-between; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
+
+export const OneVSTwoDIv = styled.div`
+    width: 100%;
+    height: 430px;
+    display: flex;
+    justify-content: space-between;
 `
 
 
@@ -687,17 +728,10 @@ export const OneInpDiv = styled.div`
 `
 
 
-export const TwoInpDiv = styled.div`
-    width: 50%;
-    height: 550px;
-    border: 1px solid yellow;
-    
-`
-
 export const LabelVSInputDiv = styled.div`
     width: 100%;
     height: 80px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -719,6 +753,71 @@ export const Input = styled.input`
     color: white;
     font-size: 20px;
 `
+
+//Two Inp Div start
+
+export const TwoInpDiv = styled.div`
+    width: 48%;
+    height: 430px;
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+`
+
+
+export const TwoInputDiv = styled.div`
+    width: 100%;
+    height: 80px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    
+`
+
+export const ForstInpDiv = styled.div`
+    width: 48%;
+    height: 100%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+`
+
+
+
+export const SecondInpDiv = styled.div`
+    width: 48%;
+    height: 100%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+`
+
+export const SendButtonDiv = styled.div`
+    width: 100%;
+    height: calc(100% - 430px);
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+` 
+
+export const SendButton = styled(Button)`
+    width: 304px !important;
+    height: 52px !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+
+`
+
+
+
 
 
 

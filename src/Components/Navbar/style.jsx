@@ -27,6 +27,7 @@ export const NavbarDiv = styled.div`
     align-items: center;
     padding: 0px 85px;
     position: fixed;
+    z-index: 999;
 
 
     @media screen and (max-width:1044px) {
