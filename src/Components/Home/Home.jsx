@@ -1,12 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { AllcardDIv, Bio, CardDiv, Image, InfoCard, MainDiv, Name, Paragraf, TextDiv } from './style'
-
+import axios from 'axios'
 //image
 import RoundImg1 from './../S-image/Image-1.png'
 import RoundImg2 from './../S-image/Image-2.png'
 import RoundImg3 from './../S-image/Image-3.png'
 
+
+
+const API = "http://159.65.207.213/api/blog/"
+
+
+
 const Home = () => {
+  
+  const [data, setData] = useState([])
+  
+  useEffect(() => {
+        axios.get(API)
+        .then(res=> {
+          setData(res.data)
+  
+          console.log(res.data);
+        })
+  }, [])
+
+
+
   return (
     <MainDiv>
       <TextDiv>
@@ -14,13 +34,19 @@ const Home = () => {
       </TextDiv>
       <CardDiv>
 
-        <InfoCard>
-          <Image src={RoundImg1} />
-          <Name>Twitch потоки</Name>
-          <Paragraf>Смотрите новые трансляции каждый день от наших лучших игроков и создателей контента.</Paragraf>
-        </InfoCard>
+      {
+        data?.map((item,index)=>{
+          return (
+            <InfoCard>
+            <Image src={`http://159.65.207.213${item.image}`} />
+            <Name>{item.title}</Name>
+            <Paragraf>{item.text}</Paragraf>
+          </InfoCard>
+          )
+        })
+      }
 
-        <InfoCard>
+        {/* <InfoCard>
         <Image src={RoundImg2} />
         <Name>Новости киберспорта</Name>
         <Paragraf>Получайте последние новости, обновления и события из мира киберспорта.</Paragraf>
@@ -30,7 +56,7 @@ const Home = () => {
         <Image src={RoundImg3} />
         <Name>Игровые турниры</Name>
         <Paragraf>Узнайтеw больше о международных и местных игровых турнирах.</Paragraf>
-        </InfoCard>
+        </InfoCard> */}
 
       </CardDiv>
     </MainDiv>

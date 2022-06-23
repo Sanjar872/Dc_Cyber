@@ -361,6 +361,19 @@ export const MuiButton = styled(Button)`
     border: 2px solid !important;
     border-image-slice: 1 !important;
     border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1)) !important;
+
+    /* @keyframes animate 
+    {
+        0%
+            {
+                transform: rotate(0deg) !important;
+            }
+        100%
+        {
+            transform: rotate(350deg) !important;
+        }
+    } */
+
 `
 
 ///======== Photo albom ================================================================================================
