@@ -20,16 +20,14 @@ const Navbar = () => {
 
 const [data, setData] = useState([])
 
-useEffect(() => {
-  axios.get(API)
-  .then(res=> {
-    setData(res.data)
-    // console.log(res.data);
-  })
-
-
-
-}, [])
+  useEffect(() => {
+    axios.get(API)
+    .then(res=> {
+      setData(res.data)
+      // console.log(res.data);
+    })
+  
+  }, [])
 
 
 

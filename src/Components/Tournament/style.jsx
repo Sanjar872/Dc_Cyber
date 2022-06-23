@@ -380,7 +380,7 @@ export const MuiButton = styled(Button)`
 
 export const PhotoAlbum = styled.div`
     width: 100%;
-    height: 850px;
+    height: auto;
     border: 1px solid white;
     margin-top: 150px;
     display: flex;
@@ -437,9 +437,12 @@ export const AllPhotoDiv = styled.div`
         transform: scale(0.6);
     }
 
-    @media (max-width:785px) {
+    @media (max-width:768px) {
         display: none;
     }
+
+    
+
 `
 
 export const ForstDiv = styled.div`
@@ -459,6 +462,7 @@ export const Card1 = styled.div`
 export const CardImg = styled.img`
     width: 100%;
     height: 100%;
+    
 `
 
 //====
@@ -540,7 +544,6 @@ export const SecondDiv = styled.div`
     height: 50%;
     border: 1px solid gray;
     display: flex;
-    flex-wrap: wrap;
 `
 
 export const CardDiv1 = styled.div`
@@ -600,17 +603,18 @@ export const CardDivImg3 = styled.img`
 
 export const Square = styled.div`
     width: 100%;
-    height: 300px;
+    height: auto;
     border: 2px solid green;
     margin-top: 150px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding:0px 40px;
 `
 
 export const Boxs = styled.div`
     width: 335px;
-    height: 100%;
+    height: 300px;
     opacity: 0.89;
     border: 3px solid ;
     border-image-slice: 1;
@@ -620,6 +624,10 @@ export const Boxs = styled.div`
     justify-content: space-around;
     align-items: center;
     padding: 40px 0px;
+
+    @media (max-width:1420px) {
+        margin: 20px;
+    }
 `
 
 
@@ -639,7 +647,7 @@ export const GameNaem = styled.h2`
 
 export const InpDiv = styled.div`
     width: 100%;
-    height: 800px;
+    height: auto;
     border: 1px solid white;
     margin-top: 200px;
     display: flex;
@@ -660,6 +668,10 @@ export const InputDiv = styled.div`
     border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(44px);
+
+    @media (max-width:589px) {
+        width: 100%;
+    }
 `
 
 export const TopDIv = styled.div`
@@ -715,11 +727,16 @@ export const MuiButtons2 = styled(Button)`
 export const BotomDIv = styled.div`
     width: 85%;
     height: calc(100% - 172px);
+    /* height: auto; */
     border: 1px solid brown;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (max-width:564px) {
+       width: 95%;
+    }
 `
 
 export const OneVSTwoDIv = styled.div`
@@ -727,6 +744,14 @@ export const OneVSTwoDIv = styled.div`
     height: 430px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width:929px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: auto ;
+    }
 `
 
 
@@ -738,6 +763,14 @@ export const OneInpDiv = styled.div`
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+
+    @media (max-width:929px) {
+        width: 80%;
+    }
+
+    @media (max-width:700px) {
+        width: 100%;
+    }
 `
 
 
@@ -777,6 +810,14 @@ export const TwoInpDiv = styled.div`
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+
+    @media (max-width:929px) {
+        width: 80%;
+    }    
+
+    @media (max-width:700px) {
+        width: 100%;
+    }
     
 `
 
@@ -819,6 +860,7 @@ export const SendButtonDiv = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 70px;
 ` 
 
 export const SendButton = styled(Button)`

@@ -1,6 +1,8 @@
 import { Box } from '@mui/material'
 import React from 'react'
 import { AllPhotoDiv, BotomDIv, Box1, Box2, BoxImg1, BoxImg2, Boxs, ButonsDiv, ButtonDiv, Card1, Card2, Card3, Card4, CardDiv1, CardDiv2, CardDiv3, CardDivImg2, CardDivImg3, CardDivIn1, CardDivIn2, CardDivInImg1, CardDivInImg2, CardImg, CardImg11, CardImg22, CardImg3, CardImgIn1, CardImgIn2, CardIn1, CardIn11, CardIn2, CardIn22, CardText, Comands, Conteyner1, Conteyner2, Data, ForstDiv, ForstInpDiv, GameNaem, GroupName, InpDiv, Input, InputDiv, LabelText, LabelVSInputDiv, LI, MainDiv, MuiButton, MuiButtons1, MuiButtons2, Name, NameText, NavbarDiv, Number, OneInpDiv, OneVSTwoDIv, Para, PhotoAlbum, RegisterText, SecondDiv, SecondInpDiv, SendButton, SendButtonDiv, Square, ThreeButtonDiv, TopDIv, TwoInpDiv, TwoInputDiv, Ul, ULdiv, VS } from './style'
+import CardImageDiv from '../Tournament/CardImg/CardImg'
+
 
 import BoxImg11 from '../S-image/game1.png'
 import BoxImg22 from '../S-image/game2.png'
@@ -128,6 +130,7 @@ const Tournament = () => {
 
     <PhotoAlbum>
       <CardText>Фото Галерея</CardText>
+        <CardImageDiv></CardImageDiv>
       <AllPhotoDiv>
         <ForstDiv>
 
