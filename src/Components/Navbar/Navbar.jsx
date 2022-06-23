@@ -1,7 +1,7 @@
 import React from 'react'
 import { Contener,  LI, LogoDiv, LogoImg, MainDiv, MenuIcon, MuiButton, NavbarDiv, UL, 
   MenuBtn, Btnwrap, CenterText, TextDiv, SpanText, Text } from './style'
-
+import axios from 'axios'
 //img
 import LogotipImg from './../F-image/Logotip-img.png'
 
@@ -12,7 +12,28 @@ import TemporaryDrawer from './Drawer'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
+
+const API = "http://159.65.207.213/api/info/"
+
+
 const Navbar = () => {
+
+const [data, setData] = useState([])
+
+useEffect(() => {
+  axios.get(API)
+  .then(res=> {
+    setData(res.data)
+    // console.log(res.data);
+  })
+
+
+
+}, [])
+
+
+
+
 
   const [state, setState] = React.useState({
     top: false,
@@ -34,8 +55,8 @@ const Navbar = () => {
   const [navSize, setnavSize] = useState("10rem")
   const [navColor, setnavColor] = useState("transparent")
   const listenScrollEvent = ()=> {
-    window.scrollY > 10 ? setnavColor("#252734") : setnavColor("transparent");
-    window.scrollY > 10 ? setnavSize("5rem") : setnavSize("10rem");
+    window.scrollY > 10 ? setnavColor("#2b3785") : setnavColor("transparent");
+    window.scrollY > 10 ? setnavSize("6rem") : setnavSize("10rem");
    };
    useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
@@ -53,7 +74,7 @@ const Navbar = () => {
         transition:"all 1s"
       }}>
         <LogoDiv>
-          <LogoImg src={LogotipImg} />
+          <LogoImg src={`http://159.65.207.213${data.logo}`} />
         </LogoDiv>
         <Contener>
         <UL>

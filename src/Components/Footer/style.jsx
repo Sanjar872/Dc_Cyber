@@ -208,6 +208,7 @@ export const Checkbo = styled.div`
 export const MyEmailOutlinedIcon = styled(EmailOutlinedIcon)`
     /* position: absolute; */
     background-color:#40007D;
+    background: linear-gradient(90deg, #434174 33%, rgba(111,0,255,1) 66%);
     height: 40px !important;
     width: 10% !important;
     
@@ -302,7 +303,7 @@ export const IMglar = styled.div`
     }
 
     img:hover {
-            transform: scale(2);
+            transform: scale(1.5);
             cursor: pointer;
     }
 `
