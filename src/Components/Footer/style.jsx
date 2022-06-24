@@ -3,7 +3,7 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
 export const  Container = styled.div`
     width:100%;
-    /* height:35vh; */
+    height:auto;
     background-color:black;
     display: flex;
     flex-direction: column;
@@ -13,13 +13,14 @@ export const  Container = styled.div`
     @media (max-width:820px) {
         flex-direction: column;
         display: flex;
+        height: auto;
     }
 `
 export const Box = styled.div`
     width: 90%;
     height: 300px;
     display: flex;
-    /* height: auto; */
+    height: auto;
     justify-content:space-evenly;
     color: white;
     align-items: center;

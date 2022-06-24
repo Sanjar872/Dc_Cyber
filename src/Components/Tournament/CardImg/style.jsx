@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MainDiv = styled.div`
     width: 100%;
     height: auto;
-    background-color: transparent;
+    /* background-color: transparent; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;

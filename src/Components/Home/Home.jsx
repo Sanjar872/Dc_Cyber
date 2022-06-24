@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { AllcardDIv, Bio, CardDiv, Image, InfoCard, MainDiv, Name, Paragraf, TextDiv } from './style'
 import axios from 'axios'
 //image
-import RoundImg1 from './../S-image/Image-1.png'
-import RoundImg2 from './../S-image/Image-2.png'
-import RoundImg3 from './../S-image/Image-3.png'
+// import RoundImg1 from './../S-image/Image-1.png'
+// import RoundImg2 from './../S-image/Image-2.png'
+// import RoundImg3 from './../S-image/Image-3.png'
 
 
 

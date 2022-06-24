@@ -12,12 +12,12 @@ import CardImg  from './Components/Tournament/CardImg/CardImg'
 const App = () => {
   return (
     <>
-    {/* <Navbar /> */}
-    {/* <Home/> */}
-    {/* <запис/> */}
+    <Navbar />
+    <Home/>
+    <запис/>
     <Tournament />
-    <CardImg />
-    {/* <Footer/> */}
+    {/* <CardImg /> */}
+    <Footer/>
     </>
   )
 }

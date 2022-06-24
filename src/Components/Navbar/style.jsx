@@ -16,6 +16,10 @@ export const MainDiv = styled.div`
     background-size: cover;
     display: flex;
     flex-direction: column;
+    @media (max-width:390px) {
+        height: 80vh;
+        width: 100%;
+    }
 `
 
 export const NavbarDiv = styled.div`
@@ -115,18 +119,23 @@ export const Btnwrap = styled.div`
 
 export const CenterText = styled.div`
     width: 100%;
-    height: 600px;
-    /* border: 2px solid blue; */
+    height:100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 `
 
 export const TextDiv = styled.div`
-    width: 70%;
+    width: 72%;
     height: 270px;
-    /* border:1px solid white; */
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    @media (max-width:390px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 `
 export const Text = styled.h1`
     color: white;
@@ -152,8 +161,9 @@ export const Text = styled.h1`
     @media screen and (max-width:517px) {
         font-size: 25px;
     }
-    @media screen and (max-width:427px) {
+    @media screen and (max-width:390px) {
         font-size: 20px;
+        width: 90% !important;
     }
 `
 export const SpanText = styled.span`

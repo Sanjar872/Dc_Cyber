@@ -19,7 +19,6 @@ export const MainDiv = styled.div`
 export const TextDiv = styled.div`
     width: 100%;
     height: 300px;
-    border: 1px solid yellow;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,7 +74,6 @@ export const InfoCard = styled.div`
     height: 300px;
     background-image: url(${InfoCardimg });
     background-size: cover;
-    border: 1px solid red;
     background-repeat: no-repeat;
 
 

@@ -226,7 +226,7 @@ const Tournament = () => {
           <RegisterText>Регистрация</RegisterText>
           <ButonsDiv>
             <MuiButtons1 variant='outlined' >Один игрок</MuiButtons1>
-            <MuiButtons2>Команда</MuiButtons2>
+            <MuiButtons2 variant='outlined'>Команда</MuiButtons2>
           </ButonsDiv>
         </TopDIv>
 

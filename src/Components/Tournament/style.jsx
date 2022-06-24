@@ -346,12 +346,17 @@ export const Data = styled.p`
 `
 
 export const ButtonDiv = styled.div`
-    width: 100%;
+    width: 80%;
     height: 40px;
     /* border: 1px solid black; */
     display: flex;
-    justify-content: flex-end;
-    padding: 0px 80px 0px 0px;
+    justify-content: end;
+    /* padding: 0px 80px 0px 0px; */
+    @media (max-width:390px) {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
 `
 
 export const MuiButton = styled(Button)`
@@ -381,7 +386,6 @@ export const MuiButton = styled(Button)`
 export const PhotoAlbum = styled.div`
     width: 100%;
     height: auto;
-    border: 1px solid white;
     margin-top: 150px;
     display: flex;
     flex-direction: column;
@@ -392,7 +396,6 @@ export const PhotoAlbum = styled.div`
 export const CardText = styled.div`
     width: 100%;
     height: 70px;
-    border: 1px solid yellow; 
     color: white;
     font-size: 25px;
     font-weight: 600;
@@ -417,6 +420,7 @@ export const AllPhotoDiv = styled.div`
     border: 3px solid ;
     border-image-slice: 1;
     border-radius: 8px;
+    
     border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
 
 
@@ -448,10 +452,10 @@ export const AllPhotoDiv = styled.div`
 export const ForstDiv = styled.div`
     width: 100%;
     height: 50%;
-    border: 1px solid red;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
 `
 
 export const Card1 = styled.div`
@@ -706,7 +710,7 @@ export const ButonsDiv = styled.div`
 `
 
 export const MuiButtons1 = styled(Button)`
-    width: 220px !important;
+    width: 230px !important;
     height: 60px !important;
     color: white !important;
     font-size: 23px !important;
@@ -715,13 +719,24 @@ export const MuiButtons1 = styled(Button)`
     border: 3px solid !important ;
     border-image-slice: 1 !important;
     border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1)) !important;
+    @media (max-width:468px) {
+        font-size: 18px !important;
+        
+    }
 `
 export const MuiButtons2 = styled(Button)`
-    width: 236px !important;
-    height: 70px !important;
+     width: 230px !important;
+    height: 60px !important;
+    color: white !important;
     font-size: 23px !important;
     font-weight: 600 !important;
-    color: white !important;
+    opacity: 0.89 !important;
+    border: 3px solid !important ;
+    border-image-slice: 1 !important;
+    border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1)) !important;
+    @media (max-width:468px) {
+        font-size: 18px !important;
+    }
 `
 
 export const BotomDIv = styled.div`
