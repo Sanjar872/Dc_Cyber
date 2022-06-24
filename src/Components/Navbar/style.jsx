@@ -135,6 +135,8 @@ export const TextDiv = styled.div`
         width: 100%;
         display: flex;
         justify-content: center;
+        border: 1px solid red;
+        font-size: 50px !important;
     }
 `
 export const Text = styled.h1`
@@ -143,7 +145,7 @@ export const Text = styled.h1`
     text-align: center;
 
     @media screen and (max-width:1033px) {
-        font-size: 50px;
+        /* font-size: 50px; */
     }
 
     @media screen and (max-width:832px) {
@@ -162,7 +164,7 @@ export const Text = styled.h1`
         font-size: 25px;
     }
     @media screen and (max-width:390px) {
-        font-size: 20px;
+        font-size: 32px !important;
         width: 90% !important;
     }
 `
