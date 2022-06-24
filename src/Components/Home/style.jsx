@@ -89,6 +89,14 @@ export const InfoCard = styled.div`
             width: 350px;
             height: 266px;
         }
+
+        /* @media (max-width:506px) {
+            transform: scale(0.9);
+        }
+
+        @media (max-width:455px) {
+            transform: scale(0.8);
+        } */
 `
 
 export const Image = styled.img`
@@ -99,6 +107,15 @@ export const Image = styled.img`
     left: 125px;
     bottom: 65px;
     border: 1px solid white;
+
+    @media (max-width:506px) {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        position: relative;
+        bottom: 50px;
+        left:117px;
+    }
 
     /* @media screen and (max-width:500px) {
         width: 120px;

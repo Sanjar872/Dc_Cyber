@@ -352,7 +352,7 @@ export const ButtonDiv = styled.div`
     display: flex;
     justify-content: end;
     /* padding: 0px 80px 0px 0px; */
-    @media (max-width:390px) {
+    @media (max-width:591px) {
         display: flex;
         width: 100%;
         justify-content: center;
@@ -632,6 +632,10 @@ export const Boxs = styled.div`
     @media (max-width:1420px) {
         margin: 20px;
     }
+
+    /* @media (max-width:460px) {
+        width: 90%;
+    } */
 `
 
 
@@ -657,6 +661,7 @@ export const InpDiv = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
 `
 
 export const InputDiv = styled.div`
@@ -721,7 +726,10 @@ export const MuiButtons1 = styled(Button)`
     border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1)) !important;
     @media (max-width:468px) {
         font-size: 18px !important;
-        
+    }
+
+    @media (max-width:393px) {
+        font-size: 15px !important;
     }
 `
 export const MuiButtons2 = styled(Button)`
@@ -734,8 +742,13 @@ export const MuiButtons2 = styled(Button)`
     border: 3px solid !important ;
     border-image-slice: 1 !important;
     border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1)) !important;
+    
     @media (max-width:468px) {
         font-size: 18px !important;
+    }
+
+    @media (max-width:393px) {
+        font-size: 15px !important;
     }
 `
 
@@ -883,7 +896,12 @@ export const SendButton = styled(Button)`
     height: 52px !important;
     font-size: 18px !important;
     font-weight: 500 !important;
+    background-color:#8F00FF !important;
 
+
+    &:hover{
+        background-color:#7000E0 !important;
+    }
 `
 
 

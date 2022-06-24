@@ -11,8 +11,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: start;
     
-  
-
+    
     @media (max-width:391px) {
         text-align:center;
         width:100%;
@@ -20,12 +19,23 @@ export const Container = styled.div`
         justify-content:center;
     }
 
+
+
     h2 {
         color:white;
         width:65%;
         font-size: 36px;
         letter-spacing: 5px;
         font-weight: 700;
+
+
+        @media (max-width:1056px) {
+            font-size: 32px;
+        }
+
+        @media (max-width:834px) {
+            font-size: 30px;
+        }
         
 
         @media (max-width:820px) {
@@ -34,6 +44,7 @@ export const Container = styled.div`
             width:100% !important;
             justify-content:center;
         }
+
         }
 
         @media (max-width:517px) {

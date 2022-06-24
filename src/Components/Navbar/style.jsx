@@ -174,7 +174,7 @@ export const Btnwrap = styled.div`
 `
 
     export const MenuBtn = styled(IconButton)`
-        color: red !important;
+        color: gold !important;
         font-size: 40px !important;
     `
 
@@ -193,6 +193,8 @@ export const TextDiv = styled.div`
     box-sizing: border-box;
     display: flex;
     align-items: center;
+
+
     @media (max-width:390px) {
         width: 100%;
         display: flex;
@@ -226,7 +228,7 @@ export const Text = styled.h1`
         font-size: 25px;
     }
     @media screen and (max-width:390px) {
-        font-size: 35px !important;
+        font-size: 25px !important;
         width: 90% !important;
     }
 `

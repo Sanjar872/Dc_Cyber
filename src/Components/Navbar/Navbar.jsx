@@ -82,7 +82,7 @@ useEffect(() => {
           <LI>Счёты</LI>
           <LI>Фото</LI>
         </UL>
-          <Buttons >Регистрация</Buttons>
+          <Buttons>Регистрация</Buttons>
            </Contener> 
 
          <Btnwrap>
