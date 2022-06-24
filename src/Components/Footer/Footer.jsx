@@ -2,7 +2,12 @@ import React from 'react'
 import { Container,Fut, Box,Div1,Brendlar,O_nas,Dota,
 MyEmailOutlinedIcon,Input2,Sign,Con,Input,IMglar,Input1,Checkbo, 
 Text, Text2 } from './style'
+// import { Facebook} from '@fortawesome/react-fontawesome'
 
+
+
+
+// import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import Brand from '../S-image/brand.png'
 import Facebook from '../S-image/Facebook.png'
 import Telegram from '../S-image/la_telegram.png'
@@ -41,6 +46,7 @@ function DcSayt(params) {
           <Brendlar>
             <img src={Brand} alt="" />
             <IMglar>
+              {/* <FontAwesomeIcon icon={Facebook}/> */}
               <img onClick={Shange} src={Facebook} alt="" />
               <img onClick={Shange2} src={Telegram} alt="" />
               <img onClick={Shange3} src={instagram} alt="" />

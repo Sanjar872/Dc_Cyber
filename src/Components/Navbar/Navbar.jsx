@@ -1,6 +1,6 @@
 import React from 'react'
 import { Contener,  LI, LogoDiv, LogoImg, MainDiv, MenuIcon, MuiButton, NavbarDiv, UL, 
-  MenuBtn, Btnwrap, CenterText, TextDiv, SpanText, Text } from './style'
+  MenuBtn, Btnwrap, CenterText, TextDiv, SpanText, Text, Buttons } from './style'
 import axios from 'axios'
 //img
 import LogotipImg from './../F-image/Logotip-img.png'
@@ -20,14 +20,16 @@ const Navbar = () => {
 
 const [data, setData] = useState([])
 
-  useEffect(() => {
-    axios.get(API)
-    .then(res=> {
-      setData(res.data)
-      // console.log(res.data);
-    })
-  
-  }, [])
+useEffect(() => {
+  axios.get(API)
+  .then(res=> {
+    setData(res.data)
+    // console.log(res.data);
+  })
+
+
+
+}, [])
 
 
 
@@ -63,13 +65,12 @@ const [data, setData] = useState([])
     }
   }, [])
 
-
   return (
     <MainDiv>
       <NavbarDiv style={{
         backgroundColor:navColor,
         height: navSize,
-        transition:"all 1s"
+        transition:"all 1s",
       }}>
         <LogoDiv>
           <LogoImg src={`http://159.65.207.213${data.logo}`} />
@@ -81,7 +82,7 @@ const [data, setData] = useState([])
           <LI>Счёты</LI>
           <LI>Фото</LI>
         </UL>
-          <MuiButton variant='contained' >Регистрация</MuiButton>
+          <Buttons >Регистрация</Buttons>
            </Contener> 
 
          <Btnwrap>

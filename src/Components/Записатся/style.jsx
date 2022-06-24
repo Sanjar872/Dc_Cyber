@@ -74,15 +74,52 @@ export const BO = styled.div`
     }
 
     button {
-        height:40px;
-        width: 150px;
-        background:none;
-        margin-top:30px;
-        font-weight: 500;
-        color: white;
-        opacity: 0.89;
-        border-image-slice: 1;
-        border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
+        border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    margin-top: 20px;
+    color: #fff;
+    width: 171px;
+    height: 45px;
+    font-size: 22px;
+    line-height: 42px;
+    padding: 0;
+    border: 0.3px dotted grey;
+    /* background: #8F00FF; */
+
+    &:hover{
+        background: transparent;
+        box-shadow:none;
+    }
+
+    &::before,::after{
+        content:'';
+        position:absolute;
+        top:0;
+        right:0;
+        height:2px;
+        width:0;
+        background: linear-gradient(92.49deg, #AD00FF 14.3%, #00E0FF 100%);
+        transition:400ms ease all;
+    }
+
+    &::after{
+        right:inherit;
+        top:inherit;
+        left:0;
+        bottom:0;
+    }
+
+    &:hover::before,:hover::after{
+        width:100%;
+        transition:800ms ease all;
+    }
         
     }
 `

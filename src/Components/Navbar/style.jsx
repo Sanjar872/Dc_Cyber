@@ -16,16 +16,69 @@ export const MainDiv = styled.div`
     background-size: cover;
     display: flex;
     flex-direction: column;
+     box-shadow: 0px 1px 10px #999;
     @media (max-width:390px) {
         height: 80vh;
-        width: 100%;
+        width: 100% !important;
     }
 `
+
+export const Buttons = styled.button`
+ border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    color: #fff;
+    width: 171px;
+    height: 45px;
+    font-size: 22px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: #8F00FF;
+
+    &:hover{
+        background: transparent;
+        box-shadow:none;
+    }
+
+    &::before,::after{
+        content:'';
+        position:absolute;
+        top:0;
+        right:0;
+        height:2px;
+        width:0;
+        background: linear-gradient(92.49deg, #AD00FF 14.3%, #00E0FF 100%);
+        transition:400ms ease all;
+    }
+
+    &::after{
+        right:inherit;
+        top:inherit;
+        left:0;
+        bottom:0;
+    }
+
+    &:hover::before,:hover::after{
+        width:100%;
+        transition:800ms ease all;
+    }
+
+
+
+`
+
+
 
 export const NavbarDiv = styled.div`
     width: 100%;
     height: 100px;
-    /* border: 1px solid white; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,13 +90,23 @@ export const NavbarDiv = styled.div`
     @media screen and (max-width:1044px) {
         padding: 0px 40px;
     }
+
+    @media (max-width:391px) {
+        
+        width: 100% !important;
+    }
 `
 
 export const LogoDiv = styled.div`
     width: 195px;
     height: 45px;
     /* border: 1px solid yellow; */
-    
+    @media (max-width:391px) {
+       width :150px ;
+       height: 35px;
+       margin-left: -20px;
+       
+    }
 `
 
 export const LogoImg = styled.img`
@@ -54,7 +117,6 @@ export const LogoImg = styled.img`
 export const Contener = styled.div`
     width: 550px;
     height: 80px;
-    /* border: 1px solid gray; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -164,7 +226,7 @@ export const Text = styled.h1`
         font-size: 25px;
     }
     @media screen and (max-width:390px) {
-        font-size: 32px !important;
+        font-size: 35px !important;
         width: 90% !important;
     }
 `

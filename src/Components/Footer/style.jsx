@@ -245,6 +245,8 @@ export const Text = styled.div`
         display: flex;
     }
 `
+
+
 export const Text2 = styled.div`
     display: flex;
     justify-content: space-between;
