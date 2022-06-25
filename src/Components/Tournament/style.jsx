@@ -656,7 +656,7 @@ export const GameNaem = styled.h2`
 export const InpDiv = styled.div`
     width: 100%;
     height: auto;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     margin-top: 200px;
     display: flex;
     justify-content: center;
@@ -668,11 +668,12 @@ export const InputDiv = styled.div`
     width: 1160px;
     height: 100%;
     display: flex;
+    border-radius: 20px !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0.89;
-    border: 3px solid ;
+    border: 4px solid ;
     border-image-slice: 1;
     border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
     background: rgba(255, 255, 255, 0.08);
@@ -686,7 +687,7 @@ export const InputDiv = styled.div`
 export const TopDIv = styled.div`
     width: 100%;
     height: 200px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -697,7 +698,7 @@ export const TopDIv = styled.div`
 export const RegisterText = styled.div`
     width: 100%;
     height: 100px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     text-align: center;
     color: white;
     font-size: 33px;
@@ -708,7 +709,7 @@ export const RegisterText = styled.div`
 export const ButonsDiv = styled.div`
     width: 85%;
     height: 60px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -756,7 +757,7 @@ export const BotomDIv = styled.div`
     width: 85%;
     height: calc(100% - 172px);
     /* height: auto; */
-    border: 1px solid brown;
+    /* border: 1px solid brown; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -786,7 +787,7 @@ export const OneVSTwoDIv = styled.div`
 export const OneInpDiv = styled.div`
     width: 50%;
     height: 430px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -812,7 +813,7 @@ export const LabelVSInputDiv = styled.div`
 `
 
 export const LabelText = styled.label`
-    color: gray;
+    color: #aaaaaa;
     font-size: 19px;
 `
 
@@ -820,7 +821,7 @@ export const Input = styled.input`
     width: 100%;
     height: 40px;
     border: none;
-    border-bottom: 2px solid white;
+    border-bottom: 3px solid white;
     background-color: transparent;
     outline: none;
     padding: 10px;
@@ -833,7 +834,7 @@ export const Input = styled.input`
 export const TwoInpDiv = styled.div`
     width: 48%;
     height: 430px;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -853,7 +854,7 @@ export const TwoInpDiv = styled.div`
 export const TwoInputDiv = styled.div`
     width: 100%;
     height: 80px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     
@@ -862,7 +863,7 @@ export const TwoInputDiv = styled.div`
 export const ForstInpDiv = styled.div`
     width: 48%;
     height: 100%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -874,7 +875,7 @@ export const ForstInpDiv = styled.div`
 export const SecondInpDiv = styled.div`
     width: 48%;
     height: 100%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -884,7 +885,7 @@ export const SecondInpDiv = styled.div`
 export const SendButtonDiv = styled.div`
     width: 100%;
     height: calc(100% - 430px);
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -904,7 +905,30 @@ export const SendButton = styled(Button)`
     }
 `
 
+export const Select1 = styled.select`
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 3px solid white;
+    transition: 3s;
 
+    cursor: pointer;
+    color: gray;
+    ::placeholder {
+            color: red;
+        }
+
+
+    option {
+       background-color: #3A156B;
+       color: white;
+       transition: 3s;
+    }
+
+
+`
 
 
 

@@ -31,7 +31,7 @@ function Shange3() {
 }
 
 function Shange4(params) {
-  window.location.href = "https://m.youtube.com/"
+  window.location.href = "https://www.youtube.com/results?search_query=dc+andijan"
 }
 
 

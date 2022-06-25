@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import { AllPhotoDiv, BotomDIv, Box1, Box2, BoxImg1, BoxImg2, Boxs, ButonsDiv, ButtonDiv, Card1, Card2, Card3, Card4, CardDiv1, CardDiv2, CardDiv3, CardDivImg2, CardDivImg3, CardDivIn1, CardDivIn2, CardDivInImg1, CardDivInImg2, CardImg, CardImg11, CardImg22, CardImg3, CardImgIn1, CardImgIn2, CardIn1, CardIn11, CardIn2, CardIn22, CardText, Comands, Conteyner1, Conteyner2, Data, ForstDiv, ForstInpDiv, GameNaem, GroupName, InpDiv, Input, InputDiv, LabelText, LabelVSInputDiv, LI, MainDiv, MuiButton, MuiButtons1, MuiButtons2, Name, NameText, NavbarDiv, Number, OneInpDiv, OneVSTwoDIv, Para, PhotoAlbum, RegisterText, SecondDiv, SecondInpDiv, SendButton, SendButtonDiv, Square, ThreeButtonDiv, TopDIv, TwoInpDiv, TwoInputDiv, Ul, ULdiv, VS } from './style'
+import { AllPhotoDiv, BotomDIv, Box1, Box2, BoxImg1, BoxImg2, Boxs, ButonsDiv, ButtonDiv, Card1, Card2, Card3, Card4, CardDiv1, CardDiv2, CardDiv3, CardDivImg2, CardDivImg3, CardDivIn1, CardDivIn2, CardDivInImg1, CardDivInImg2, CardImg, CardImg11, CardImg22, CardImg3, CardImgIn1, CardImgIn2, CardIn1, CardIn11, CardIn2, CardIn22, CardText, Comands, Conteyner1, Conteyner2, Data, ForstDiv, ForstInpDiv, GameNaem, GroupName, InpDiv, Input, InputDiv, LabelText, LabelVSInputDiv, LI, MainDiv, MuiButton, MuiButtons1, MuiButtons2, Name, NameText, NavbarDiv, Number, OneInpDiv, OneVSTwoDIv, Para, PhotoAlbum, RegisterText, SecondDiv, SecondInpDiv, Select1, SendButton, SendButtonDiv, Square, ThreeButtonDiv, TopDIv, TwoInpDiv, TwoInputDiv, Ul, ULdiv, VS } from './style'
 import CardImageDiv from '../Tournament/CardImg/CardImg'
 
 
@@ -32,119 +32,119 @@ const Tournament = () => {
           <Name>Последние турниры</Name>
         </NameText>
         <ULdiv>
-        <Ul>
-          <LI>Все</LI>
-          <LI>CS:GO</LI>
-          <LI>DOTA 2</LI>
-          <LI>R6 SEGA</LI>
-          <LI>PUBG</LI>
-        </Ul>
+          <Ul>
+            <LI>Все</LI>
+            <LI>CS:GO</LI>
+            <LI>DOTA 2</LI>
+            <LI>R6 SEGA</LI>
+            <LI>PUBG</LI>
+          </Ul>
         </ULdiv>
       </NavbarDiv>
-      
-{/* ================================================= */}
+
+      {/* ================================================= */}
 
       <Comands>
         <Para>
           <Conteyner1>
-          <Box1>
-             <BoxImg1 src={BoxImg11} />
-          </Box1>
-          <VS>VS</VS>
-           <Box2>
-             <BoxImg2 src={BoxImg22} />
-           </Box2>
+            <Box1>
+              <BoxImg1 src={BoxImg11} />
+            </Box1>
+            <VS>VS</VS>
+            <Box2>
+              <BoxImg2 src={BoxImg22} />
+            </Box2>
           </Conteyner1>
-        
+
           <Conteyner2>
-          <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
-          <Data>03 Марта 2022  13:20</Data>
+            <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
+            <Data>03 Марта 2022  13:20</Data>
           </Conteyner2>
         </Para>
 
-{/* ================================================================= */}
+        {/* ================================================================= */}
 
         <Para>
           <Conteyner1>
-          <Box1>
-             <BoxImg1 src={BoxImg11} />
-          </Box1>
-          <VS>VS</VS>
-           <Box2>
-             <BoxImg2 src={BoxImg22} />
-           </Box2>
+            <Box1>
+              <BoxImg1 src={BoxImg11} />
+            </Box1>
+            <VS>VS</VS>
+            <Box2>
+              <BoxImg2 src={BoxImg22} />
+            </Box2>
           </Conteyner1>
-        
+
           <Conteyner2>
-          <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
-          <Data>03 Марта 2022  13:20</Data>
+            <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
+            <Data>03 Марта 2022  13:20</Data>
           </Conteyner2>
         </Para>
 
-{/* ========================================================= */}
+        {/* ========================================================= */}
 
         <Para>
           <Conteyner1>
-          <Box1>
-             <BoxImg1 src={BoxImg11} />
-          </Box1>
-          <VS>VS</VS>
-           <Box2>
-             <BoxImg2 src={BoxImg22} />
-           </Box2>
+            <Box1>
+              <BoxImg1 src={BoxImg11} />
+            </Box1>
+            <VS>VS</VS>
+            <Box2>
+              <BoxImg2 src={BoxImg22} />
+            </Box2>
           </Conteyner1>
-        
+
           <Conteyner2>
-          <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
-          <Data>03 Марта 2022  13:20</Data>
+            <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
+            <Data>03 Марта 2022  13:20</Data>
           </Conteyner2>
         </Para>
 
-{/* ============================================================== */}
+        {/* ============================================================== */}
 
         <Para>
           <Conteyner1>
-          <Box1>
-             <BoxImg1 src={BoxImg11} />
-          </Box1>
-          <VS>VS</VS>
-           <Box2>
-             <BoxImg2 src={BoxImg22} />
-           </Box2>
+            <Box1>
+              <BoxImg1 src={BoxImg11} />
+            </Box1>
+            <VS>VS</VS>
+            <Box2>
+              <BoxImg2 src={BoxImg22} />
+            </Box2>
           </Conteyner1>
-        
+
           <Conteyner2>
-          <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
-          <Data>03 Марта 2022  13:20</Data>
+            <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
+            <Data>03 Марта 2022  13:20</Data>
           </Conteyner2>
         </Para>
-          <ButtonDiv>
-            <MuiButton variant='outlined' >Записаться</MuiButton>
-          </ButtonDiv>
+        <ButtonDiv>
+          <MuiButton variant='outlined' >Записаться</MuiButton>
+        </ButtonDiv>
       </Comands>
 
-{/* ==================================================================== */}
+      {/* ==================================================================== */}
 
 
 
 
-    <PhotoAlbum>
-      <CardText>Фото Галерея</CardText>
+      <PhotoAlbum>
+        <CardText>Фото Галерея</CardText>
         <CardImageDiv></CardImageDiv>
-      <AllPhotoDiv>
-        <ForstDiv>
+        <AllPhotoDiv>
+          <ForstDiv>
 
-          <Card1>
-            <CardImg src={Img1} />
-          </Card1>
+            <Card1>
+              <CardImg src={Img1} />
+            </Card1>
 
-          <Card2>
-            <CardIn1>
-              <CardImgIn1 src={Img2} /> 
-            </CardIn1>
+            <Card2>
+              <CardIn1>
+                <CardImgIn1 src={Img2} />
+              </CardIn1>
 
-            <CardIn2>
-              <CardImgIn2 src={Img3} /> 
+              <CardIn2>
+                <CardImgIn2 src={Img3} />
               </CardIn2>
             </Card2>
 
@@ -154,141 +154,148 @@ const Tournament = () => {
 
             <Card4>
 
-            <CardIn11>
-              <CardImg11 src={Img5} />
-            </CardIn11>
+              <CardIn11>
+                <CardImg11 src={Img5} />
+              </CardIn11>
 
-            <CardIn22>
+              <CardIn22>
                 <CardImg22 src={Img6} />
-            </CardIn22>
-            
-          </Card4>
+              </CardIn22>
 
-        </ForstDiv>
-{/* ======================================================== */}
-        <SecondDiv>
-          <CardDiv1>
+            </Card4>
 
-            <CardDivIn1>
-              <CardDivInImg1 src={Img7} />
-            </CardDivIn1>
+          </ForstDiv>
+          {/* ======================================================== */}
+          <SecondDiv>
+            <CardDiv1>
 
-            <CardDivIn2>
-              <CardDivInImg2 src={Img8} />
-            </CardDivIn2>
+              <CardDivIn1>
+                <CardDivInImg1 src={Img7} />
+              </CardDivIn1>
 
-          </CardDiv1>
+              <CardDivIn2>
+                <CardDivInImg2 src={Img8} />
+              </CardDivIn2>
 
-          <CardDiv2>
-            <CardDivImg2 src={Img9} />
-          </CardDiv2>
+            </CardDiv1>
 
-          <CardDiv3>
-            <CardDivImg3 src={Img10} />
-          </CardDiv3>
-        </SecondDiv>
+            <CardDiv2>
+              <CardDivImg2 src={Img9} />
+            </CardDiv2>
 
-      </AllPhotoDiv>
+            <CardDiv3>
+              <CardDivImg3 src={Img10} />
+            </CardDiv3>
+          </SecondDiv>
 
-    </PhotoAlbum>
+        </AllPhotoDiv>
 
-
-{/* ======================================================================== */}
+      </PhotoAlbum>
 
 
-    <Square>
-      <Boxs>
-        <Number>+1300</Number>
-        <GameNaem>Twitch потоки</GameNaem>
-      </Boxs>
-      <Boxs>
-        <Number>+108</Number>
-        <GameNaem>Стримеры</GameNaem>
-      </Boxs>
-      <Boxs>
-        <Number>+1000</Number>
-        <GameNaem>CS:GO</GameNaem>
-      </Boxs>
-      <Boxs>
-        <Number>+202</Number>
-        <GameNaem>Twitch потоки</GameNaem>
-      </Boxs>
-    </Square>
+      {/* ======================================================================== */}
 
 
-{/* =============================================================== */}
+      <Square>
+        <Boxs>
+          <Number>+1300</Number>
+          <GameNaem>Twitch потоки</GameNaem>
+        </Boxs>
+        <Boxs>
+          <Number>+108</Number>
+          <GameNaem>Стримеры</GameNaem>
+        </Boxs>
+        <Boxs>
+          <Number>+1000</Number>
+          <GameNaem>CS:GO</GameNaem>
+        </Boxs>
+        <Boxs>
+          <Number>+202</Number>
+          <GameNaem>Twitch потоки</GameNaem>
+        </Boxs>
+      </Square>
 
 
-    <InpDiv>
-      <InputDiv>
+      {/* =============================================================== */}
 
-        <TopDIv>
-          <RegisterText>Регистрация</RegisterText>
-          <ButonsDiv>
-            <MuiButtons1 variant='outlined' >Один игрок</MuiButtons1>
-            <MuiButtons2 variant='outlined'>Команда</MuiButtons2>
-          </ButonsDiv>
-        </TopDIv>
 
-        <BotomDIv>
-          
-        <OneVSTwoDIv>
-          <OneInpDiv>
-            <LabelVSInputDiv >
-              <LabelText>Имя</LabelText>
-              <Input />
-            </LabelVSInputDiv>
+      <InpDiv>
+        <InputDiv>
 
-            <LabelVSInputDiv >
-              <LabelText>Фамилия</LabelText>
-              <Input />
-            </LabelVSInputDiv>
+          <TopDIv>
+            <RegisterText>Регистрация</RegisterText>
+            <ButonsDiv>
+              <MuiButtons1 variant='outlined' >Один игрок</MuiButtons1>
+              <MuiButtons2 variant='outlined'>Команда</MuiButtons2>
+            </ButonsDiv>
+          </TopDIv>
 
-            <LabelVSInputDiv >
-              <LabelText>Почта</LabelText>
-              <Input />
-            </LabelVSInputDiv>
+          <BotomDIv>
 
-          </OneInpDiv>
+            <OneVSTwoDIv>
+              <OneInpDiv>
+                <LabelVSInputDiv >
+                  <LabelText>Имя</LabelText>
+                  <Input />
+                </LabelVSInputDiv>
 
-          <TwoInpDiv>
-            <TwoInputDiv>
+                <LabelVSInputDiv >
+                  <LabelText>Фамилия</LabelText>
+                  <Input />
+                </LabelVSInputDiv>
 
-              <ForstInpDiv>
-                <LabelText>Опыт</LabelText>
-                <Input placeholder='От' />
-              </ForstInpDiv>
+                <LabelVSInputDiv >
+                  <LabelText>Почта</LabelText>
+                  <Input type="email" />
+                </LabelVSInputDiv>
 
-              <SecondInpDiv>
-                <LabelText></LabelText>
-                <Input placeholder='До' />
-              </SecondInpDiv>
+              </OneInpDiv>
 
-            </TwoInputDiv>
+              <TwoInpDiv>
+                <TwoInputDiv>
 
-              <LabelVSInputDiv >
-                <LabelText>Направления</LabelText>
-                <Input />
-              </LabelVSInputDiv>
+                  <ForstInpDiv>
+                    <LabelText>Опыт</LabelText>
+                    <Input type="number" placeholder='От' />
+                  </ForstInpDiv>
 
-              <LabelVSInputDiv >
-                <LabelText>Телефон</LabelText>
-                <Input />
-              </LabelVSInputDiv>
+                  <SecondInpDiv>
+                    <LabelText></LabelText>
+                    <Input type="number" placeholder='До' />
+                  </SecondInpDiv>
 
-          </TwoInpDiv>
-        </OneVSTwoDIv>
+                </TwoInputDiv>
 
-        {/* /=================== */}
+                <LabelVSInputDiv >
+                  <LabelText>Направления</LabelText>
+                  {/* <Input /> */}
+                  <Select1 name="" id="">
+                    <option value="">CS:GO</option>
+                    <option value="">DOTA 2</option>
+                    <option value="">R6 SEGA</option>
+                    <option value="">PUBG</option>
 
-        <SendButtonDiv>
-          <SendButton variant='contained'>Отправить</SendButton>
-        </SendButtonDiv>
+                  </Select1>
+                </LabelVSInputDiv>
 
-        </BotomDIv>
+                <LabelVSInputDiv >
+                  <LabelText>Телефон</LabelText>
+                  <Input />
+                </LabelVSInputDiv>
 
-      </InputDiv>
-    </InpDiv>
+              </TwoInpDiv>
+            </OneVSTwoDIv>
+
+            {/* /=================== */}
+
+            <SendButtonDiv>
+              <SendButton variant='contained'>Отправить</SendButton>
+            </SendButtonDiv>
+
+          </BotomDIv>
+
+        </InputDiv>
+      </InpDiv>
 
 
     </MainDiv>
