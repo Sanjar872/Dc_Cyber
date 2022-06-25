@@ -1,18 +1,19 @@
 import React from 'react'
 import { Container,Fut, Box,Div1,Brendlar,O_nas,Dota,
-MyEmailOutlinedIcon,Input2,Sign,Con,Input,IMglar,Input1,Checkbo, 
-Text, Text2 } from './style'
-// import { Facebook} from '@fortawesome/react-fontawesome'
-
-
+MyEmailOutlinedIcon,Input2,Sign,Con,Input,IMglar,Input1,Checkbo
+,FacebookOutlined1 ,
+Text, Text2,Facebodiv,TelegraDiv ,Telegram1,IntagramDiv,IntagramIcons1,
+YoutubeDiv,YouTubeIcon1 } from './style'
 
 
 // import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import Brand from '../S-image/brand.png'
-import Facebook from '../S-image/Facebook.png'
+// import Facebook from '../S-image/Facebook.png'
 import Telegram from '../S-image/la_telegram.png'
 import instagram from '../S-image/instagram.png'
 import youtube from '../S-image/youtube.png'
+import { FacebookOutlined } from '@mui/icons-material';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 
 const Footer = () => {
@@ -46,11 +47,19 @@ function DcSayt(params) {
           <Brendlar>
             <img src={Brand} alt="" />
             <IMglar>
-              {/* <FontAwesomeIcon icon={Facebook}/> */}
-              <img onClick={Shange} src={Facebook} alt="" />
-              <img onClick={Shange2} src={Telegram} alt="" />
-              <img onClick={Shange3} src={instagram} alt="" />
-              <img onClick={Shange4} src={youtube} alt="" />
+              <Facebodiv>
+              <FacebookOutlined1/>
+              </Facebodiv>
+              <TelegraDiv>
+                <Telegram1 />
+              </TelegraDiv>
+              <IntagramDiv>
+                  <IntagramIcons1/>
+              </IntagramDiv>
+
+              <YoutubeDiv>
+                <YouTubeIcon1/>
+              </YoutubeDiv>
 
             </IMglar>
           </Brendlar>

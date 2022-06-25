@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
+import { FacebookOutlined } from '@mui/icons-material';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+
 export const  Container = styled.div`
     width:100%;
     height:auto;
@@ -33,7 +38,7 @@ export const Box = styled.div`
     }
 `
 export const Brendlar = styled.div`
-    width: 30%;
+    width: 35%;
     height: 250px;
     display: flex;
     flex-direction: column;
@@ -50,7 +55,9 @@ export const Brendlar = styled.div`
         gap: 20px;
     }
     
-
+    @media (max-width:390px) {
+        
+    }
     div {
         width: 60%;
         height: auto;
@@ -71,9 +78,10 @@ export const Div1 = styled.div`
     }
 `
 export const O_nas = styled.div`
-    width: 30%;
+    width: 25%;
     line-height:40px;
     font-weight:500;
+    margin-left: 20px;
     margin-bottom: 50px;
     flex-wrap: wrap !important;
 
@@ -182,9 +190,16 @@ export const Input1 = styled.input`
     width: 50%;
     padding-left: 7px;
     transform:skew(-25deg);
-    border: none;
+    border: white 1px dotted;
+    border-right-style: none;
+    color: white;
     outline: none;
+    background-color: transparent;
     /* margin-top: 15px; */
+
+    ::placeholder {
+        color: white;
+    }
 `
 
 
@@ -212,8 +227,10 @@ export const MyEmailOutlinedIcon = styled(EmailOutlinedIcon)`
     background: linear-gradient(90deg, #434174 33%, rgba(111,0,255,1) 66%);
     height: 40px !important;
     width: 10% !important;
-    
+    border: 1px dotted white;
     font-weight: 200 !important;
+    border-left-style: none;
+
     cursor: pointer;
     transform: skew(-25deg);
 
@@ -234,15 +251,21 @@ export const Fut = styled.div`
 
 export const Text = styled.div`
     display: flex;
+    width: 50%;
     justify-content: space-between;
     align-items: center;
     margin-top: 15px;
-    gap: 40px;
+    gap: 20px;
 
     @media (max-width:1250px) {
         /* justify-content: center!important;
         flex-direction: column; */
+        flex-direction: column;
         display: flex;
+    }
+
+    @media (max-width:600px) {
+        width: 100%;
     }
 `
 
@@ -288,6 +311,7 @@ export const Sign = styled.div`
 
 `
 export const IMglar = styled.div`
+    width: 100%;
     img:nth-child(1) {
         transform: skew(-25deg);
         
@@ -308,5 +332,147 @@ export const IMglar = styled.div`
     img:hover {
             transform: scale(1.5);
             cursor: pointer;
+    }
+`
+
+
+export const FacebookOutlined1 = styled(FacebookOutlined)`
+    width: 50px !important;
+    height: 50px !important;
+    &:hover {
+        color: #4267b2 ;
+    }
+    
+`
+export const Facebodiv = styled.div`
+    width: 50px !important;
+    height: 50px !important;
+    background-color:#4267b2 ;
+    border-radius: 50%;
+    border: 4px solid white !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    &:hover {
+        background-color: white;
+        transform: scale(1.2);
+        transition: 1s;
+        cursor: pointer;
+
+    }
+`
+export const TelegraDiv = styled.div`
+        width: 50px !important;
+    height: 50px !important;
+    background-color:white ;
+    border-radius: 50%;
+    display: flex !important;
+    border: 4px solid white !important;
+
+    justify-content: center !important;
+    align-items: center !important;
+
+
+    &:hover {
+        background-color: #28a1da;
+        transform: scale(1.2);
+        transition: 1s;
+        cursor: pointer;
+
+    }
+`
+
+export const Telegram1 = styled(TelegramIcon)`
+      width: 50px !important;
+    height: 50px !important;
+    /* border: 1px solid #4267b2  !important; */
+    border-radius: 50%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-right: 5px !important;
+
+    color: #28a1da;
+    &:hover {
+        color: white ;
+    }
+`
+
+export const IntagramDiv = styled.div`
+        width: 50px !important;
+    height: 50px !important;
+    background-color:white ;
+    border-radius: 50%;
+    display: flex !important;
+    /* border: 4px solid white !important; */
+    justify-content: center !important;
+    align-items: center !important;
+
+
+    &:hover {
+        background-color: #D93F7D;
+        transform: scale(1.2);
+        transition: 1s;
+        cursor: pointer;
+
+    }
+`
+
+export const IntagramIcons1 = styled(InstagramIcon)`
+        width: 50px !important;
+    height: 50px !important;
+    border: 1px solid #4267b2  !important;
+    border-radius: 50%;
+    display: flex !important;
+    color:  #D93F7D;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    border: 4px solid white !important;
+
+
+    &:hover {
+        color: white ;
+    }
+`
+
+export const YoutubeDiv = styled.div`
+         width: 50px !important;
+    height: 50px !important;
+    background-color:white ;
+    border-radius: 50%;
+    display: flex !important;
+    /* border: 4px solid white !important; */
+    justify-content: center !important;
+    align-items: center !important;
+
+
+    &:hover {
+        background-color: #F70000;
+        transform: scale(1.2);
+        transition: 1s;
+        cursor: pointer;
+
+    }
+`
+
+export const YouTubeIcon1 = styled(YouTubeIcon)`
+        width: 50px !important;
+    height: 50px !important;
+    border: 1px solid #4267b2  !important;
+    border-radius: 50%;
+    display: flex !important;
+    color:  #F70000;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    border: 4px solid white !important;
+
+
+    &:hover {
+        color: white ;
     }
 `
