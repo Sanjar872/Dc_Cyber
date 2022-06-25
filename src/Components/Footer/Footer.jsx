@@ -39,6 +39,15 @@ function Shange4(params) {
 function DcSayt(params) {
   window.location = "https://www.gazeta.uz/ru/2020/05/22/digital-city/"
 }
+
+// Scrolling
+const Scrolling = (value) => {
+  window.scrollTo({
+    top:value,
+    behavior: 'smooth'
+  })
+}
+
   return (
     <Container>
       <Box>
@@ -65,10 +74,10 @@ function DcSayt(params) {
           </Brendlar>
           <O_nas>
             <ul>
-              <li>О нас</li>
-              <li>Турниры</li>
-              <li>Счёты</li>
-              <li>Фото</li>
+              <li onClick={()=>Scrolling(0)}>     О нас</li>
+              <li onClick={()=>Scrolling(1850)}>  Турниры</li>
+              <li onClick={()=>Scrolling(700)}>   Счёты</li>
+              <li onClick={()=>Scrolling(3270)}>  Фото</li>
             </ul>
           </O_nas>
         </Text>
@@ -77,13 +86,13 @@ function DcSayt(params) {
               <Con>
                 <Dota>
                   <ul>
-                    <li>Dota 2</li>
-                    <li>StarCraff 2</li>
-                    <li>CS:GO</li>
-                    <li>League of Legends</li>
-                    <li>Fortnite</li>
-                    <li>Rainbow 6 Siege</li>
-                    <li>PUBG</li>
+                    <li onClick={()=>Scrolling(1850)}>Dota 2</li>
+                    <li onClick={()=>Scrolling(1850)}>StarCraff 2</li>
+                    <li onClick={()=>Scrolling(1850)}>CS:GO</li>
+                    <li onClick={()=>Scrolling(1850)}>League of Legends</li>
+                    <li onClick={()=>Scrolling(1850)}>Fortnite</li>
+                    <li onClick={()=>Scrolling(1850)}>Rainbow 6 Siege</li>
+                    <li onClick={()=>Scrolling(1850)}>PUBG</li>
 
                   </ul>
                 </Dota>

@@ -65,6 +65,13 @@ useEffect(() => {
     }
   }, [])
 
+  const Scrolling = (value) => {
+    window.scrollTo({
+      top:value,
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <MainDiv>
       <NavbarDiv style={{
@@ -77,12 +84,12 @@ useEffect(() => {
         </LogoDiv>
         <Contener>
         <UL>
-          <LI>О нас</LI>
-          <LI>Турниры</LI>
-          <LI>Счёты</LI>
-          <LI>Фото</LI>
+          <LI onClick={()=>Scrolling(0)}>    О нас</LI>
+          <LI onClick={()=>Scrolling(1850)}> Турниры</LI>
+          <LI onClick={()=>Scrolling(4100)}>  Счёты</LI>
+          <LI onClick={()=>Scrolling(3270)}> Фото</LI>
         </UL>
-          <Buttons>Регистрация</Buttons>
+          <Buttons onClick={()=>Scrolling(4750)}>Регистрация</Buttons>
            </Contener> 
 
          <Btnwrap>

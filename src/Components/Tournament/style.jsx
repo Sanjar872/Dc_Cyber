@@ -102,27 +102,27 @@ export const LI = styled.li`
     cursor: pointer;
     position: relative;
 
-&::before{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 0px;
-  opacity: 0.89;
-  border: 1px solid ;
-  border-image-slice: 1;
-  border-image-source: linear-gradient( to left,     rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
-  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
+   
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0px;
+        height: 0px;
+        border: 1px solid  ;
+        border-image-slice: 0.5;
+        border-image-source: linear-gradient( to left,     rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
+        transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
 
-@media (hover: hover) and (pointer: fine) {
-  :hover::before{
-    left: 0;
-    right: auto;
-    width: 100%;
-  }
-}
+    @media (hover: hover) and (pointer: fine) {
+        :hover::before{
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+    }
 
     
     
@@ -383,10 +383,11 @@ export const MuiButton = styled(Button)`
     font-size: 21px !important;
     color: white !important;
     font-weight: 500 !important;
-    opacity: 0.89 !important;
-    border: 2px solid !important;
-    border-image-slice: 1 !important;
-    border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1)) !important;
+    border-radius: 5px !important;
+    background: linear-gradient(rgba(27, 4, 79, 1), rgba(27, 4, 79, 1)) padding-box,
+    linear-gradient(45deg, rgba(173, 0, 255, 1), rgba(0, 224, 255, 1)) border-box !important;
+    border: 3px solid transparent !important;
+    backdrop-filter: blur(40px) !important;
 
     /* @keyframes animate 
     {
@@ -653,12 +654,14 @@ export const Boxs = styled.div`
     backdrop-filter: blur(40px);
 
     @media (max-width:1420px) {
-        margin: 20px;
+        margin: 20px 0px ;
     }
+    
 
-    /* @media (max-width:460px) {
-        width: 90%;
-    } */
+    @media (max-width:396px) {
+        width: 400px ;
+        height: 250px;
+    }
 `
 
 

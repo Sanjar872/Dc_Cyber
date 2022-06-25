@@ -178,7 +178,7 @@ export const Btnwrap = styled.div`
 `
 
     export const MenuBtn = styled(IconButton)`
-        color: gold !important;
+        color: white !important;
         font-size: 40px !important;
     `
 
