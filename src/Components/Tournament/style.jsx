@@ -100,14 +100,32 @@ export const LI = styled.li`
     align-items: center;
     border: none;
     cursor: pointer;
+    position: relative;
+
+&::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0px;
+  opacity: 0.89;
+  border: 1px solid ;
+  border-image-slice: 1;
+  border-image-source: linear-gradient( to left,     rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
 
     
-    &:active{
-        opacity: 0.89;
-        border-bottom: 3px solid ;
-        border-image-slice: 1;
-        border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
-    }
+    
 
     @media screen and (max-width:363px) {
         font-size: 13px;
@@ -360,6 +378,9 @@ export const ButtonDiv = styled.div`
 `
 
 export const MuiButton = styled(Button)`
+    width: 175px !important;
+    height: 45px !important;
+    font-size: 21px !important;
     color: white !important;
     font-weight: 500 !important;
     opacity: 0.89 !important;
@@ -416,12 +437,11 @@ export const CardText = styled.div`
 export const AllPhotoDiv = styled.div`
     width: 1300px;
     height: auto;
-    opacity: 0.89;
-    border: 3px solid ;
-    border-image-slice: 1;
-    border-radius: 8px;
-    
-    border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
+    border-radius: 20px !important;
+    background: linear-gradient(rgba(27, 4, 79, 1), rgba(27, 4, 79, 1)) padding-box,
+    linear-gradient(45deg, rgba(173, 0, 255, 1), rgba(0, 224, 255, 1)) border-box;
+    border: 3px solid transparent;
+    backdrop-filter: blur(40px);
 
 
     @media  (max-width:1420px) {
@@ -466,6 +486,7 @@ export const Card1 = styled.div`
 export const CardImg = styled.img`
     width: 100%;
     height: 100%;
+    border-radius: 20px 0px 0px 0px;
     
 `
 
@@ -490,6 +511,7 @@ export const CardIn2 = styled.div`
 export const CardImgIn1 = styled.img`
     width: 100%;
     height: 100%;
+    /* border-radius: 30px 0px 0px 0px; */
 `
 
 export const CardImgIn2 = styled.img`
@@ -534,6 +556,7 @@ export const CardIn22 = styled.div`
 export const CardImg11 = styled.img`
     width: 100%;
     height: 100%;
+    border-radius: 0px 20px 0px 0px;
 `
 export const CardImg22 = styled.img`
     width: 100%;
@@ -546,26 +569,24 @@ export const CardImg22 = styled.img`
 export const SecondDiv = styled.div`
     width: 100%;
     height: 50%;
-    border: 1px solid gray;
+    border-radius: 0px 0px 14px 14px;
     display: flex;
 `
 
 export const CardDiv1 = styled.div`
     width: 370px;
     height: 383px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 `
 
 export const CardDivIn1 = styled.div`
     width: 100%;
     height: 50%;
-    border: 1px solid yellow;
 `
 
 export const CardDivIn2 = styled.div`
     width: 100%;
     height: 50%;
-    border: 1px solid red;
 `
 
 export const CardDivInImg1 = styled.img`
@@ -576,6 +597,7 @@ export const CardDivInImg1 = styled.img`
 export const CardDivInImg2 = styled.img`
     width: 100%;
     height: 100%;
+    border-radius: 0px 0px 0px 14px;
 `
 
 //========================
@@ -583,8 +605,8 @@ export const CardDivInImg2 = styled.img`
 export const CardDiv2 = styled.div`
     width: 600px;
     height: 382px;
-    border: 1px solid green;
 `
+
 export const CardDivImg2 = styled.img`
     width: 100%;
     height: 100%;
@@ -593,14 +615,14 @@ export const CardDivImg2 = styled.img`
 // ==========================
 
 export const CardDiv3 = styled.div`
-    width:320px;
+    width:325px;
     height: 382px;
-    border: 1px solid blue;
-`
+    `
 
 export const CardDivImg3 = styled.img`
     width: 100%;
     height: 100%;
+    border-radius: 0px 0px 14px 0px;
 `
 
 // CardDiv start ================================================
@@ -619,15 +641,16 @@ export const Square = styled.div`
 export const Boxs = styled.div`
     width: 335px;
     height: 300px;
-    opacity: 0.89;
-    border: 3px solid ;
-    border-image-slice: 1;
-    border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding: 40px 0px;
+    border-radius: 15px !important;
+    background: linear-gradient(rgba(27, 4, 79, 1), rgba(27, 4, 79, 1)) padding-box,
+    linear-gradient(45deg, rgba(173, 0, 255, 1), rgba(0, 224, 255, 1)) border-box;
+    border: 3px solid transparent;
+    backdrop-filter: blur(40px);
 
     @media (max-width:1420px) {
         margin: 20px;
@@ -672,12 +695,11 @@ export const InputDiv = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0.89;
-    border: 4px solid ;
-    border-image-slice: 1;
-    border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(44px);
+    border-radius: 18px !important;
+    background: linear-gradient(rgba(27, 4, 79, 1), rgba(27, 4, 79, 1)) padding-box,
+    linear-gradient(45deg, rgba(173, 0, 255, 1), rgba(0, 224, 255, 1)) border-box;
+    border: 3px solid transparent;
+    backdrop-filter: blur(40px);
 
     @media (max-width:589px) {
         width: 100%;
@@ -721,10 +743,14 @@ export const MuiButtons1 = styled(Button)`
     color: white !important;
     font-size: 23px !important;
     font-weight: 600 !important;
-    opacity: 0.89 !important;
-    border: 3px solid !important ;
-    border-image-slice: 1 !important;
-    border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1)) !important;
+    border-radius: 8px !important;
+    background: linear-gradient(rgba(27, 4, 79, 1), rgba(27, 4, 79, 1)) padding-box,
+    linear-gradient(45deg, rgba(173, 0, 255, 1), rgba(0, 224, 255, 1)) border-box !important;
+    border: 3px solid transparent !important;
+    backdrop-filter: blur(40px) !important;
+    
+
+    
     @media (max-width:468px) {
         font-size: 18px !important;
     }
@@ -739,10 +765,12 @@ export const MuiButtons2 = styled(Button)`
     color: white !important;
     font-size: 23px !important;
     font-weight: 600 !important;
-    opacity: 0.89 !important;
-    border: 3px solid !important ;
-    border-image-slice: 1 !important;
-    border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1)) !important;
+    border-radius: 8px !important;
+    background: linear-gradient(rgba(27, 4, 79, 1), rgba(27, 4, 79, 1)) padding-box,
+    linear-gradient(45deg, rgba(173, 0, 255, 1), rgba(0, 224, 255, 1)) border-box !important;
+    border: 3px solid transparent !important;
+    backdrop-filter: blur(40px) !important;
+
     
     @media (max-width:468px) {
         font-size: 18px !important;
@@ -885,11 +913,12 @@ export const SecondInpDiv = styled.div`
 export const SendButtonDiv = styled.div`
     width: 100%;
     height: calc(100% - 430px);
-    /* border: 1px solid blue; */
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 70px;
+    margin-bottom: 100px;
+
 ` 
 
 export const SendButton = styled(Button)`

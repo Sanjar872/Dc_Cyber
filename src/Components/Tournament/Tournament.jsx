@@ -57,7 +57,7 @@ const Tournament = () => {
           </Conteyner1>
 
           <Conteyner2>
-            <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
+            <GroupName>Oldschoolband - Oldchoolband Dota 2</GroupName>
             <Data>03 Марта 2022  13:20</Data>
           </Conteyner2>
         </Para>
@@ -76,7 +76,7 @@ const Tournament = () => {
           </Conteyner1>
 
           <Conteyner2>
-            <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
+            <GroupName>Oldschoolband - Oldchoolband Dota 2</GroupName>
             <Data>03 Марта 2022  13:20</Data>
           </Conteyner2>
         </Para>
@@ -95,7 +95,7 @@ const Tournament = () => {
           </Conteyner1>
 
           <Conteyner2>
-            <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
+            <GroupName>Oldschoolband - Oldchoolband Dota 2</GroupName>
             <Data>03 Марта 2022  13:20</Data>
           </Conteyner2>
         </Para>
@@ -114,7 +114,7 @@ const Tournament = () => {
           </Conteyner1>
 
           <Conteyner2>
-            <GroupName>Oldchoolband - Oldchoolband Dota 2</GroupName>
+            <GroupName>Oldschoolband - Oldchoolband Dota 2</GroupName>
             <Data>03 Марта 2022  13:20</Data>
           </Conteyner2>
         </Para>
@@ -124,9 +124,6 @@ const Tournament = () => {
       </Comands>
 
       {/* ==================================================================== */}
-
-
-
 
       <PhotoAlbum>
         <CardText>Фото Галерея</CardText>

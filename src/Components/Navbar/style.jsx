@@ -24,7 +24,7 @@ export const MainDiv = styled.div`
 `
 
 export const Buttons = styled.button`
- border-radius: 5px;
+    border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     background: transparent;
@@ -150,7 +150,11 @@ export const LI = styled.li`
 
     &:hover{
         cursor: pointer;
-        color: #7000E0 ;
+        transition: 1s;
+        opacity: 0.89;
+        border-bottom: 3px solid ;
+        border-image-slice: 1;
+        border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
     }
 `
 
