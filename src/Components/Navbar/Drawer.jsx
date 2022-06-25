@@ -25,7 +25,7 @@ export default function TemporaryDrawer({
     };
 
   const list = (anchor) => (
-    <Box  style={{backgroundColor: '#001d3d', color: 'gold'}}
+    <Box  style={{backgroundColor: '#001d3d', color: 'white'}}
       sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
