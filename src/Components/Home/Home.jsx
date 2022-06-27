@@ -37,7 +37,7 @@ const Home = () => {
       {
         data?.map((item,index)=>{
           return (
-            <InfoCard>
+            <InfoCard key={index}>
             <Image src={`http://159.65.207.213${item.image}`} />
             <Name>{item.title}</Name>
             <Paragraf>{item.text}</Paragraf>

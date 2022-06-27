@@ -448,7 +448,6 @@ export const YoutubeDiv = styled.div`
     justify-content: center !important;
     align-items: center !important;
 
-
     &:hover {
         background-color: #F70000;
         transform: scale(1.2);
