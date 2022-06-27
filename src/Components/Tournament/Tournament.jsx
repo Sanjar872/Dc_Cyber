@@ -23,6 +23,7 @@ import Img8 from '../F-image/Image-8.png'
 import Img9 from '../F-image/Image-9.png'
 import Img10 from '../F-image/Image-10.png'
 import axios from 'axios'
+import { Category } from '@mui/icons-material'
 
 const API = 'http://159.65.207.213/api/competition/'
 
@@ -34,14 +35,25 @@ const Tournament = () => {
 
   //useStates
   const [data, setData] = useState([]) // 1
+  const [category, setCatigory] = useState('Все')
 
   useEffect(() => {
    axios.get(API)
    .then(res=>{
-    setData(res.data)
+
+    let Filtred = res.data.filter((item)=>{
+      if (item.game.name === category) {
+        return item
+      }
+      if (category === 'Все') {
+        return item
+      }
+    })
+
+    setData(Filtred)
     console.log('Game', res.data);
    })
-  }, [])
+  }, [category,setCatigory])
   
 
 
@@ -62,11 +74,11 @@ const Tournament = () => {
         </NameText>
         <ULdiv>
           <Ul>
-            <LI>Все</LI>
-            <LI>CS:GO</LI>
-            <LI>DOTA 2</LI>
-            <LI>R6 SEGA</LI>
-            <LI>PUBG</LI>
+            <LI onClick={()=>setCatigory('Все')}>Все</LI>
+            <LI onClick={()=>setCatigory('CS:GO')}>CS:GO</LI>
+            <LI onClick={()=>setCatigory('DOTA 2')}>DOTA 2</LI>
+            <LI onClick={()=>setCatigory('R6 SEGA')}>R6 SEGA</LI>
+            <LI onClick={()=>setCatigory('PUBG')}>PUBG</LI>
           </Ul>
         </ULdiv>
       </NavbarDiv>
