@@ -48,7 +48,7 @@ function DcSayt(params) {
             <img src={Brand} alt="" />
             <IMglar>
               <Facebodiv>
-              <FacebookOutlined1/>
+              <FacebookOutlined1 onClick={Shange}/>
               </Facebodiv>
               <TelegraDiv>
                 <Telegram1 />
