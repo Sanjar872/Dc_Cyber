@@ -1,5 +1,5 @@
+import React, { useEffect, useState } from 'react'
 import { Box } from '@mui/material'
-import React from 'react'
 import { AllPhotoDiv, BotomDIv, Box1, Box2, BoxImg1, BoxImg2, Boxs, ButonsDiv, ButtonDiv, Card1, Card2, Card3, Card4, CardDiv1, CardDiv2, CardDiv3, CardDivImg2, CardDivImg3, CardDivIn1, CardDivIn2, CardDivInImg1, CardDivInImg2, CardImg, CardImg11, CardImg22, CardImg3, CardImgIn1, CardImgIn2, CardIn1, CardIn11, CardIn2, CardIn22, CardText, Comands, Conteyner1, Conteyner2, Data, ForstDiv, ForstInpDiv, GameNaem, GroupName, InpDiv, Input, InputDiv, LabelText, LabelVSInputDiv, LI, MainDiv, MuiButton, MuiButtons1, MuiButtons2, Name, NameText, NavbarDiv, Number, OneInpDiv, OneVSTwoDIv, Para, PhotoAlbum, RegisterText, SecondDiv, SecondInpDiv, Select1, SendButton, SendButtonDiv, Square, ThreeButtonDiv, TopDIv, TwoInpDiv, TwoInputDiv, Ul, ULdiv, VS } from './style'
 import CardImageDiv from '../Tournament/CardImg/CardImg'
 
@@ -20,11 +20,25 @@ import Img7 from '../F-image/Image-7.png'
 import Img8 from '../F-image/Image-8.png'
 import Img9 from '../F-image/Image-9.png'
 import Img10 from '../F-image/Image-10.png'
+import axios from 'axios'
 
-
+const API = 'http://159.65.207.213/api/competition/'
 
 
 const Tournament = () => {
+
+  //useStates
+  const [data, setData] = useState([]) // 1
+
+  useEffect(() => {
+   axios.get(API)
+   .then(res=>{
+    setData(res.data)
+    console.log('Game', res.data);
+   })
+  }, [])
+  
+
   return (
     <MainDiv>
       <NavbarDiv>
@@ -45,26 +59,32 @@ const Tournament = () => {
       {/* ================================================= */}
 
       <Comands>
-        <Para>
-          <Conteyner1>
-            <Box1>
-              <BoxImg1 src={BoxImg11} />
-            </Box1>
-            <VS>VS</VS>
-            <Box2>
-              <BoxImg2 src={BoxImg22} />
-            </Box2>
-          </Conteyner1>
-
-          <Conteyner2>
-            <GroupName>Oldschoolband - Oldchoolband Dota 2</GroupName>
-            <Data>03 Марта 2022  13:20</Data>
-          </Conteyner2>
-        </Para>
+        {
+          data?.map((item,index)=>{
+            return(
+                <Para key={index}>
+                  <Conteyner1>
+                    <Box1>
+                      <BoxImg1 src={`http://159.65.207.213${item.user1.img}`} />
+                    </Box1>
+                    <VS>VS</VS>
+                    <Box2>
+                      <BoxImg1 src={`http://159.65.207.213${item.user2.img}`} />
+                    </Box2>
+                  </Conteyner1>
+        
+                  <Conteyner2>
+                    <GroupName> <h6>{item.user1.name}</h6> - <h6>{item.user2.name}</h6> <h6>{item.game.name}</h6> </GroupName>
+                    <Data>{item.data}</Data>
+                  </Conteyner2>
+              </Para>
+            )
+          })
+        }
 
         {/* ================================================================= */}
 
-        <Para>
+        {/* <Para>
           <Conteyner1>
             <Box1>
               <BoxImg1 src={BoxImg11} />
@@ -79,11 +99,11 @@ const Tournament = () => {
             <GroupName>Oldschoolband - Oldchoolband Dota 2</GroupName>
             <Data>03 Марта 2022  13:20</Data>
           </Conteyner2>
-        </Para>
+        </Para> */}
 
         {/* ========================================================= */}
 
-        <Para>
+        {/* <Para>
           <Conteyner1>
             <Box1>
               <BoxImg1 src={BoxImg11} />
@@ -98,11 +118,11 @@ const Tournament = () => {
             <GroupName>Oldschoolband - Oldchoolband Dota 2</GroupName>
             <Data>03 Марта 2022  13:20</Data>
           </Conteyner2>
-        </Para>
+        </Para> */}
 
         {/* ============================================================== */}
 
-        <Para>
+        {/* <Para>
           <Conteyner1>
             <Box1>
               <BoxImg1 src={BoxImg11} />
@@ -117,7 +137,8 @@ const Tournament = () => {
             <GroupName>Oldschoolband - Oldchoolband Dota 2</GroupName>
             <Data>03 Марта 2022  13:20</Data>
           </Conteyner2>
-        </Para>
+        </Para> */}
+
         <ButtonDiv>
           <MuiButton variant='outlined' >Записаться</MuiButton>
         </ButtonDiv>

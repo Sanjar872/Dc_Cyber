@@ -337,8 +337,13 @@ export const Conteyner2 = styled.div`
 `
 
 export const GroupName = styled.h1`
+    width: 380px;
     color: white;
     font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
 
     @media screen and (max-width:604px) {
         font-size: 26px;
@@ -631,7 +636,6 @@ export const CardDivImg3 = styled.img`
 export const Square = styled.div`
     width: 100%;
     height: auto;
-    border: 2px solid green;
     margin-top: 150px;
     display: flex;
     flex-wrap: wrap;

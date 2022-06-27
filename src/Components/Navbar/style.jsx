@@ -130,7 +130,6 @@ export const Contener = styled.div`
 export const UL = styled.ul`
     width: 380px;
     height: 70px;
-    /* border: 1px solid blue; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -139,7 +138,6 @@ export const UL = styled.ul`
 export const LI = styled.li`
     width: 80px;
     height: 30px;
-    /* border: 1px solid blueviolet; */
     list-style: none;
     display: flex;
     justify-content: center;
@@ -150,7 +148,7 @@ export const LI = styled.li`
 
     &:hover{
         cursor: pointer;
-        transition: 1s;
+        /* transition: 1s; */
         opacity: 0.89;
         border-bottom: 3px solid ;
         border-image-slice: 1;
@@ -203,7 +201,6 @@ export const TextDiv = styled.div`
         width: 100%;
         display: flex;
         justify-content: center;
-        border: 1px solid red;
         font-size: 50px !important;
     }
 `

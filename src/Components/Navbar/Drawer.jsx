@@ -11,6 +11,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { color } from '@mui/system';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 export default function TemporaryDrawer({
   state,setState}) {
@@ -18,22 +19,22 @@ export default function TemporaryDrawer({
     {
       id:1,
       name:'О нас',
-      son:100,
+      son:600,
     },
     {
       id:1,
-      name:'О насjxj1',
-      son:1000,
+      name:'Турниры',
+      son:2650,
     },
     {
       id:1,
-      name:'О насksdjajs',
-      son:1500,
+      name:'Счёты',
+      son:9200,
     }
     , {
       id:1,
-      name:'О насrwer',
-      son:1900,
+      name:'Фото',
+      son:4670,
     }
   ]
 
@@ -66,7 +67,7 @@ export default function TemporaryDrawer({
           <ListItem key={index} disablePadding>
             <ListItemButton onClick={()=>Scrolling(text.son)}>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon style={{color: 'gray'}} /> : <MailIcon style={{color: 'gray'}} />}
+                {index % 0 === 0 ? <InboxIcon style={{color: 'gray'}} /> : <ChevronRightIcon style={{color: 'gray'}} />}
               </ListItemIcon>
               <ListItemText primary={text.name}  />
             </ListItemButton>

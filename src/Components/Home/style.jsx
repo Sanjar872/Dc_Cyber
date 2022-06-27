@@ -32,7 +32,6 @@ export const TextDiv = styled.div`
 export const Bio = styled.h1`
     width: 900px;
     height: 200px;
-    border: 1px solid white;
     color: white;
     text-align: center;
     /* letter-spacing: 3px; */
@@ -60,7 +59,6 @@ export const CardDiv = styled.div`
     /* height: 500px;    */
     margin-top: 100px;
     margin-bottom: 100px;
-    border: 1px solid blue;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
