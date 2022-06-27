@@ -72,31 +72,45 @@ export const CardDiv = styled.div`
 export const InfoCard = styled.div`
     width: 400px;
     height: 300px;
-    background-image: url(${InfoCardimg });
-    background-size: cover;
-    background-repeat: no-repeat;
+    border-radius: 20px !important;
+    box-shadow: 0px 0px 20px rgb(60, 60, 175);
+    background: linear-gradient(rgba(27, 4, 79, 1), rgba(27, 4, 79, 1)) padding-box,
+    linear-gradient(45deg, rgba(173, 0, 255, 1), rgba(0, 224, 255, 1)) border-box;
+    border: 3px solid transparent;
+    backdrop-filter: blur(40px);
 
 
         @media (max-width:1202px) {
-            margin: 50px;
+            margin: 50px 0px;
         }
         
         @media (max-width:620px) {
-            margin: 50px;
+            margin: 50px 0px;
         }
 
         @media (max-width:500px) {
             width: 350px;
             height: 266px;
         }
+        
 
-        /* @media (max-width:506px) {
-            transform: scale(0.9);
+        @media (max-width:446px) {
+            width: 420px;
         }
 
-        @media (max-width:455px) {
-            transform: scale(0.8);
-        } */
+        @media (max-width:441px) {
+            width:300px ;
+        }
+
+        @media (max-width:406px) {
+            width: 270px;
+            height: 270px;
+        }
+
+        @media (max-width:373px) {
+            height: 250px;
+            width:290px;
+        }
 `
 
 export const Image = styled.img`
@@ -115,6 +129,22 @@ export const Image = styled.img`
         position: relative;
         bottom: 50px;
         left:117px;
+    }
+
+    @media (max-width:441px) {
+        position: relative;
+        left: 90px;
+    }
+
+    @media (max-width:406px) {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        left: 85px;
+    }
+
+    @media (max-width:373px) {
+        
     }
 
     /* @media screen and (max-width:500px) {

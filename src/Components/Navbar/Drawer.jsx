@@ -14,15 +14,45 @@ import { color } from '@mui/system';
 
 export default function TemporaryDrawer({
   state,setState}) {
-  
+  let maindata = [
+    {
+      id:1,
+      name:'О нас',
+      son:100,
+    },
+    {
+      id:1,
+      name:'О насjxj1',
+      son:1000,
+    },
+    {
+      id:1,
+      name:'О насksdjajs',
+      son:1500,
+    }
+    , {
+      id:1,
+      name:'О насrwer',
+      son:1900,
+    }
+  ]
 
     const toggleDrawer = (anchor, open) => (event) => {
       if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
         return;
       }
+      
   
       setState({ ...state, [anchor]: open });
     };
+
+    const Scrolling = (son) => {
+      window.scrollTo({
+        top:son,
+        behavior: 'smooth'
+      })
+
+    }
 
   const list = (anchor) => (
     <Box  style={{backgroundColor: '#001d3d', color: 'white'}}
@@ -32,13 +62,13 @@ export default function TemporaryDrawer({
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['О нас', 'Турниры', 'Счёты', 'Фото'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
+        {maindata.map((text, index) => (
+          <ListItem key={index} disablePadding>
+            <ListItemButton onClick={()=>Scrolling(text.son)}>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon style={{color: 'gray'}} /> : <MailIcon style={{color: 'gray'}} />}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={text.name}  />
             </ListItemButton>
           </ListItem>
         ))}
