@@ -740,15 +740,16 @@ export const ButonsDiv = styled.div`
     align-items: center;
 `
 
-export const MuiButtons1 = styled(Button)`
+export const MuiButtons1 = styled.button`
     width: 230px !important;
     height: 60px !important;
     color: white !important;
     font-size: 23px !important;
+    cursor: pointer;
     font-weight: 600 !important;
     border-radius: 8px !important;
-    background: linear-gradient(rgba(27, 4, 79, 1), rgba(27, 4, 79, 1)) padding-box,
-    linear-gradient(45deg, rgba(173, 0, 255, 1), rgba(0, 224, 255, 1)) border-box !important;
+    /* background: linear-gradient(rgba(27, 4, 79, 1), rgba(27, 4, 79, 1)) padding-box,
+    linear-gradient(45deg, rgba(173, 0, 255, 1), rgba(0, 224, 255, 1)) border-box !important; */
     border: 3px solid transparent !important;
     backdrop-filter: blur(40px) !important;
     
@@ -762,15 +763,16 @@ export const MuiButtons1 = styled(Button)`
         font-size: 15px !important;
     }
 `
-export const MuiButtons2 = styled(Button)`
+export const MuiButtons2 = styled.button`
      width: 230px !important;
     height: 60px !important;
     color: white !important;
+    cursor: pointer;
     font-size: 23px !important;
     font-weight: 600 !important;
     border-radius: 8px !important;
-    background: linear-gradient(rgba(27, 4, 79, 1), rgba(27, 4, 79, 1)) padding-box,
-    linear-gradient(45deg, rgba(173, 0, 255, 1), rgba(0, 224, 255, 1)) border-box !important;
+    /* background: linear-gradient(rgba(27, 4, 79, 1), rgba(27, 4, 79, 1)) padding-box,
+    linear-gradient(45deg, rgba(173, 0, 255, 1), rgba(0, 224, 255, 1)) border-box !important; */
     border: 3px solid transparent !important;
     backdrop-filter: blur(40px) !important;
 

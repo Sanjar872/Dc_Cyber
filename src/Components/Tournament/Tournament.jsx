@@ -1,8 +1,17 @@
 import { Box } from '@mui/material'
-import React from 'react'
-import { AllPhotoDiv, BotomDIv, Box1, Box2, BoxImg1, BoxImg2, Boxs, ButonsDiv, ButtonDiv, Card1, Card2, Card3, Card4, CardDiv1, CardDiv2, CardDiv3, CardDivImg2, CardDivImg3, CardDivIn1, CardDivIn2, CardDivInImg1, CardDivInImg2, CardImg, CardImg11, CardImg22, CardImg3, CardImgIn1, CardImgIn2, CardIn1, CardIn11, CardIn2, CardIn22, CardText, Comands, Conteyner1, Conteyner2, Data, ForstDiv, ForstInpDiv, GameNaem, GroupName, InpDiv, Input, InputDiv, LabelText, LabelVSInputDiv, LI, MainDiv, MuiButton, MuiButtons1, MuiButtons2, Name, NameText, NavbarDiv, Number, OneInpDiv, OneVSTwoDIv, Para, PhotoAlbum, RegisterText, SecondDiv, SecondInpDiv, Select1, SendButton, SendButtonDiv, Square, ThreeButtonDiv, TopDIv, TwoInpDiv, TwoInputDiv, Ul, ULdiv, VS } from './style'
+import React, { useEffect, useState } from 'react'
+import { AllPhotoDiv, BotomDIv, Box1, Box2, BoxImg1, BoxImg2, Boxs,
+   ButonsDiv, ButtonDiv, Card1, Card2, Card3, Card4, CardDiv1, CardDiv2, 
+   CardDiv3, CardDivImg2, CardDivImg3, CardDivIn1, CardDivIn2, CardDivInImg1,
+    CardDivInImg2, CardImg, CardImg11, CardImg22, CardImg3, CardImgIn1, CardImgIn2,
+     CardIn1, CardIn11, CardIn2, CardIn22, CardText, Comands, Conteyner1, Conteyner2,
+      Data, ForstDiv, ForstInpDiv, GameNaem, GroupName, InpDiv, Input, InputDiv, LabelText, 
+      LabelVSInputDiv, LI, MainDiv, MuiButton, MuiButtons1, MuiButtons2, Name, NameText, NavbarDiv,
+       Number, OneInpDiv, OneVSTwoDIv, Para, PhotoAlbum, RegisterText, SecondDiv, SecondInpDiv, Select1,
+        SendButton, SendButtonDiv, Square, ThreeButtonDiv, TopDIv, TwoInpDiv, TwoInputDiv, Ul, ULdiv, VS } from './style'
 import CardImageDiv from '../Tournament/CardImg/CardImg'
 
+import axios from 'axios'
 
 import BoxImg11 from '../S-image/game1.png'
 import BoxImg22 from '../S-image/game2.png'
@@ -24,7 +33,17 @@ import Img10 from '../F-image/Image-10.png'
 
 
 
+const API1 = 'http://159.65.207.213/api/email/'
+
 const Tournament = () => {
+  const [value, setValue] = useState("")
+  console.log(value);
+  const [catigory1, setcatigory1] = useState('onegame')
+  const [data1, setData1] = useState([])
+
+  
+
+
   return (
     <MainDiv>
       <NavbarDiv>
@@ -222,66 +241,139 @@ const Tournament = () => {
           <TopDIv>
             <RegisterText>Регистрация</RegisterText>
             <ButonsDiv>
-              <MuiButtons1 variant='outlined' >Один игрок</MuiButtons1>
-              <MuiButtons2 variant='outlined'>Команда</MuiButtons2>
+              <MuiButtons1 onClick={()=>setcatigory1('onegame')} variant='outlined' style={{ 
+                backgroundColor:catigory1 === 'onegame' ? '#724edf'  : '#200A50'
+                
+                
+              }}
+               >Один игрок</MuiButtons1>
+
+              <MuiButtons2 onClick={()=>setcatigory1('command')} variant='outlined' style={{ backgroundColor:catigory1 === 'command' ? '#724edf ' : '#200A50'}}
+               
+          
+              
+              >Команда</MuiButtons2>
             </ButonsDiv>
           </TopDIv>
 
           <BotomDIv>
 
+           {
+            catigory1 === 'onegame' ?
             <OneVSTwoDIv>
-              <OneInpDiv>
-                <LabelVSInputDiv >
-                  <LabelText>Имя</LabelText>
-                  <Input />
-                </LabelVSInputDiv>
+            <OneInpDiv>
+              <LabelVSInputDiv >
+                <LabelText>Имя</LabelText>
+                <Input type="text" onChange={(e)=>setValue(e.target.value)} />
+              </LabelVSInputDiv>
 
-                <LabelVSInputDiv >
-                  <LabelText>Фамилия</LabelText>
-                  <Input />
-                </LabelVSInputDiv>
+              <LabelVSInputDiv >
+                <LabelText>Фамилия</LabelText>
+                <Input type="text" />
+              </LabelVSInputDiv>
 
-                <LabelVSInputDiv >
-                  <LabelText>Почта</LabelText>
-                  <Input type="email" />
-                </LabelVSInputDiv>
+              <LabelVSInputDiv >
+                <LabelText>Почта</LabelText>
+                <Input type="email" />
+              </LabelVSInputDiv>
 
-              </OneInpDiv>
+            </OneInpDiv>
 
-              <TwoInpDiv>
-                <TwoInputDiv>
+            <TwoInpDiv>
+              <TwoInputDiv>
 
-                  <ForstInpDiv>
-                    <LabelText>Опыт</LabelText>
-                    <Input type="number" placeholder='От' />
-                  </ForstInpDiv>
+                <ForstInpDiv>
+                  <LabelText>Опыт</LabelText>
+                  <Input type="number" placeholder='От' />
+                </ForstInpDiv>
 
-                  <SecondInpDiv>
-                    <LabelText></LabelText>
-                    <Input type="number" placeholder='До' />
-                  </SecondInpDiv>
+                <SecondInpDiv>
+                  <LabelText></LabelText>
+                  <Input type="number" placeholder='До' />
+                </SecondInpDiv>
 
-                </TwoInputDiv>
+              </TwoInputDiv>
 
-                <LabelVSInputDiv >
-                  <LabelText>Направления</LabelText>
-                  {/* <Input /> */}
-                  <Select1 name="" id="">
-                    <option value="">CS:GO</option>
-                    <option value="">DOTA 2</option>
-                    <option value="">R6 SEGA</option>
-                    <option value="">PUBG</option>
+              <LabelVSInputDiv >
+                <LabelText>Направления</LabelText>
+                {/* <Input /> */}
+                <Select1 name="" id="">
+                  <option value="">CS:GO</option>
+                  <option value="">DOTA 2</option>
+                  <option value="">R6 SEGA</option>
+                  <option value="">PUBG</option>
 
-                  </Select1>
-                </LabelVSInputDiv>
+                </Select1>
+              </LabelVSInputDiv>
 
-                <LabelVSInputDiv >
-                  <LabelText>Телефон</LabelText>
-                  <Input />
-                </LabelVSInputDiv>
+              <LabelVSInputDiv >
+                <LabelText>Телефон</LabelText>
+                <Input />
+              </LabelVSInputDiv>
 
-              </TwoInpDiv>
-            </OneVSTwoDIv>
+            </TwoInpDiv>
+          </OneVSTwoDIv>
+
+
+
+          :
+
+
+
+          <OneVSTwoDIv>
+          <OneInpDiv>
+            <LabelVSInputDiv >
+              <LabelText>Названия</LabelText>
+              <Input />
+            </LabelVSInputDiv>
+
+            <LabelVSInputDiv >
+              <LabelText>Число игроков</LabelText>
+              <Input />
+            </LabelVSInputDiv>
+
+            <LabelVSInputDiv >
+              <LabelText>Почта Лидера</LabelText>
+              <Input type="email" />
+            </LabelVSInputDiv>
+
+          </OneInpDiv>
+
+          <TwoInpDiv>
+            <TwoInputDiv>
+
+              <ForstInpDiv>
+                <LabelText>Опыт</LabelText>
+                <Input type="number" placeholder='От' />
+              </ForstInpDiv>
+
+              <SecondInpDiv>
+                <LabelText></LabelText>
+                <Input type="number" placeholder='До' />
+              </SecondInpDiv>
+
+            </TwoInputDiv>
+
+            <LabelVSInputDiv >
+              <LabelText>Направления</LabelText>
+              {/* <Input /> */}
+              <Select1 name="" id="">
+                <option value="">CS:GO</option>
+                <option value="">DOTA 2</option>
+                <option value="">R6 SEGA</option>
+                <option value="">PUBG</option>
+
+              </Select1>
+            </LabelVSInputDiv>
+
+            <LabelVSInputDiv >
+              <LabelText>Телефон Лидера</LabelText>
+              <Input />
+            </LabelVSInputDiv>
+
+          </TwoInpDiv>
+        </OneVSTwoDIv>
+           }
 
             {/* /=================== */}
 
@@ -300,3 +392,62 @@ const Tournament = () => {
 }
 
 export default Tournament
+
+
+
+
+
+
+// <OneVSTwoDIv>
+// <OneInpDiv>
+//   <LabelVSInputDiv >
+//     <LabelText>Имя</LabelText>
+//     <Input />
+//   </LabelVSInputDiv>
+
+//   <LabelVSInputDiv >
+//     <LabelText>Фамилия</LabelText>
+//     <Input />
+//   </LabelVSInputDiv>
+
+//   <LabelVSInputDiv >
+//     <LabelText>Почта</LabelText>
+//     <Input type="email" />
+//   </LabelVSInputDiv>
+
+// </OneInpDiv>
+
+// <TwoInpDiv>
+//   <TwoInputDiv>
+
+//     <ForstInpDiv>
+//       <LabelText>Опыт</LabelText>
+//       <Input type="number" placeholder='От' />
+//     </ForstInpDiv>
+
+//     <SecondInpDiv>
+//       <LabelText></LabelText>
+//       <Input type="number" placeholder='До' />
+//     </SecondInpDiv>
+
+//   </TwoInputDiv>
+
+//   <LabelVSInputDiv >
+//     <LabelText>Направления</LabelText>
+//     {/* <Input /> */}
+//     <Select1 name="" id="">
+//       <option value="">CS:GO</option>
+//       <option value="">DOTA 2</option>
+//       <option value="">R6 SEGA</option>
+//       <option value="">PUBG</option>
+
+//     </Select1>
+//   </LabelVSInputDiv>
+
+//   <LabelVSInputDiv >
+//     <LabelText>Телефон</LabelText>
+//     <Input />
+//   </LabelVSInputDiv>
+
+// </TwoInpDiv>
+// </OneVSTwoDIv>
