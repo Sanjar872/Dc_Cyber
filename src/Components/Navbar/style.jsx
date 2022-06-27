@@ -18,7 +18,7 @@ export const MainDiv = styled.div`
     flex-direction: column;
      box-shadow: 0px 1px 10px #999;
     @media (max-width:390px) {
-        height: 80vh;
+        height: 60vh;
         width: 100% !important;
     }
 `
