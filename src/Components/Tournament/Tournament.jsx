@@ -26,7 +26,7 @@ import axios from 'axios'
 import { Category } from '@mui/icons-material'
 
 const API = 'http://159.65.207.213/api/competition/'
-
+const APIgame = 'http://159.65.207.213/api/game/'
 
 const API1 = 'http://159.65.207.213/api/email/'
 
@@ -36,6 +36,7 @@ const Tournament = () => {
   //useStates
   const [data, setData] = useState([]) // 1
   const [category, setCatigory] = useState('Все')
+  const [GameCategory, setGameCategory] = useState([])
 
   useEffect(() => {
    axios.get(API)
@@ -51,8 +52,16 @@ const Tournament = () => {
     })
 
     setData(Filtred)
-    console.log('Game', res.data);
+    // console.log('Game', res.data);
    })
+
+
+  axios.get(APIgame)
+  .then(res=>{
+    setGameCategory(res.data)
+    console.log('GameCategory', res.data);
+  })
+
   }, [category,setCatigory])
   
 
@@ -74,11 +83,15 @@ const Tournament = () => {
         </NameText>
         <ULdiv>
           <Ul>
-            <LI onClick={()=>setCatigory('Все')}>Все</LI>
-            <LI onClick={()=>setCatigory('CS:GO')}>CS:GO</LI>
-            <LI onClick={()=>setCatigory('DOTA 2')}>DOTA 2</LI>
-            <LI onClick={()=>setCatigory('R6 SEGA')}>R6 SEGA</LI>
-            <LI onClick={()=>setCatigory('PUBG')}>PUBG</LI>
+          <LI onClick={()=>setCatigory('Все')}>Все</LI>
+
+          {
+            GameCategory?.map((itemm,indexx)=>{
+              return(
+                <LI onClick={()=>setCatigory(itemm.name)}>{itemm.name}</LI>
+              )
+            })
+          }
           </Ul>
         </ULdiv>
       </NavbarDiv>
@@ -424,7 +437,7 @@ export default Tournament
 
 
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 // <OneVSTwoDIv>
@@ -480,3 +493,14 @@ export default Tournament
 
 // </TwoInpDiv>
 // </OneVSTwoDIv>
+
+
+
+////////////////////////////////////////////////////////////////////////
+              // <Ul>
+              //   <LI onClick={()=>setCatigory('Все')}>Все</LI>
+              //   <LI onClick={()=>setCatigory('CS:GO')}>CS:GO</LI>
+              //   <LI onClick={()=>setCatigory('DOTA 2')}>DOTA 2</LI>
+              //   <LI onClick={()=>setCatigory('R6 SEGA')}>R6 SEGA</LI>
+              //   <LI onClick={()=>setCatigory('PUBG')}>PUBG</LI>
+              // </Ul>

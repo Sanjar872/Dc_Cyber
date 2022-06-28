@@ -80,7 +80,7 @@ export const Ul = styled.ul`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* border: 1px solid white; */
+    border: 1px solid white;
 
     @media (max-width:413px) {
         display: flex;
