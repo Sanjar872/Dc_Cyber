@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Box } from '@mui/material'
 import { AllPhotoDiv, BotomDIv, Box1, Box2, BoxImg1, BoxImg2, Boxs, ButonsDiv, ButtonDiv, Card1, Card2, Card3, Card4, CardDiv1, CardDiv2, CardDiv3, CardDivImg2, CardDivImg3, CardDivIn1, CardDivIn2, CardDivInImg1, CardDivInImg2, CardImg, CardImg11, CardImg22, CardImg3, CardImgIn1, CardImgIn2, CardIn1, CardIn11, CardIn2, CardIn22, CardText, Comands, Conteyner1, Conteyner2, Data, ForstDiv, ForstInpDiv, GameNaem, GroupName, InpDiv, Input, InputDiv, LabelText, LabelVSInputDiv, LI, MainDiv, MuiButton, MuiButtons1, MuiButtons2, Name, NameText, NavbarDiv, Number, OneInpDiv, OneVSTwoDIv, Para, PhotoAlbum, RegisterText, SecondDiv, SecondInpDiv, Select1, SendButton, SendButtonDiv, Square, ThreeButtonDiv, TopDIv, TwoInpDiv, TwoInputDiv, Ul, ULdiv, VS } from './style'
 
 
@@ -56,7 +55,7 @@ const Tournament = () => {
   }, [category, setCatigory])
 
 
-  const [Name, setIsim] = useState("");
+  const [Isim, setIsim] = useState("");
   const [Surname, setSurname] = useState("");
   const [Email, setEmail] = useState("");
   const [Opit, setOpit] = useState("");
@@ -70,7 +69,7 @@ const Tournament = () => {
   // const [data1, setData1] = useState([])
 
   let DATAMAIN = new FormData()
-  DATAMAIN.append('name', Name)
+  DATAMAIN.append('name', Isim)
   DATAMAIN.append('surname', Surname)
   DATAMAIN.append('email', Email)
   DATAMAIN.append('experience_from', Opit)
@@ -81,7 +80,7 @@ const Tournament = () => {
 
   const OneGameSubmit = () => {
     try {
-      axios.post('http://127.0.0.1:8000/api/user/post/', DATAMAIN)
+      axios.post('http://159.65.207.213/api/user/', DATAMAIN)
         .then((res) => {
           console.log(res);
 
@@ -448,62 +447,3 @@ const Tournament = () => {
 }
 
 export default Tournament
-
-
-
-
-
-
-// <OneVSTwoDIv>
-// <OneInpDiv>
-//   <LabelVSInputDiv >
-//     <LabelText>Имя</LabelText>
-//     <Input />
-//   </LabelVSInputDiv>
-
-//   <LabelVSInputDiv >
-//     <LabelText>Фамилия</LabelText>
-//     <Input />
-//   </LabelVSInputDiv>
-
-//   <LabelVSInputDiv >
-//     <LabelText>Почта</LabelText>
-//     <Input type="email" />
-//   </LabelVSInputDiv>
-
-// </OneInpDiv>
-
-// <TwoInpDiv>
-//   <TwoInputDiv>
-
-//     <ForstInpDiv>
-//       <LabelText>Опыт</LabelText>
-//       <Input type="number" placeholder='От' />
-//     </ForstInpDiv>
-
-//     <SecondInpDiv>
-//       <LabelText></LabelText>
-//       <Input type="number" placeholder='До' />
-//     </SecondInpDiv>
-
-//   </TwoInputDiv>
-
-//   <LabelVSInputDiv >
-//     <LabelText>Направления</LabelText>
-//     {/* <Input /> */}
-//     <Select1 name="" id="">
-//       <option value="">CS:GO</option>
-//       <option value="">DOTA 2</option>
-//       <option value="">R6 SEGA</option>
-//       <option value="">PUBG</option>
-
-//     </Select1>
-//   </LabelVSInputDiv>
-
-//   <LabelVSInputDiv >
-//     <LabelText>Телефон</LabelText>
-//     <Input />
-//   </LabelVSInputDiv>
-
-// </TwoInpDiv>
-// </OneVSTwoDIv>

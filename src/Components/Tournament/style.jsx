@@ -40,7 +40,7 @@ export const NameText = styled.div`
     align-items: center;
     padding: 0px  0px 0px 25px;
 
-    @media screen and (max-width:650px){
+    @media  (max-width:650px){
         width: 100%;
     }
 `
