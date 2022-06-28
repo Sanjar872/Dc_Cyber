@@ -50,8 +50,23 @@ const Tournament = () => {
   const [catigory1, setcatigory1] = useState('onegame')
   const [data1, setData1] = useState([])
 
+  let DATAMAIN  = new FormData()
+  DATAMAIN.append('email','mygrmail@gmail.com')
+  DATAMAIN.append('game','PUBG')
+  DATAMAIN.append('name','Dostonbek')
   
 
+  const OneGameSubmit = () => {
+    try {
+      axios.post('api',DATAMAIN)
+      .then((res)=>{
+        console.log(res);
+        
+      })
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
 
   return (
@@ -395,7 +410,7 @@ const Tournament = () => {
             {/* /=================== */}
 
             <SendButtonDiv>
-              <SendButton variant='contained'>Отправить</SendButton>
+              <SendButton variant='contained' onClick={OneGameSubmit}>Отправить</SendButton>
             </SendButtonDiv>
 
           </BotomDIv>
