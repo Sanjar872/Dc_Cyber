@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { AllPhotoDiv, BotomDIv, Box1, Box2, BoxImg1,
-   BoxImg2, Boxs, ButonsDiv, ButtonDiv, Card1, Card2, Card3,
-    Card4, CardDiv1, CardDiv2, CardDiv3, CardDivImg2, CardDivImg3, 
-    CardDivIn1, CardDivIn2, CardDivInImg1, CardDivInImg2, CardImg, CardImg11, CardImg22, CardImg3, CardImgIn1, CardImgIn2, CardIn1, CardIn11, CardIn2, CardIn22, CardText, Comands, Conteyner1, Conteyner2, Data, ForstDiv, ForstInpDiv, GameNaem, GroupName, InpDiv, Input, InputDiv, LabelText, LabelVSInputDiv, LI, MainDiv, MuiButton, MuiButtons1, MuiButtons2, Name, NameText, NavbarDiv, Number, OneInpDiv, OneVSTwoDIv, Para, PhotoAlbum, RegisterText, SecondDiv, SecondInpDiv, Select1, SendButton, SendButtonDiv, Square, ThreeButtonDiv, TopDIv, TwoInpDiv, TwoInputDiv, Ul, ULdiv, VS } from './style'
+  BoxImg2, Boxs, ButonsDiv, ButtonDiv, Card1, Card2, Card3,
+  Card4, CardDiv1, CardDiv2, CardDiv3, CardDivImg2, CardDivImg3, 
+  CardDivIn1, CardDivIn2, CardDivInImg1, CardDivInImg2, CardImg,
+  CardImg11, CardImg22, CardImg3, CardImgIn1, CardImgIn2, CardIn1,
+  CardIn11, CardIn2, CardIn22, CardText, Comands, Conteyner1, Conteyner2,
+  Data, ForstDiv, ForstInpDiv, GameNaem, GroupName, InpDiv, Input, InputDiv,
+  LabelText, LabelVSInputDiv, LI, MainDiv, MuiButton, MuiButtons1, MuiButtons2,
+  Name, NameText, NavbarDiv, Number, OneInpDiv, OneVSTwoDIv, Para, PhotoAlbum,
+  RegisterText, SecondDiv, SecondInpDiv, Select1, SendButton, SendButtonDiv, Square,
+  ThreeButtonDiv, TopDIv, TwoInpDiv, TwoInputDiv, Ul, ULdiv, VS } from './style'
 
 
 import CardImageDiv from '../Tournament/CardImg/CardImg'
@@ -25,11 +32,11 @@ import Img8 from '../F-image/Image-8.png'
 import Img9 from '../F-image/Image-9.png'
 import Img10 from '../F-image/Image-10.png'
 import axios from 'axios'
-import { Category } from '@mui/icons-material'
+import { Apartment, Category } from '@mui/icons-material'
 
 const API = 'http://159.65.207.213/api/competition/'
 const APIgame = 'http://159.65.207.213/api/game/'
-
+const APInumber = 'http://159.65.207.213/api/number/'
 const API1 = 'http://159.65.207.213/api/email/'
 
 
@@ -40,6 +47,7 @@ const Tournament = () => {
   const [data, setData] = useState([]) // 1
   const [category, setCatigory] = useState('Все')
   const [GameCategory, setGameCategory] = useState([])
+  const [numberr, setNumberr] = useState([])
 
   useEffect(() => {
     axios.get(API)
@@ -54,27 +62,29 @@ const Tournament = () => {
           }
         })
 
+        setData(Filtred)
+        // console.log('Game', res.data);
+      })
 
-
-
-    setData(Filtred)
-    // console.log('Game', res.data);
-   })
-
-
-  axios.get(APIgame)
-  .then(res=>{
+    //APIgame axios
+    axios.get(APIgame)
+    .then(res=>{
     setGameCategory(res.data)
     console.log('GameCategory', res.data);
-  })
+    })
+
+
+    //APInumber axios
+    axios.get(APInumber)
+    .then(res=>{
+      setNumberr(res.data)
+      console.log(res.data);
+    })
 
   }, [category,setCatigory])
   
 
-        // setData(Filtred)
-  //       console.log('Game', res.data);
-  //     })
-  // }, [category, setCatigory])
+  
 
 
 
@@ -115,121 +125,65 @@ const Tournament = () => {
   }
 
 
-  return (
-    <MainDiv>
-      <NavbarDiv>
+return (
+  <MainDiv>
+    <NavbarDiv>
         <NameText>
           <Name>Последние турниры</Name>
         </NameText>
-        <ULdiv>
-          <Ul>
+          <ULdiv>
+            <Ul>
+              <LI onClick={()=>setCatigory('Все')}>Все</LI>
+              {
+                GameCategory?.map((itemm,indexx)=>{
+                  return(
+                    <LI key={indexx} onClick={()=>setCatigory(itemm.name)}>{itemm.name}</LI>
+                  )
+                })
+              }
+            </Ul>
+          </ULdiv>
+    </NavbarDiv>
 
-          <LI onClick={()=>setCatigory('Все')}>Все</LI>
+{/* ============ Comands VS start ============================================== */}
 
-          {
-            GameCategory?.map((itemm,indexx)=>{
-              return(
-                <LI key={indexx} onClick={()=>setCatigory(itemm.name)}>{itemm.name}</LI>
-              )
-            })
-          }
-          </Ul>
-        </ULdiv>
-      </NavbarDiv>
+  <Comands>
+    {
+      data?.map((item, index) => {
+        return (
+          <Para key={index}>
+            <Conteyner1>
 
-      {/* ================================================= */}
+              <Box1>
+                <BoxImg1 src={`http://159.65.207.213${item.user1.img}`} />
+              </Box1>
+                <VS>VS</VS>
+              <Box2>
+                <BoxImg1 src={`http://159.65.207.213${item.user2.img}`} />
+              </Box2>
 
-      <Comands>
-        {
-          data?.map((item, index) => {
-            return (
-              <Para key={index}>
-                <Conteyner1>
-                  <Box1>
-                    <BoxImg1 src={`http://159.65.207.213${item.user1.img}`} />
-                  </Box1>
-                  <VS>VS</VS>
-                  <Box2>
-                    <BoxImg1 src={`http://159.65.207.213${item.user2.img}`} />
-                  </Box2>
-                </Conteyner1>
+            </Conteyner1>
 
-                <Conteyner2>
-                  <GroupName> <h3>{item.user1.name}</h3> - <h3>{item.user2.name}</h3> <h3>{item.game.name}</h3> </GroupName>
-                  <Data>{item.data}</Data>
-                </Conteyner2>
-              </Para>
-            )
-          })
-        }
+            <Conteyner2>
+              <GroupName> <h3>{item.user1.name}</h3> - <h3>{item.user2.name}</h3> <h3>{item.game.name}</h3> </GroupName>
+              <Data>{item.data}</Data>
+            </Conteyner2>
 
-        {/* ================================================================= */}
+          </Para>
+        )
+      })
+    }
+      <ButtonDiv>
+        <MuiButton variant='outlined' >Записаться</MuiButton>
+      </ButtonDiv>
+  </Comands>
 
-        {/* <Para>
-          <Conteyner1>
-            <Box1>
-              <BoxImg1 src={BoxImg11} />
-            </Box1>
-            <VS>VS</VS>
-            <Box2>
-              <BoxImg2 src={BoxImg22} />
-            </Box2>
-          </Conteyner1>
+{/* ==================================================================== */}
 
-          <Conteyner2>
-            <GroupName>Oldschoolband - Oldchoolband Dota 2</GroupName>
-            <Data>03 Марта 2022  13:20</Data>
-          </Conteyner2>
-        </Para> */}
+  <PhotoAlbum>
+    <CardText>Фото Галерея</CardText>
+      <CardImageDiv></CardImageDiv>
 
-        {/* ========================================================= */}
-
-        {/* <Para>
-          <Conteyner1>
-            <Box1>
-              <BoxImg1 src={BoxImg11} />
-            </Box1>
-            <VS>VS</VS>
-            <Box2>
-              <BoxImg2 src={BoxImg22} />
-            </Box2>
-          </Conteyner1>
-
-          <Conteyner2>
-            <GroupName>Oldschoolband - Oldchoolband Dota 2</GroupName>
-            <Data>03 Марта 2022  13:20</Data>
-          </Conteyner2>
-        </Para> */}
-
-        {/* ============================================================== */}
-
-        {/* <Para>
-          <Conteyner1>
-            <Box1>
-              <BoxImg1 src={BoxImg11} />
-            </Box1>
-            <VS>VS</VS>
-            <Box2>
-              <BoxImg2 src={BoxImg22} />
-            </Box2>
-          </Conteyner1>
-
-          <Conteyner2>
-            <GroupName>Oldschoolband - Oldchoolband Dota 2</GroupName>
-            <Data>03 Марта 2022  13:20</Data>
-          </Conteyner2>
-        </Para> */}
-
-        <ButtonDiv>
-          <MuiButton variant='outlined' >Записаться</MuiButton>
-        </ButtonDiv>
-      </Comands>
-
-      {/* ==================================================================== */}
-
-      <PhotoAlbum>
-        <CardText>Фото Галерея</CardText>
-        <CardImageDiv></CardImageDiv>
         <AllPhotoDiv>
           <ForstDiv>
 
@@ -264,7 +218,7 @@ const Tournament = () => {
             </Card4>
 
           </ForstDiv>
-          {/* ======================================================== */}
+{/* ====================== Second Div start ===================================================*/}
           <SecondDiv>
             <CardDiv1>
 
@@ -285,83 +239,70 @@ const Tournament = () => {
             <CardDiv3>
               <CardDivImg3 src={Img10} />
             </CardDiv3>
+
           </SecondDiv>
 
-        </AllPhotoDiv>
+    </AllPhotoDiv>
 
-      </PhotoAlbum>
-
-
-      {/* ======================================================================== */}
+  </PhotoAlbum>
 
 
-      <Square>
-        <Boxs>
-          <Number>+1300</Number>
-          <GameNaem>Twitch потоки</GameNaem>
-        </Boxs>
-        <Boxs>
-          <Number>+108</Number>
-          <GameNaem>Стримеры</GameNaem>
-        </Boxs>
-        <Boxs>
-          <Number>+1000</Number>
-          <GameNaem>CS:GO</GameNaem>
-        </Boxs>
-        <Boxs>
-          <Number>+202</Number>
-          <GameNaem>Twitch потоки</GameNaem>
-        </Boxs>
-      </Square>
+{/* ========================= Card Number page Start ======================================== */}
 
 
-      {/* =============================================================== */}
+  <Square>
+    {
+      numberr?.map((item3,index3)=>{
+        return(
+          <Boxs key={index3}>
+            <Number>+{item3.number}</Number>
+            <GameNaem>{item3.text}</GameNaem>
+          </Boxs>
+        )
+      })
+    }
+  </Square>
 
 
-      <InpDiv>
-        <InputDiv>
-
-          <TopDIv>
-            <RegisterText>Регистрация</RegisterText>
-            <ButonsDiv>
-              <MuiButtons1 onClick={() => setcatigory1('onegame')} variant='outlined' style={{
-                backgroundColor: catigory1 === 'onegame' ? '#724edf' : '#200A50'
+{/* ========================= Register Page start =========================================== */}
 
 
-              }}
-              >Один игрок</MuiButtons1>
+  <InpDiv>
+    <InputDiv>
 
-              <MuiButtons2 onClick={() => setcatigory1('command')} variant='outlined' style={{ backgroundColor: catigory1 === 'command' ? '#724edf ' : '#200A50' }}
+      <TopDIv>
+        <RegisterText>Регистрация</RegisterText>
+          <ButonsDiv>
+            <MuiButtons1 onClick={() => setcatigory1('onegame')} variant='outlined' style={{
+            backgroundColor: catigory1 === 'onegame' ? '#724edf' : '#200A50'}}>Один игрок</MuiButtons1>
 
+            <MuiButtons2 onClick={() => setcatigory1('command')} variant='outlined' style={{ backgroundColor: catigory1 === 'command' ? '#724edf ' : '#200A50' }}>Команда</MuiButtons2>
+          </ButonsDiv>
+      </TopDIv>
 
+        <BotomDIv>
 
-              >Команда</MuiButtons2>
-            </ButonsDiv>
-          </TopDIv>
+          {
+            catigory1 === 'onegame' ?
+              <OneVSTwoDIv>
+                <OneInpDiv>
+                  <LabelVSInputDiv >
+                    <LabelText>Имя</LabelText>
+                    <Input type="text" onChange={(e) => setIsim(e.target.value)} />
+                    {/* <Input type="text" name='name' onChange={} */}
+                  </LabelVSInputDiv>
 
-          <BotomDIv>
+                  <LabelVSInputDiv >
+                    <LabelText>Фамилия</LabelText>
+                    <Input type="text" onChange={(e) => setSurname(e.target.value)} />
+                  </LabelVSInputDiv>
 
-            {
-              catigory1 === 'onegame' ?
-                <OneVSTwoDIv>
-                  <OneInpDiv>
-                    <LabelVSInputDiv >
-                      <LabelText>Имя</LabelText>
-                      <Input type="text" onChange={(e) => setIsim(e.target.value)} />
-                      {/* <Input type="text" name='name' onChange={} */}
-                    </LabelVSInputDiv>
+                  <LabelVSInputDiv >
+                    <LabelText>Почта</LabelText>
+                    <Input type="email" onChange={(e) => setEmail(e.target.value)} />
+                  </LabelVSInputDiv>
 
-                    <LabelVSInputDiv >
-                      <LabelText>Фамилия</LabelText>
-                      <Input type="text" onChange={(e) => setSurname(e.target.value)} />
-                    </LabelVSInputDiv>
-
-                    <LabelVSInputDiv >
-                      <LabelText>Почта</LabelText>
-                      <Input type="email" onChange={(e) => setEmail(e.target.value)} />
-                    </LabelVSInputDiv>
-
-                  </OneInpDiv>
+                </OneInpDiv>
 
                   <TwoInpDiv>
                     <TwoInputDiv>
@@ -385,7 +326,7 @@ const Tournament = () => {
                         {
                           GameCategory?.map((itim1,index1)=>{
                             return(
-                        <option value={itim1.id}>{itim1.name}lllllll</option>
+                        <option value={itim1.id}>{itim1.name}</option>
 
                             )
                           })
@@ -404,32 +345,28 @@ const Tournament = () => {
                     </LabelVSInputDiv>
 
                   </TwoInpDiv>
-                </OneVSTwoDIv>
-
-
+              </OneVSTwoDIv>
 
                 :
 
+              <OneVSTwoDIv>
+                <OneInpDiv>
+                  <LabelVSInputDiv >
+                    <LabelText>Названия</LabelText>
+                    <Input />
+                  </LabelVSInputDiv>
 
+                  <LabelVSInputDiv >
+                    <LabelText>Число игроков</LabelText>
+                    <Input />
+                  </LabelVSInputDiv>
 
-                <OneVSTwoDIv>
-                  <OneInpDiv>
-                    <LabelVSInputDiv >
-                      <LabelText>Названия</LabelText>
-                      <Input />
-                    </LabelVSInputDiv>
+                  <LabelVSInputDiv >
+                    <LabelText>Почта Лидера</LabelText>
+                    <Input type="email" />
+                  </LabelVSInputDiv>
 
-                    <LabelVSInputDiv >
-                      <LabelText>Число игроков</LabelText>
-                      <Input />
-                    </LabelVSInputDiv>
-
-                    <LabelVSInputDiv >
-                      <LabelText>Почта Лидера</LabelText>
-                      <Input type="email" />
-                    </LabelVSInputDiv>
-
-                  </OneInpDiv>
+                </OneInpDiv>
 
                   <TwoInpDiv>
                     <TwoInputDiv>
@@ -450,6 +387,7 @@ const Tournament = () => {
                       <LabelText>Направления</LabelText>
                       {/* <Input /> */}
                       <Select1 name="" id="">
+
                         <option value="">CS:GO</option>
                         <option value="">DOTA 2</option>
                         <option value="">R6 SEGA</option>
@@ -465,18 +403,15 @@ const Tournament = () => {
 
                   </TwoInpDiv>
                 </OneVSTwoDIv>
-            }
+          }
 
-            {/* /=================== */}
+          <SendButtonDiv>
+             <SendButton variant='contained' onClick={OneGameSubmit}>Отправить</SendButton>
+          </SendButtonDiv>
 
-            <SendButtonDiv>
-              <SendButton variant='contained' onClick={OneGameSubmit}>Отправить</SendButton>
-            </SendButtonDiv>
-
-          </BotomDIv>
-
-        </InputDiv>
-      </InpDiv>
+        </BotomDIv>
+    </InputDiv>
+  </InpDiv>
 
 
     </MainDiv>
