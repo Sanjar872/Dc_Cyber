@@ -89,6 +89,7 @@ const Tournament = () => {
   // const [data1, setData1] = useState([])
 
   let DATAMAIN = new FormData()
+  DATAMAIN.append('player_type', Isim)
   DATAMAIN.append('name', Isim)
   DATAMAIN.append('surname', Surname)
   DATAMAIN.append('email', Email)
@@ -378,10 +379,18 @@ const Tournament = () => {
                       <LabelText>Направления</LabelText>
                       {/* <Input /> */}
                       <Select1 onChange={(e) => setNapravleniya(e.target.value)} name="" id="">
-                        <option value="">CS:GO</option>
-                        <option value="">DOTA 2</option>
+                        {
+                          GameCategory?.map((itim1,index1)=>{
+                            return(
+                        <option value="">{itim1.name}</option>
+
+                            )
+                          })
+                        }
+
+                        {/* <option value="">DOTA 2</option>
                         <option value="">R6 SEGA</option>
-                        <option value="">PUBG</option>
+                        <option value="">PUBG</option> */}
 
                       </Select1>
                     </LabelVSInputDiv>
