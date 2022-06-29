@@ -193,6 +193,8 @@ export const Input1 = styled.input`
     border: white 1px dotted;
     border-right-style: none;
     color: white;
+    letter-spacing:1px;
+    font-size: 16px;
     outline: none;
     background-color: transparent;
     /* margin-top: 15px; */
