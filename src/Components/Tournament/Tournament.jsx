@@ -5,7 +5,7 @@ import { AllPhotoDiv, BotomDIv, Box1, Box2, BoxImg1,
   CardDivIn1, CardDivIn2, CardDivInImg1, CardDivInImg2, CardImg,
   CardImg11, CardImg22, CardImg3, CardImgIn1, CardImgIn2, CardIn1,
   CardIn11, CardIn2, CardIn22, CardText, Comands, Conteyner1, Conteyner2,
-  Data, ForstDiv, ForstInpDiv, GameNaem, GroupName, InpDiv, Input, InputDiv,
+  Data, ForstDiv, ForstInpDiv, GameNaem, GroupName, H2, HR, InpDiv, Input, InputDiv,
   LabelText, LabelVSInputDiv, LI, MainDiv, MuiButton, MuiButtons1, MuiButtons2,
   Name, NameText, NavbarDiv, Number, OneInpDiv, OneVSTwoDIv, Para, PhotoAlbum,
   RegisterText, SecondDiv, SecondInpDiv, Select1, SendButton, SendButtonDiv, Square,
@@ -163,7 +163,7 @@ return (
             </Conteyner1>
 
             <Conteyner2>
-              <GroupName> <h3>{item.user1.name}</h3> - <h3>{item.user2.name}</h3> <h3>{item.game.name}</h3> </GroupName>
+              <GroupName> <H2>{item.user1.name}</H2> <HR/> <H2>{item.user2.name}</H2> <H2>{item.game.name}</H2> </GroupName>
               <Data>{item.data}</Data>
             </Conteyner2>
 
@@ -277,6 +277,7 @@ return (
             <MuiButtons2 onClick={() => setcatigory1('command')} variant='outlined' style={{ backgroundColor: catigory1 === 'command' ? '#724edf ' : '#200A50' }}>Команда</MuiButtons2>
           </ButonsDiv>
       </TopDIv>
+      {/* <Inputlar/> */}
           <BotomDIv>
             {
               catigory1 === 'onegame' ?

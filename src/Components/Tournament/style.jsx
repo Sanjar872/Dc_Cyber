@@ -18,7 +18,7 @@ export const MainDiv = styled.div`
 export const NavbarDiv = styled.div`
     width: 100%;
     height: 100px;
-    /* border: 1px solid red; */
+    /* border: 1px solid red;/ */
     display: flex;
 
     @media screen and (max-width:674px) {
@@ -67,6 +67,11 @@ export const ULdiv = styled.div`
     justify-content: center;
     align-items: center;
     /* border: 1px solid yellow; */
+    padding: 0px 0px 0px 80px;
+
+    @media (max-width:779px) {
+        padding: 0px;
+    }
 
     @media screen and (max-width:543px) {
         width: 100%;
@@ -78,9 +83,10 @@ export const Ul = styled.ul`
     width: 600px;
     height: 100px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 
     @media (max-width:413px) {
         display: flex;
@@ -138,7 +144,7 @@ export const LI = styled.li`
 
 export const Comands = styled.div`
     width: 100%;
-    height: 1000px;
+    height: auto;
     /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
@@ -147,7 +153,7 @@ export const Comands = styled.div`
     margin-top: 150px;
 
     @media screen and (max-width:950px) {
-        height: 1400px;
+        /* height: 1400px; */
     }
 
 `
@@ -157,7 +163,7 @@ export const Para = styled.div`
     height: 214px;
     /* border: 1px solid red; */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     @media screen and (max-width:950px) {
         display: flex;
@@ -210,7 +216,7 @@ export const Conteyner1 = styled.div`
 
 export const Box1 = styled.div`
     width: 200px;
-    /* height: 214px; */
+    /* height: 180px; */
 
     @media screen and (max-width:602px) {
         height: 190px;
@@ -337,35 +343,59 @@ export const Conteyner2 = styled.div`
 `
 
 export const GroupName = styled.div`
-    width: 380px;
+    width: 600px;
+    height: 60px;
     color: white;
     font-weight: 300;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
     @media screen and (max-width:604px) {
-        font-size: 26px;
+        font-size: 15px;
+        width: 500px;
     }
 
-    @media screen and (max-width:503px) {
-        font-size: 23px;
+    @media screen and (max-width:507px) {
+        font-size: 10px;
+        width: 400px;
     } 
 
     @media screen and (max-width:454px) {
-        font-size: 20px;
+        font-size: 10px;
     }
 
     @media screen and (max-width:408px) {
-        font-size: 17px;
+        font-size: 10px;
+        width: 380px;
+    }
+
+    @media screen and (max-width:380px) {
+        width: 350px;
+    }
+
+    @media screen and (max-width:350px) {
+        width: 300px;
     }
 
 
 `
 
+export const H2 = styled.h1`
+    font-weight: 400;
+`
+
+export const HR = styled.hr`
+    width: 20px;
+    height: 2px;
+    background-color: white;
+`
+
 export const Data = styled.p`
     color: gray;
+    margin: 0px 0px 0px 27px;
 `
 
 export const ButtonDiv = styled.div`

@@ -16,11 +16,7 @@ export const MainDiv = styled.div`
     background-size: cover;
     display: flex;
     flex-direction: column;
-     box-shadow: 0px 1px 10px #999;
-    @media (max-width:390px) {
-        height: 60vh;
-        width: 100% !important;
-    }
+    box-shadow: 0px 1px 10px #999;
 `
 
 export const Buttons = styled.button`
