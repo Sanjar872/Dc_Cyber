@@ -32,6 +32,7 @@ const APIgame = 'http://159.65.207.213/api/game/'
 
 const API1 = 'http://159.65.207.213/api/email/'
 
+
 const Tournament = () => {
 
 
@@ -52,6 +53,8 @@ const Tournament = () => {
             return item
           }
         })
+
+
 
 
     setData(Filtred)
@@ -126,7 +129,7 @@ const Tournament = () => {
           {
             GameCategory?.map((itemm,indexx)=>{
               return(
-                <LI onClick={()=>setCatigory(itemm.name)}>{itemm.name}</LI>
+                <LI key={indexx} onClick={()=>setCatigory(itemm.name)}>{itemm.name}</LI>
               )
             })
           }
@@ -382,7 +385,7 @@ const Tournament = () => {
                         {
                           GameCategory?.map((itim1,index1)=>{
                             return(
-                        <option value="">{itim1.name}</option>
+                        <option value={itim1.id}>{itim1.name}lllllll</option>
 
                             )
                           })

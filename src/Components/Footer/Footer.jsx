@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container,Fut, Box,Div1,Brendlar,O_nas,Dota,
 MyEmailOutlinedIcon,Input2,Sign,Con,Input,IMglar,Input1,Checkbo
 ,FacebookOutlined1 ,
@@ -12,11 +12,13 @@ import Brand from '../S-image/brand.png'
 import Telegram from '../S-image/la_telegram.png'
 import instagram from '../S-image/instagram.png'
 import youtube from '../S-image/youtube.png'
-import { FacebookOutlined } from '@mui/icons-material';
+import { FacebookOutlined, SettingsPowerRounded, SettingsSystemDaydreamOutlined } from '@mui/icons-material';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import axios from 'axios'
 
 
 const Footer = () => {
+  const [email, setEmail] = useState('')
 
 function Shange() {
   window.location.href = "https://ru-ru.facebook.com/";
@@ -45,6 +47,18 @@ const Scrolling = (value) => {
   window.scrollTo({
     top:value,
     behavior: 'smooth'
+  })
+}
+
+const Submit = () => {
+  let formData = new FormData();
+  formData.append('email',email)
+  // formData.append('omage',email)
+  axios.post('http://159.65.207.213/api/email/',formData)
+  .then((res)=>{
+    console.log(res);
+    setEmail('')
+    // SettingsPowerRounded()
   })
 }
 
@@ -103,8 +117,8 @@ const Scrolling = (value) => {
                           email below to receive our weekly newsletter. </p>
                     </Sign>
                         <Div1>
-                      <Input1 type="text" placeholder='Your email' />
-                      <MyEmailOutlinedIcon/>
+                      <Input1 value={email} onChange={(e)=>setEmail(e.target.value)} type='email' placeholder='Your email' />
+                      <MyEmailOutlinedIcon onClick={Submit}/>
                         </Div1>
                       <Checkbo>
 
