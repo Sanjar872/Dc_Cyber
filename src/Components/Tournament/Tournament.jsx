@@ -39,17 +39,18 @@ const Tournament = () => {
   const [GameCategory, setGameCategory] = useState([])
 
   useEffect(() => {
-   axios.get(API)
-   .then(res=>{
+    axios.get(API)
+      .then(res => {
 
-    let Filtred = res.data.filter((item)=>{
-      if (item.game.name === category) {
-        return item
-      }
-      if (category === 'Все') {
-        return item
-      }
-    })
+        let Filtred = res.data.filter((item) => {
+          if (item.game.name === category) {
+            return item
+          }
+          if (category === 'Все') {
+            return item
+          }
+        })
+
 
     setData(Filtred)
     // console.log('Game', res.data);
@@ -65,14 +66,47 @@ const Tournament = () => {
   }, [category,setCatigory])
   
 
+        // setData(Filtred)
+  //       console.log('Game', res.data);
+  //     })
+  // }, [category, setCatigory])
 
-  const [value, setValue] = useState("")
-  console.log(value);
+
+
+  const [Name, setIsim] = useState("");
+  const [Surname, setSurname] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Opit, setOpit] = useState("");
+  const [To, setTo] = useState("");
+  const [Naprarvleniya, setNapravleniya] = useState("");
+  const [Phone, setPhone] = useState("");
+
+
+  // console.log();
   const [catigory1, setcatigory1] = useState('onegame')
-  const [data1, setData1] = useState([])
+  // const [data1, setData1] = useState([])
 
-  
+  let DATAMAIN = new FormData()
+  DATAMAIN.append('name', Name)
+  DATAMAIN.append('surname', Surname)
+  DATAMAIN.append('email', Email)
+  DATAMAIN.append('experience_from', Opit)
+  DATAMAIN.append('experience_to', To)
+  DATAMAIN.append('game', Naprarvleniya)
+  DATAMAIN.append('phone', Phone)
 
+
+  const OneGameSubmit = () => {
+    try {
+      axios.post('http://127.0.0.1:8000/api/user/post/', DATAMAIN)
+        .then((res) => {
+          console.log(res);
+
+        })
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
 
   return (
@@ -83,6 +117,7 @@ const Tournament = () => {
         </NameText>
         <ULdiv>
           <Ul>
+
           <LI onClick={()=>setCatigory('Все')}>Все</LI>
 
           {
@@ -100,23 +135,23 @@ const Tournament = () => {
 
       <Comands>
         {
-          data?.map((item,index)=>{
-            return(
-                <Para key={index}>
-                  <Conteyner1>
-                    <Box1>
-                      <BoxImg1 src={`http://159.65.207.213${item.user1.img}`} />
-                    </Box1>
-                    <VS>VS</VS>
-                    <Box2>
-                      <BoxImg1 src={`http://159.65.207.213${item.user2.img}`} />
-                    </Box2>
-                  </Conteyner1>
-        
-                  <Conteyner2>
-                    <GroupName> <h3>{item.user1.name}</h3> - <h3>{item.user2.name}</h3> <h3>{item.game.name}</h3> </GroupName>
-                    <Data>{item.data}</Data>
-                  </Conteyner2>
+          data?.map((item, index) => {
+            return (
+              <Para key={index}>
+                <Conteyner1>
+                  <Box1>
+                    <BoxImg1 src={`http://159.65.207.213${item.user1.img}`} />
+                  </Box1>
+                  <VS>VS</VS>
+                  <Box2>
+                    <BoxImg1 src={`http://159.65.207.213${item.user2.img}`} />
+                  </Box2>
+                </Conteyner1>
+
+                <Conteyner2>
+                  <GroupName> <h3>{item.user1.name}</h3> - <h3>{item.user2.name}</h3> <h3>{item.game.name}</h3> </GroupName>
+                  <Data>{item.data}</Data>
+                </Conteyner2>
               </Para>
             )
           })
@@ -283,144 +318,145 @@ const Tournament = () => {
           <TopDIv>
             <RegisterText>Регистрация</RegisterText>
             <ButonsDiv>
-              <MuiButtons1 onClick={()=>setcatigory1('onegame')} variant='outlined' style={{ 
-                backgroundColor:catigory1 === 'onegame' ? '#724edf'  : '#200A50'
-                
-                
-              }}
-               >Один игрок</MuiButtons1>
+              <MuiButtons1 onClick={() => setcatigory1('onegame')} variant='outlined' style={{
+                backgroundColor: catigory1 === 'onegame' ? '#724edf' : '#200A50'
 
-              <MuiButtons2 onClick={()=>setcatigory1('command')} variant='outlined' style={{ backgroundColor:catigory1 === 'command' ? '#724edf ' : '#200A50'}}
-               
-          
-              
+
+              }}
+              >Один игрок</MuiButtons1>
+
+              <MuiButtons2 onClick={() => setcatigory1('command')} variant='outlined' style={{ backgroundColor: catigory1 === 'command' ? '#724edf ' : '#200A50' }}
+
+
+
               >Команда</MuiButtons2>
             </ButonsDiv>
           </TopDIv>
 
           <BotomDIv>
 
-           {
-            catigory1 === 'onegame' ?
-            <OneVSTwoDIv>
-            <OneInpDiv>
-              <LabelVSInputDiv >
-                <LabelText>Имя</LabelText>
-                <Input type="text" onChange={(e)=>setValue(e.target.value)} />
-              </LabelVSInputDiv>
+            {
+              catigory1 === 'onegame' ?
+                <OneVSTwoDIv>
+                  <OneInpDiv>
+                    <LabelVSInputDiv >
+                      <LabelText>Имя</LabelText>
+                      <Input type="text" onChange={(e) => setIsim(e.target.value)} />
+                      {/* <Input type="text" name='name' onChange={} */}
+                    </LabelVSInputDiv>
 
-              <LabelVSInputDiv >
-                <LabelText>Фамилия</LabelText>
-                <Input type="text" />
-              </LabelVSInputDiv>
+                    <LabelVSInputDiv >
+                      <LabelText>Фамилия</LabelText>
+                      <Input type="text" onChange={(e) => setSurname(e.target.value)} />
+                    </LabelVSInputDiv>
 
-              <LabelVSInputDiv >
-                <LabelText>Почта</LabelText>
-                <Input type="email" />
-              </LabelVSInputDiv>
+                    <LabelVSInputDiv >
+                      <LabelText>Почта</LabelText>
+                      <Input type="email" onChange={(e) => setEmail(e.target.value)} />
+                    </LabelVSInputDiv>
 
-            </OneInpDiv>
+                  </OneInpDiv>
 
-            <TwoInpDiv>
-              <TwoInputDiv>
+                  <TwoInpDiv>
+                    <TwoInputDiv>
 
-                <ForstInpDiv>
-                  <LabelText>Опыт</LabelText>
-                  <Input type="number" placeholder='От' />
-                </ForstInpDiv>
+                      <ForstInpDiv>
+                        <LabelText>Опыт</LabelText>
+                        <Input type="number" placeholder='От' onChange={(e) => setOpit(e.target.value)} />
+                      </ForstInpDiv>
 
-                <SecondInpDiv>
-                  <LabelText></LabelText>
-                  <Input type="number" placeholder='До' />
-                </SecondInpDiv>
+                      <SecondInpDiv>
+                        <LabelText></LabelText>
+                        <Input type="number" placeholder='До' onChange={(e) => setTo(e.target.value)} />
+                      </SecondInpDiv>
 
-              </TwoInputDiv>
+                    </TwoInputDiv>
 
-              <LabelVSInputDiv >
-                <LabelText>Направления</LabelText>
-                {/* <Input /> */}
-                <Select1 name="" id="">
-                  <option value="">CS:GO</option>
-                  <option value="">DOTA 2</option>
-                  <option value="">R6 SEGA</option>
-                  <option value="">PUBG</option>
+                    <LabelVSInputDiv >
+                      <LabelText>Направления</LabelText>
+                      {/* <Input /> */}
+                      <Select1 onChange={(e) => setNapravleniya(e.target.value)} name="" id="">
+                        <option value="">CS:GO</option>
+                        <option value="">DOTA 2</option>
+                        <option value="">R6 SEGA</option>
+                        <option value="">PUBG</option>
 
-                </Select1>
-              </LabelVSInputDiv>
+                      </Select1>
+                    </LabelVSInputDiv>
 
-              <LabelVSInputDiv >
-                <LabelText>Телефон</LabelText>
-                <Input />
-              </LabelVSInputDiv>
+                    <LabelVSInputDiv >
+                      <LabelText>Телефон</LabelText>
+                      <Input onChange={(e) => setPhone(e.target.value)} />
+                    </LabelVSInputDiv>
 
-            </TwoInpDiv>
-          </OneVSTwoDIv>
-
-
-
-          :
+                  </TwoInpDiv>
+                </OneVSTwoDIv>
 
 
 
-          <OneVSTwoDIv>
-          <OneInpDiv>
-            <LabelVSInputDiv >
-              <LabelText>Названия</LabelText>
-              <Input />
-            </LabelVSInputDiv>
+                :
 
-            <LabelVSInputDiv >
-              <LabelText>Число игроков</LabelText>
-              <Input />
-            </LabelVSInputDiv>
 
-            <LabelVSInputDiv >
-              <LabelText>Почта Лидера</LabelText>
-              <Input type="email" />
-            </LabelVSInputDiv>
 
-          </OneInpDiv>
+                <OneVSTwoDIv>
+                  <OneInpDiv>
+                    <LabelVSInputDiv >
+                      <LabelText>Названия</LabelText>
+                      <Input />
+                    </LabelVSInputDiv>
 
-          <TwoInpDiv>
-            <TwoInputDiv>
+                    <LabelVSInputDiv >
+                      <LabelText>Число игроков</LabelText>
+                      <Input />
+                    </LabelVSInputDiv>
 
-              <ForstInpDiv>
-                <LabelText>Опыт</LabelText>
-                <Input type="number" placeholder='От' />
-              </ForstInpDiv>
+                    <LabelVSInputDiv >
+                      <LabelText>Почта Лидера</LabelText>
+                      <Input type="email" />
+                    </LabelVSInputDiv>
 
-              <SecondInpDiv>
-                <LabelText></LabelText>
-                <Input type="number" placeholder='До' />
-              </SecondInpDiv>
+                  </OneInpDiv>
 
-            </TwoInputDiv>
+                  <TwoInpDiv>
+                    <TwoInputDiv>
 
-            <LabelVSInputDiv >
-              <LabelText>Направления</LabelText>
-              {/* <Input /> */}
-              <Select1 name="" id="">
-                <option value="">CS:GO</option>
-                <option value="">DOTA 2</option>
-                <option value="">R6 SEGA</option>
-                <option value="">PUBG</option>
+                      <ForstInpDiv>
+                        <LabelText>Опыт</LabelText>
+                        <Input type="number" placeholder='От' />
+                      </ForstInpDiv>
 
-              </Select1>
-            </LabelVSInputDiv>
+                      <SecondInpDiv>
+                        <LabelText></LabelText>
+                        <Input type="number" placeholder='До' />
+                      </SecondInpDiv>
 
-            <LabelVSInputDiv >
-              <LabelText>Телефон Лидера</LabelText>
-              <Input />
-            </LabelVSInputDiv>
+                    </TwoInputDiv>
 
-          </TwoInpDiv>
-        </OneVSTwoDIv>
-           }
+                    <LabelVSInputDiv >
+                      <LabelText>Направления</LabelText>
+                      {/* <Input /> */}
+                      <Select1 name="" id="">
+                        <option value="">CS:GO</option>
+                        <option value="">DOTA 2</option>
+                        <option value="">R6 SEGA</option>
+                        <option value="">PUBG</option>
+
+                      </Select1>
+                    </LabelVSInputDiv>
+
+                    <LabelVSInputDiv >
+                      <LabelText>Телефонn Лидера</LabelText>
+                      <Input />
+                    </LabelVSInputDiv>
+
+                  </TwoInpDiv>
+                </OneVSTwoDIv>
+            }
 
             {/* /=================== */}
 
             <SendButtonDiv>
-              <SendButton variant='contained'>Отправить</SendButton>
+              <SendButton variant='contained' onClick={OneGameSubmit}>Отправить</SendButton>
             </SendButtonDiv>
 
           </BotomDIv>
@@ -493,6 +529,7 @@ export default Tournament
 
 // </TwoInpDiv>
 // </OneVSTwoDIv>
+///sjdhgsfhdskfsdhjfd
 
 
 
