@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Box } from '@mui/material'
-import { AllPhotoDiv, BotomDIv, Box1, Box2, BoxImg1, BoxImg2, Boxs, ButonsDiv, ButtonDiv, Card1, Card2, Card3, Card4, CardDiv1, CardDiv2, CardDiv3, CardDivImg2, CardDivImg3, CardDivIn1, CardDivIn2, CardDivInImg1, CardDivInImg2, CardImg, CardImg11, CardImg22, CardImg3, CardImgIn1, CardImgIn2, CardIn1, CardIn11, CardIn2, CardIn22, CardText, Comands, Conteyner1, Conteyner2, Data, ForstDiv, ForstInpDiv, GameNaem, GroupName, InpDiv, Input, InputDiv, LabelText, LabelVSInputDiv, LI, MainDiv, MuiButton, MuiButtons1, MuiButtons2, Name, NameText, NavbarDiv, Number, OneInpDiv, OneVSTwoDIv, Para, PhotoAlbum, RegisterText, SecondDiv, SecondInpDiv, Select1, SendButton, SendButtonDiv, Square, ThreeButtonDiv, TopDIv, TwoInpDiv, TwoInputDiv, Ul, ULdiv, VS } from './style'
+import { AllPhotoDiv, BotomDIv, Box1, Box2, BoxImg1,
+   BoxImg2, Boxs, ButonsDiv, ButtonDiv, Card1, Card2, Card3,
+    Card4, CardDiv1, CardDiv2, CardDiv3, CardDivImg2, CardDivImg3, 
+    CardDivIn1, CardDivIn2, CardDivInImg1, CardDivInImg2, CardImg, CardImg11, CardImg22, CardImg3, CardImgIn1, CardImgIn2, CardIn1, CardIn11, CardIn2, CardIn22, CardText, Comands, Conteyner1, Conteyner2, Data, ForstDiv, ForstInpDiv, GameNaem, GroupName, InpDiv, Input, InputDiv, LabelText, LabelVSInputDiv, LI, MainDiv, MuiButton, MuiButtons1, MuiButtons2, Name, NameText, NavbarDiv, Number, OneInpDiv, OneVSTwoDIv, Para, PhotoAlbum, RegisterText, SecondDiv, SecondInpDiv, Select1, SendButton, SendButtonDiv, Square, ThreeButtonDiv, TopDIv, TwoInpDiv, TwoInputDiv, Ul, ULdiv, VS } from './style'
 
 
 import CardImageDiv from '../Tournament/CardImg/CardImg'
@@ -73,7 +75,7 @@ const Tournament = () => {
 
 
 
-  const [Name, setIsim] = useState("");
+  const [Isim, setIsim] = useState("");
   const [Surname, setSurname] = useState("");
   const [Email, setEmail] = useState("");
   const [Opit, setOpit] = useState("");
@@ -87,7 +89,7 @@ const Tournament = () => {
   // const [data1, setData1] = useState([])
 
   let DATAMAIN = new FormData()
-  DATAMAIN.append('name', Name)
+  DATAMAIN.append('name', Isim)
   DATAMAIN.append('surname', Surname)
   DATAMAIN.append('email', Email)
   DATAMAIN.append('experience_from', Opit)
@@ -98,7 +100,7 @@ const Tournament = () => {
 
   const OneGameSubmit = () => {
     try {
-      axios.post('http://127.0.0.1:8000/api/user/post/', DATAMAIN)
+      axios.post('http://159.65.207.213/api/user/', DATAMAIN)
         .then((res) => {
           console.log(res);
 
@@ -470,6 +472,7 @@ const Tournament = () => {
 }
 
 export default Tournament
+<<<<<<< HEAD
 
 
 
@@ -541,3 +544,5 @@ export default Tournament
               //   <LI onClick={()=>setCatigory('R6 SEGA')}>R6 SEGA</LI>
               //   <LI onClick={()=>setCatigory('PUBG')}>PUBG</LI>
               // </Ul>
+=======
+>>>>>>> c559feda0f11a7bad2b6cd93b5646df38b136fa7
