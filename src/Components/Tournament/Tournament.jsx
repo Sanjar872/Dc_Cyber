@@ -89,6 +89,7 @@ const Tournament = () => {
   // const [data1, setData1] = useState([])
 
   let DATAMAIN = new FormData()
+  DATAMAIN.append('player_type', Isim)
   DATAMAIN.append('name', Isim)
   DATAMAIN.append('surname', Surname)
   DATAMAIN.append('email', Email)
@@ -378,10 +379,18 @@ const Tournament = () => {
                       <LabelText>Направления</LabelText>
                       {/* <Input /> */}
                       <Select1 onChange={(e) => setNapravleniya(e.target.value)} name="" id="">
-                        <option value="">CS:GO</option>
-                        <option value="">DOTA 2</option>
+                        {
+                          GameCategory?.map((itim1,index1)=>{
+                            return(
+                        <option value="">{itim1.name}</option>
+
+                            )
+                          })
+                        }
+
+                        {/* <option value="">DOTA 2</option>
                         <option value="">R6 SEGA</option>
-                        <option value="">PUBG</option>
+                        <option value="">PUBG</option> */}
 
                       </Select1>
                     </LabelVSInputDiv>
@@ -472,77 +481,3 @@ const Tournament = () => {
 }
 
 export default Tournament
-<<<<<<< HEAD
-
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-// <OneVSTwoDIv>
-// <OneInpDiv>
-//   <LabelVSInputDiv >
-//     <LabelText>Имя</LabelText>
-//     <Input />
-//   </LabelVSInputDiv>
-
-//   <LabelVSInputDiv >
-//     <LabelText>Фамилия</LabelText>
-//     <Input />
-//   </LabelVSInputDiv>
-
-//   <LabelVSInputDiv >
-//     <LabelText>Почта</LabelText>
-//     <Input type="email" />
-//   </LabelVSInputDiv>
-
-// </OneInpDiv>
-
-// <TwoInpDiv>
-//   <TwoInputDiv>
-
-//     <ForstInpDiv>
-//       <LabelText>Опыт</LabelText>
-//       <Input type="number" placeholder='От' />
-//     </ForstInpDiv>
-
-//     <SecondInpDiv>
-//       <LabelText></LabelText>
-//       <Input type="number" placeholder='До' />
-//     </SecondInpDiv>
-
-//   </TwoInputDiv>
-
-//   <LabelVSInputDiv >
-//     <LabelText>Направления</LabelText>
-//     {/* <Input /> */}
-//     <Select1 name="" id="">
-//       <option value="">CS:GO</option>
-//       <option value="">DOTA 2</option>
-//       <option value="">R6 SEGA</option>
-//       <option value="">PUBG</option>
-
-//     </Select1>
-//   </LabelVSInputDiv>
-
-//   <LabelVSInputDiv >
-//     <LabelText>Телефон</LabelText>
-//     <Input />
-//   </LabelVSInputDiv>
-
-// </TwoInpDiv>
-// </OneVSTwoDIv>
-///sjdhgsfhdskfsdhjfd
-
-
-
-////////////////////////////////////////////////////////////////////////
-              // <Ul>
-              //   <LI onClick={()=>setCatigory('Все')}>Все</LI>
-              //   <LI onClick={()=>setCatigory('CS:GO')}>CS:GO</LI>
-              //   <LI onClick={()=>setCatigory('DOTA 2')}>DOTA 2</LI>
-              //   <LI onClick={()=>setCatigory('R6 SEGA')}>R6 SEGA</LI>
-              //   <LI onClick={()=>setCatigory('PUBG')}>PUBG</LI>
-              // </Ul>
-=======
->>>>>>> c559feda0f11a7bad2b6cd93b5646df38b136fa7
