@@ -11,10 +11,8 @@ import { AllPhotoDiv, BotomDIv, Box1, Box2, BoxImg1,
   RegisterText, SecondDiv, SecondInpDiv, Select1, SendButton, SendButtonDiv, Square,
   ThreeButtonDiv, TopDIv, TwoInpDiv, TwoInputDiv, Ul, ULdiv, VS } from './style'
 
-
+import Inputlar from './INP/inputlar'
 import CardImageDiv from '../Tournament/CardImg/CardImg'
-
-
 import BoxImg11 from '../S-image/game1.png'
 import BoxImg22 from '../S-image/game2.png'
 
@@ -279,30 +277,28 @@ return (
             <MuiButtons2 onClick={() => setcatigory1('command')} variant='outlined' style={{ backgroundColor: catigory1 === 'command' ? '#724edf ' : '#200A50' }}>Команда</MuiButtons2>
           </ButonsDiv>
       </TopDIv>
+          <BotomDIv>
+            {
+              catigory1 === 'onegame' ?
+                <OneVSTwoDIv>
+                  <OneInpDiv>
+                    <LabelVSInputDiv >
+                      <LabelText>Имя</LabelText>
+                      <Input type="text" onChange={(e) => setIsim(e.target.value)} />
+                      {/* <Input type="text" name='name' onChange={} */}
+                    </LabelVSInputDiv>
 
-        <BotomDIv>
+                    <LabelVSInputDiv >
+                      <LabelText>Фамилия</LabelText>
+                      <Input type="text" onChange={(e) => setSurname(e.target.value)} />
+                    </LabelVSInputDiv>
 
-          {
-            catigory1 === 'onegame' ?
-              <OneVSTwoDIv>
-                <OneInpDiv>
-                  <LabelVSInputDiv >
-                    <LabelText>Имя</LabelText>
-                    <Input type="text" onChange={(e) => setIsim(e.target.value)} />
-                    {/* <Input type="text" name='name' onChange={} */}
-                  </LabelVSInputDiv>
+                    <LabelVSInputDiv >
+                      <LabelText>Почта</LabelText>
+                      <Input type="email" onChange={(e) => setEmail(e.target.value)} />
+                    </LabelVSInputDiv>
 
-                  <LabelVSInputDiv >
-                    <LabelText>Фамилия</LabelText>
-                    <Input type="text" onChange={(e) => setSurname(e.target.value)} />
-                  </LabelVSInputDiv>
-
-                  <LabelVSInputDiv >
-                    <LabelText>Почта</LabelText>
-                    <Input type="email" onChange={(e) => setEmail(e.target.value)} />
-                  </LabelVSInputDiv>
-
-                </OneInpDiv>
+                  </OneInpDiv>
 
                   <TwoInpDiv>
                     <TwoInputDiv>
