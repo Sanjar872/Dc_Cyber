@@ -292,6 +292,10 @@ export const Box2 = styled.div`
 export const BoxImg1 = styled.img`
     width: 100%;
     height: 100%;
+
+    @media (max-width:547px) {
+        object-fit: contain;
+    }
 `
 export const BoxImg2 = styled.img`
     width: 100%;
@@ -751,6 +755,7 @@ export const TopDIv = styled.div`
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
+    margin: 0px 0px 40px 0px;
 `
 
 
@@ -998,16 +1003,25 @@ export const Select1 = styled.select`
 
 `
 
-
+// Send Image start ==================================================================================
 
 export const  Edit__img = styled.div`
     height: 140px;
     display: flex;
-    width: 80%;
+    width: 85%;
     align-items: center;
     justify-content: space-between;
     grid-gap: 50px;
     margin-bottom: 40px;
+    /* border: 1px solid red; */
+
+
+    @media (max-width:764px) {
+        display: flex;
+        flex-direction: column;
+        /* margin: 0px 0px 40px 0px; */
+        height: auto;
+    }
   `
   export const Img_preview = styled.div`
     padding: 5px;
@@ -1026,20 +1040,40 @@ export const  Edit__img = styled.div`
     }
 `
 export const Img__drop = styled.label`
-border: 1px dashed #02B6EB;
+border: 3px dashed #02B6EB;
 border-radius: 5px;
 flex-grow: 1;
 height: 100%;
 display: flex;
 align-items: center;
-justify-content: space-around;
+justify-content: space-between;
 cursor: pointer;
+padding: 0px 50px 0px 30px;
+
+@media (max-width:764px) {
+    width: 100%;
+    height: 100px;
+}
+
+@media (max-width:541px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+
 span{
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
   color: #808191;
+
+
+  @media (max-width:541px) {
+    display: none;
+  }
 }
 p{
   font-style: normal;

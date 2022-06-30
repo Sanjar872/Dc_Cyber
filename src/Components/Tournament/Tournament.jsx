@@ -21,7 +21,7 @@ import AvatarLogo from '../S-image/AvatartLogo.png'
 
 //Albomimg
 // Forst Div image
-import Img1 from '../F-image/Image-1.png'
+import Img11 from '../F-image/Image-1.png'
 import Img2 from '../F-image/Image-2.png'
 import Img3 from '../F-image/Image-3.png'
 import Img4 from '../F-image/Image-4.png'
@@ -206,7 +206,7 @@ return (
           <ForstDiv>
 
             <Card1>
-              <CardImg src={Img1} />
+              <CardImg src={Img11} />
             </Card1>
 
             <Card2>
@@ -300,16 +300,14 @@ return (
       {/* <Inputlar/> */}
       <Edit__img>
         <Img_preview>
-              {
-                Img === '' ?
-                <img src={AvatarLogo} alt="" />
+          {
+            Img === '' ?
+            <img src={AvatarLogo} alt="" />
 
-                :
+            :
 
-                <img src={Img1} alt="" />
-
-
-              }
+            <img src={Img1} alt="" />
+          }
         </Img_preview>
         <Img__drop for="img_upload" className="img__drop">
           <span>Fayl yuklang</span>
