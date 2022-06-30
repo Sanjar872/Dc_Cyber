@@ -1000,6 +1000,61 @@ export const Select1 = styled.select`
 
 
 
+export const  Edit__img = styled.div`
+    height: 140px;
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 50px;
+    margin-bottom: 40px;
+  `
+  export const Img_preview = styled.div`
+    padding: 5px;
+    background: #AD00FF;
+    border-radius: 6.35338px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 140px;
+    img{
+      border-radius: 50%;
+      width: 125px;
+      height: 125px;
+      /* filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.15)) */
+    }
+`
+export const Img__drop = styled.label`
+border: 1px dashed #02B6EB;
+border-radius: 5px;
+flex-grow: 1;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: space-around;
+cursor: pointer;
+span{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  color: #808191;
+}
+p{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16.8578px;
+  line-height: 21px;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+  /* background: linear-gradient(180deg, #03F5FF 0%, #02B6EB 100%); */
+  border-radius: 5px;
+  padding: 10px 30px;
+  background-color:
+#8F00FF ;
+}
 
-
+`
 

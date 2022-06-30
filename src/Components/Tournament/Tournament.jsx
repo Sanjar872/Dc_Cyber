@@ -5,16 +5,19 @@ import { AllPhotoDiv, BotomDIv, Box1, Box2, BoxImg1,
   CardDivIn1, CardDivIn2, CardDivInImg1, CardDivInImg2, CardImg,
   CardImg11, CardImg22, CardImg3, CardImgIn1, CardImgIn2, CardIn1,
   CardIn11, CardIn2, CardIn22, CardText, Comands, Conteyner1, Conteyner2,
-  Data, ForstDiv, ForstInpDiv, GameNaem, GroupName, H2, HR, InpDiv, Input, InputDiv,
+  Data, Edit__img, ForstDiv, ForstInpDiv, GameNaem, GroupName, H2, HR, Img_preview, Img__drop, InpDiv, Input, InputDiv,
   LabelText, LabelVSInputDiv, LI, MainDiv, MuiButton, MuiButtons1, MuiButtons2,
   Name, NameText, NavbarDiv, Number, OneInpDiv, OneVSTwoDIv, Para, PhotoAlbum,
   RegisterText, SecondDiv, SecondInpDiv, Select1, SendButton, SendButtonDiv, Square,
   ThreeButtonDiv, TopDIv, TwoInpDiv, TwoInputDiv, Ul, ULdiv, VS } from './style'
+// import styles from '../Tournament/INP/style.module.css'
 
 import Inputlar from './INP/inputlar'
 import CardImageDiv from '../Tournament/CardImg/CardImg'
 import BoxImg11 from '../S-image/game1.png'
 import BoxImg22 from '../S-image/game2.png'
+
+import AvatarLogo from '../S-image/AvatartLogo.png'
 
 //Albomimg
 // Forst Div image
@@ -39,13 +42,26 @@ const API1 = 'http://159.65.207.213/api/email/'
 
 
 const Tournament = () => {
-
-
+  
+  
   //useStates
   const [data, setData] = useState([]) // 1
   const [category, setCatigory] = useState('Все')
   const [GameCategory, setGameCategory] = useState([])
   const [numberr, setNumberr] = useState([])
+  const [Img, setImg] = useState("");
+
+  //input rasm quyish
+  const [Img1, SettingImg] = useState('');
+  // const [ImgtoBackend, setImgtoBackend] = useState(null)
+
+  const SEtImg = (e) => {
+    const rasm = e.target.files[0]
+    setImg(rasm)
+    SettingImg(URL.createObjectURL(rasm))
+  }
+
+
 
   useEffect(() => {
     axios.get(API)
@@ -84,14 +100,14 @@ const Tournament = () => {
 
   
 
-
+//Player 1 One game useState
 
   const [Isim, setIsim] = useState("");
   const [Surname, setSurname] = useState("");
   const [Email, setEmail] = useState("");
   const [Opit, setOpit] = useState("");
   const [To, setTo] = useState("");
-  const [Naprarvleniya, setNapravleniya] = useState("");
+  const [Naprarvleniya, setNapravleniya] = useState(0);
   const [Phone, setPhone] = useState("");
 
 
@@ -100,17 +116,21 @@ const Tournament = () => {
   // const [data1, setData1] = useState([])
 
   let DATAMAIN = new FormData()
-  DATAMAIN.append('player_type', Isim)
+  DATAMAIN.append('player_type', 1)
   DATAMAIN.append('name', Isim)
   DATAMAIN.append('surname', Surname)
   DATAMAIN.append('email', Email)
-  DATAMAIN.append('experience_from', Opit)
-  DATAMAIN.append('experience_to', To)
-  DATAMAIN.append('game', Naprarvleniya)
-  DATAMAIN.append('phone', Phone)
+  DATAMAIN.append('experience_from', 2)
+  DATAMAIN.append('experience_to', 5)
+  DATAMAIN.append('game', 1)
+  DATAMAIN.append('phone', 21312312)
+  DATAMAIN.append('img',Img)
+  DATAMAIN.append('team_member',1)
+
 
 
   const OneGameSubmit = () => {
+  console.log(Img)
     try {
       axios.post('http://159.65.207.213/api/user/', DATAMAIN)
         .then((res) => {
@@ -278,6 +298,32 @@ return (
           </ButonsDiv>
       </TopDIv>
       {/* <Inputlar/> */}
+      <Edit__img>
+        <Img_preview>
+              {
+                Img === '' ?
+                <img src={AvatarLogo} alt="" />
+
+                :
+
+                <img src={Img1} alt="" />
+
+
+              }
+        </Img_preview>
+        <Img__drop for="img_upload" className="img__drop">
+          <span>Fayl yuklang</span>
+          <input
+            type="file"
+            onChange={(e) => SEtImg(e)}
+            name=""
+            hidden
+            id="img_upload"
+          />
+          <p>Avatar yuklang</p>
+          {/* onChange={(e) => setEmail(e.target.value)} */}
+        </Img__drop>
+      </Edit__img>
           <BotomDIv>
             {
               catigory1 === 'onegame' ?
