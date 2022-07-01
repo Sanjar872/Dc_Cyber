@@ -75,7 +75,7 @@ useEffect(() => {
 
   return (
     <Container >
-      <Box data-aos="zoom-in">
+      <Box >
        
         <Text>
           <Brendlar>

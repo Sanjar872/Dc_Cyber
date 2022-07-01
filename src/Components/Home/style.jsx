@@ -18,7 +18,7 @@ export const MainDiv = styled.div`
 
 export const TextDiv = styled.div`
     width: 100%;
-    height: 300px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;

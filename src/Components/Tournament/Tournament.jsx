@@ -23,7 +23,7 @@ import AvatarLogo from '../S-image/AvatartLogo.png'
 // Forst Div image
 import Img11 from '../F-image/Image-1.png'
 import Img2 from '../F-image/Image-2.png'
-import Img3 from '../F-image/Image-3.png'
+import Img33 from '../F-image/Image-3.png'
 import Img4 from '../F-image/Image-4.png'
 import Img5 from '../F-image/Image-5.png'
 import Img6 from '../F-image/Image-6.png'
@@ -33,7 +33,6 @@ import Img8 from '../F-image/Image-8.png'
 import Img9 from '../F-image/Image-9.png'
 import Img10 from '../F-image/Image-10.png'
 import axios from 'axios'
-import { Apartment, Category } from '@mui/icons-material'
 
 const API = 'http://159.65.207.213/api/competition/'
 const APIgame = 'http://159.65.207.213/api/game/'
@@ -157,14 +156,14 @@ DATAMAIN2.append('team_member',Surname2)
     try {
       axios.post('http://159.65.207.213/api/user/', DATAMAIN)
         .then((res) => {
-          console.log(res);
-          alert('Xush kelibsiz togo')
-          // setIsim('')
-          // setSurname("")
-          // setEmail("")
-          // setOpit("")
-          // setTo("")
-          // setNapravleniya("")
+          console.log(res,setIsim(""));
+          // alert('Xush kelibsiz togo')
+          setIsim('')
+          setSurname("")
+          setEmail("")
+          setOpit("")
+          setTo("")
+          setNapravleniya("")
           // setPhone("")
           
 
@@ -194,11 +193,11 @@ DATAMAIN2.append('team_member',Surname2)
 return (
   <MainDiv>
     <NavbarDiv>
-        <NameText data-aos="zoom-in">
+        <NameText >
           <Name>Последние турниры</Name>
         </NameText>
           <ULdiv>
-            <Ul data-aos="zoom-in">
+            <Ul >
               <LI onClick={()=>setCatigory('Все')}>Все</LI>
               {
                 GameCategory?.map((itemm,indexx)=>{
@@ -217,8 +216,9 @@ return (
     {
       data?.map((item, index) => {
         return (
-          <Para key={index}>
-            <Conteyner1 data-aos="zoom-in">
+          <Para data-aos="fade-up"
+          data-aos-anchor-placement="center-center" key={index}>
+            <Conteyner1 >
 
               <Box1>
                 <BoxImg1 src={`http://159.65.207.213${item.user1.img}`} />
@@ -239,7 +239,7 @@ return (
         )
       })
     }
-      <ButtonDiv data-aos="flip-up">
+      <ButtonDiv>
         <MuiButton variant='outlined' >Записаться</MuiButton>
       </ButtonDiv>
   </Comands>
@@ -250,7 +250,7 @@ return (
     <CardText>Фото Галерея</CardText>
       <CardImageDiv></CardImageDiv>
 
-        <AllPhotoDiv data-aos="flip-up">
+        <AllPhotoDiv  >
           <ForstDiv>
 
             <Card1>
@@ -263,7 +263,7 @@ return (
               </CardIn1>
 
               <CardIn2>
-                <CardImgIn2 src={Img3} />
+                <CardImgIn2 src={Img33} />
               </CardIn2>
             </Card2>
 
@@ -316,7 +316,7 @@ return (
 {/* ========================= Card Number page Start ======================================== */}
 
 
-  <Square div data-aos="zoom-in">
+  <Square >
     {
       numberr?.map((item3,index3)=>{
         return(
@@ -333,9 +333,7 @@ return (
 {/* ========================= Register Page start =========================================== */}
 
 
-  <InpDiv data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
+  <InpDiv >
     <InputDiv>
 
       <TopDIv>

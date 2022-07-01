@@ -165,9 +165,10 @@ export const Para = styled.div`
     display: flex;
     justify-content: space-between;
 
-    @media screen and (max-width:950px) {
+    @media screen and (max-width:1141px) {
         display: flex;
         flex-direction: column;
+        width: 100%;
         justify-content: center;
         align-items: center;
         height: 400px;
@@ -527,7 +528,11 @@ export const CardImg = styled.img`
     width: 100%;
     height: 100%;
     border-radius: 20px 0px 0px 0px;
-    
+    /* &:hover {
+        transform: scale(1.2);
+        transition: 2s;
+
+    } */
 `
 
 //====
@@ -551,12 +556,24 @@ export const CardIn2 = styled.div`
 export const CardImgIn1 = styled.img`
     width: 100%;
     height: 100%;
+    transition: 1s;
     /* border-radius: 30px 0px 0px 0px; */
+    /* &:hover {
+        transform: scale(1.2);
+        transition: 2s;
+        cursor: pointer;
+    } */
 `
 
 export const CardImgIn2 = styled.img`
     width: 100%;
     height: 100%;
+    transition: 1s;
+    /* &:hover {
+        transform: scale(1.2);
+        transition: 2s;
+
+    } */
 `
 
 //============
@@ -569,6 +586,12 @@ export const Card3 = styled.div`
 export const CardImg3 = styled.img`
     width: 100%;
     height: 100%;
+    transition: 1s;
+    /* &:hover {
+        transform: scale(1.2);
+        transition: 2s;
+
+    } */
 `
 
 //===============
@@ -597,10 +620,22 @@ export const CardImg11 = styled.img`
     width: 100%;
     height: 100%;
     border-radius: 0px 20px 0px 0px;
+    transition: 1s;
+    /* &:hover {
+        transform: scale(1.2);
+        transition: 2s;
+
+    } */
 `
 export const CardImg22 = styled.img`
     width: 100%;
     height: 100%;
+    transition: 1s;
+    /* &:hover {
+        transform: scale(1.2);
+        transition: 2s;
+
+    } */
 `
 
 // Second div start ======================================
@@ -630,14 +665,22 @@ export const CardDivIn2 = styled.div`
 `
 
 export const CardDivInImg1 = styled.img`
-    width: 100%;
+    width: 100% !important;
     height: 100%;
+    transition: 1s;
+    /* margin-left: -56px; */
+    /* &:hover {
+        transform: scale(1.2);
+        transition: 2s;
+
+    } */
 `
 
 export const CardDivInImg2 = styled.img`
     width: 100%;
     height: 100%;
     border-radius: 0px 0px 0px 14px;
+    
 `
 
 //========================

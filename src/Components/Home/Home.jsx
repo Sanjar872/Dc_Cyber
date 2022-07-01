@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <MainDiv>
-      <TextDiv data-aos="fade-down" data-aos-duration="1000">
+      <TextDiv data-aos="flip-up" >
         <Bio>Digital City — профессиональная игровая организация, созданная в 2019 году. Наша цель — объединить самых талантливых киберспортсменов со всего мира.</Bio>
       </TextDiv>
       <CardDiv>
