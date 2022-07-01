@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <MainDiv>
-      <TextDiv>
+      <TextDiv data-aos="fade-down" data-aos-duration="1000">
         <Bio>Digital City — профессиональная игровая организация, созданная в 2019 году. Наша цель — объединить самых талантливых киберспортсменов со всего мира.</Bio>
       </TextDiv>
       <CardDiv>
@@ -37,7 +37,7 @@ const Home = () => {
       {
         data?.map((item,index)=>{
           return (
-            <InfoCard key={index}>
+            <InfoCard data-aos="zoom-in" key={index}>
             <Image src={`http://159.65.207.213${item.image}`} />
             <Name>{item.title}</Name>
             <Paragraf>{item.text}</Paragraf>

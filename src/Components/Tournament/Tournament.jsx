@@ -146,11 +146,11 @@ const Tournament = () => {
 return (
   <MainDiv>
     <NavbarDiv>
-        <NameText>
+        <NameText data-aos="zoom-in">
           <Name>Последние турниры</Name>
         </NameText>
           <ULdiv>
-            <Ul>
+            <Ul data-aos="zoom-in">
               <LI onClick={()=>setCatigory('Все')}>Все</LI>
               {
                 GameCategory?.map((itemm,indexx)=>{
@@ -170,7 +170,7 @@ return (
       data?.map((item, index) => {
         return (
           <Para key={index}>
-            <Conteyner1>
+            <Conteyner1 data-aos="zoom-in">
 
               <Box1>
                 <BoxImg1 src={`http://159.65.207.213${item.user1.img}`} />
@@ -191,7 +191,7 @@ return (
         )
       })
     }
-      <ButtonDiv>
+      <ButtonDiv data-aos="flip-up">
         <MuiButton variant='outlined' >Записаться</MuiButton>
       </ButtonDiv>
   </Comands>
@@ -202,7 +202,7 @@ return (
     <CardText>Фото Галерея</CardText>
       <CardImageDiv></CardImageDiv>
 
-        <AllPhotoDiv>
+        <AllPhotoDiv data-aos="flip-up">
           <ForstDiv>
 
             <Card1>
@@ -268,7 +268,7 @@ return (
 {/* ========================= Card Number page Start ======================================== */}
 
 
-  <Square>
+  <Square div data-aos="zoom-in">
     {
       numberr?.map((item3,index3)=>{
         return(
@@ -285,7 +285,9 @@ return (
 {/* ========================= Register Page start =========================================== */}
 
 
-  <InpDiv>
+  <InpDiv data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <InputDiv>
 
       <TopDIv>
