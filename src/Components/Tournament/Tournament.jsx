@@ -50,6 +50,8 @@ const Tournament = () => {
   const [GameCategory, setGameCategory] = useState([])
   const [numberr, setNumberr] = useState([])
   const [Img, setImg] = useState("");
+  const [Img3, setImg3] = useState("");
+
 
   //input rasm quyish
   const [Img1, SettingImg] = useState('');
@@ -111,28 +113,71 @@ const Tournament = () => {
   const [Phone, setPhone] = useState("");
 
 
-  // console.log();
-  const [catigory1, setcatigory1] = useState('onegame')
+//Player 2 Game useState
+const [Isim2, setIsim2] = useState("");
+const [Surname2, setSurname2] = useState("");
+const [Email2, setEmail2] = useState("");
+const [Opit2, setOpit2] = useState("");
+const [To2, setTo2] = useState("");
+const [Naprarvleniya2, setNapravleniya2] = useState(0);
+const [Phone2, setPhone2] = useState("");
+
+
+const [catigory1, setcatigory1] = useState('onegame')
   // const [data1, setData1] = useState([])
 
+  //Data API 1 User1___________________________
   let DATAMAIN = new FormData()
-  DATAMAIN.append('player_type', 2)
+  DATAMAIN.append('player_type', 1)
   DATAMAIN.append('name', Isim)
   DATAMAIN.append('surname', Surname)
   DATAMAIN.append('email', Email)
-  DATAMAIN.append('experience_from', 2)
-  DATAMAIN.append('experience_to', 5)
-  DATAMAIN.append('game', 1)
-  DATAMAIN.append('phone', 21312312)
+  DATAMAIN.append('experience_from', Opit)
+  DATAMAIN.append('experience_to', To)
+  DATAMAIN.append('game', Naprarvleniya)
+  DATAMAIN.append('phone', Phone)
   DATAMAIN.append('img',Img)
-  DATAMAIN.append('team_member',4)
+  DATAMAIN.append('team_member',1)
 
+  //Data API 1 User2__________________________
 
+let DATAMAIN2 = new FormData()
+DATAMAIN2.append('player_type',2)
+DATAMAIN2.append('name',Isim2)
+DATAMAIN2.append('email',Email2)
+DATAMAIN2.append('experience_from', Opit2)
+DATAMAIN2.append('experience_to',To2)
+DATAMAIN2.append('game',Naprarvleniya2)
+DATAMAIN2.append('phone',Phone2)
+DATAMAIN2.append('img',Img)
+DATAMAIN2.append('team_member',Surname2)
 
   const OneGameSubmit = () => {
-  console.log(Img)
+  // console.log(Img)
     try {
       axios.post('http://159.65.207.213/api/user/', DATAMAIN)
+        .then((res) => {
+          console.log(res);
+          alert('Xush kelibsiz togo')
+          // setIsim('')
+          // setSurname("")
+          // setEmail("")
+          // setOpit("")
+          // setTo("")
+          // setNapravleniya("")
+          // setPhone("")
+          
+
+        })
+    } catch (err) {
+      console.log(err);
+
+    }
+
+//_________________________________________________________________________
+    console.log(Img)
+    try {
+      axios.post('http://159.65.207.213/api/user/', DATAMAIN2)
         .then((res) => {
           console.log(res);
 
@@ -140,6 +185,9 @@ const Tournament = () => {
     } catch (err) {
       console.log(err);
     }
+
+
+    
   }
 
 
@@ -396,17 +444,17 @@ return (
                 <OneInpDiv>
                   <LabelVSInputDiv >
                     <LabelText>Названия</LabelText>
-                    <Input />
+                    <Input onChange={(e) => setIsim2(e.target.value)} />
                   </LabelVSInputDiv>
 
                   <LabelVSInputDiv >
                     <LabelText>Число игроков</LabelText>
-                    <Input />
+                    <Input onChange={(e) => setSurname2(e.target.value)} />
                   </LabelVSInputDiv>
 
                   <LabelVSInputDiv >
                     <LabelText>Почта Лидера</LabelText>
-                    <Input type="email" />
+                    <Input type="email" onChange={(e) => setEmail2(e.target.value)}  />
                   </LabelVSInputDiv>
 
                 </OneInpDiv>
@@ -416,12 +464,12 @@ return (
 
                       <ForstInpDiv>
                         <LabelText>Опыт</LabelText>
-                        <Input type="number" placeholder='От' />
+                        <Input type="number" placeholder='От' onChange={(e) => setOpit2(e.target.value)}  />
                       </ForstInpDiv>
 
                       <SecondInpDiv>
                         <LabelText></LabelText>
-                        <Input type="number" placeholder='До' />
+                        <Input type="number" placeholder='До'  onChange={(e) => setTo2(e.target.value)} />
                       </SecondInpDiv>
 
                     </TwoInputDiv>
@@ -429,19 +477,21 @@ return (
                     <LabelVSInputDiv >
                       <LabelText>Направления</LabelText>
                       {/* <Input /> */}
-                      <Select1 name="" id="">
+                      <Select1 name="" id=""  onChange={(e) => setNapravleniya2(e.target.value)}>
+                      {
+                          GameCategory?.map((itim1,index1)=>{
+                            return(
+                        <option value={itim1.id}>{itim1.name}</option>
 
-                        <option value="">CS:GO</option>
-                        <option value="">DOTA 2</option>
-                        <option value="">R6 SEGA</option>
-                        <option value="">PUBG</option>
-
+                            )
+                          })
+                        }
                       </Select1>
                     </LabelVSInputDiv>
 
                     <LabelVSInputDiv >
                       <LabelText>Телефонn Лидера</LabelText>
-                      <Input />
+                      <Input onChange={(e) => setPhone2(e.target.value)} />
                     </LabelVSInputDiv>
 
                   </TwoInpDiv>
