@@ -116,7 +116,7 @@ const Tournament = () => {
   // const [data1, setData1] = useState([])
 
   let DATAMAIN = new FormData()
-  DATAMAIN.append('player_type', 1)
+  DATAMAIN.append('player_type', 2)
   DATAMAIN.append('name', Isim)
   DATAMAIN.append('surname', Surname)
   DATAMAIN.append('email', Email)
@@ -125,7 +125,7 @@ const Tournament = () => {
   DATAMAIN.append('game', 1)
   DATAMAIN.append('phone', 21312312)
   DATAMAIN.append('img',Img)
-  DATAMAIN.append('team_member',1)
+  DATAMAIN.append('team_member',4)
 
 
 

@@ -63,8 +63,8 @@ const Submit = () => {
 }
 
   return (
-    <Container>
-      <Box>
+    <Container >
+      <Box data-aos="zoom-in">
        
         <Text>
           <Brendlar>
