@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container,Fut, Box,Div1,Brendlar,O_nas,Dota,
 MyEmailOutlinedIcon,Input2,Sign,Con,Input,IMglar,Input1,Checkbo
 ,FacebookOutlined1 ,
@@ -19,6 +19,7 @@ import axios from 'axios'
 
 const Footer = () => {
   const [email, setEmail] = useState('')
+  const [game, setGame] = useState([])
 
 function Shange() {
   window.location.href = "https://ru-ru.facebook.com/";
@@ -50,10 +51,11 @@ const Scrolling = (value) => {
   })
 }
 
+// API concat
+let formData = new FormData();
+formData.append('email',email)
+
 const Submit = () => {
-  let formData = new FormData();
-  formData.append('email',email)
-  // formData.append('omage',email)
   axios.post('http://159.65.207.213/api/email/',formData)
   .then((res)=>{
     console.log(res);
@@ -61,6 +63,15 @@ const Submit = () => {
     // SettingsPowerRounded()
   })
 }
+
+useEffect(() => {
+  axios.get('http://159.65.207.213/api/game')
+  .then(res=>{
+    setGame(res.data)
+    console.log('Hello',res.data);
+  })
+}, [])
+
 
   return (
     <Container >
@@ -100,14 +111,13 @@ const Submit = () => {
               <Con>
                 <Dota>
                   <ul>
-                    <li onClick={()=>Scrolling(1850)}>Dota 2</li>
-                    <li onClick={()=>Scrolling(1850)}>StarCraff 2</li>
-                    <li onClick={()=>Scrolling(1850)}>CS:GO</li>
-                    <li onClick={()=>Scrolling(1850)}>League of Legends</li>
-                    <li onClick={()=>Scrolling(1850)}>Fortnite</li>
-                    <li onClick={()=>Scrolling(1850)}>Rainbow 6 Siege</li>
-                    <li onClick={()=>Scrolling(1850)}>PUBG</li>
-
+                    {
+                      game?.map((item,index)=>{
+                        return(
+                          <li key={index} onClick={()=>Scrolling(2300)}>{item.name}</li>
+                        )
+                      })
+                    }
                   </ul>
                 </Dota>
                   <Input>
