@@ -100,7 +100,7 @@ useEffect(() => {
          </NavbarDiv>
       <TemporaryDrawer state={state} setState={setState}/>
         <CenterText>
-          <TextDiv data-aos="fade-down" >
+          <TextDiv div data-aos="zoom-in" data-aos-duration="3000">
             <Text>ДОБРО ПОЖАЛОВАТЬ В ИГРУ <SpanText>DC cyber</SpanText> В <br /> КИБЕРСПОРТИВНЫХ ИГРАХ</Text>
           </TextDiv>
         </CenterText>

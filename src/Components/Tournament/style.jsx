@@ -18,7 +18,7 @@ export const MainDiv = styled.div`
 export const NavbarDiv = styled.div`
     width: 100%;
     height: 100px;
-    /* border: 1px solid red;/ */
+    /* border: 1px solid red; */
     display: flex;
 
     @media screen and (max-width:674px) {
@@ -115,10 +115,8 @@ export const LI = styled.li`
         bottom: 0;
         right: 0;
         width: 0px;
-        height: 0px;
-        border: 1px solid  ;
-        border-image-slice: 0.5;
-        border-image-source: linear-gradient( to left,     rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
+        height: 2px;
+        background: linear-gradient(92.49deg, #AD00FF 14.3%, #00E0FF 100%);
         transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
@@ -165,10 +163,9 @@ export const Para = styled.div`
     display: flex;
     justify-content: space-between;
 
-    @media screen and (max-width:1141px) {
+    @media screen and (max-width:1157px) {
         display: flex;
         flex-direction: column;
-        width: 100%;
         justify-content: center;
         align-items: center;
         height: 400px;
@@ -312,6 +309,13 @@ export const Conteyner2 = styled.div`
     justify-content: center;
     align-items: flex-start;
 
+    @media (max-width:1156px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     @media screen and (max-width:950px) {
         display: flex;
         flex-direction: column;
@@ -428,19 +432,6 @@ export const MuiButton = styled(Button)`
     linear-gradient(45deg, rgba(173, 0, 255, 1), rgba(0, 224, 255, 1)) border-box !important;
     border: 3px solid transparent !important;
     backdrop-filter: blur(40px) !important;
-
-    /* @keyframes animate 
-    {
-        0%
-            {
-                transform: rotate(0deg) !important;
-            }
-        100%
-        {
-            transform: rotate(350deg) !important;
-        }
-    } */
-
 `
 
 ///======== Photo albom ================================================================================================
@@ -528,11 +519,7 @@ export const CardImg = styled.img`
     width: 100%;
     height: 100%;
     border-radius: 20px 0px 0px 0px;
-    /* &:hover {
-        transform: scale(1.2);
-        transition: 2s;
-
-    } */
+    
 `
 
 //====
@@ -556,24 +543,12 @@ export const CardIn2 = styled.div`
 export const CardImgIn1 = styled.img`
     width: 100%;
     height: 100%;
-    transition: 1s;
     /* border-radius: 30px 0px 0px 0px; */
-    /* &:hover {
-        transform: scale(1.2);
-        transition: 2s;
-        cursor: pointer;
-    } */
 `
 
 export const CardImgIn2 = styled.img`
     width: 100%;
     height: 100%;
-    transition: 1s;
-    /* &:hover {
-        transform: scale(1.2);
-        transition: 2s;
-
-    } */
 `
 
 //============
@@ -586,12 +561,6 @@ export const Card3 = styled.div`
 export const CardImg3 = styled.img`
     width: 100%;
     height: 100%;
-    transition: 1s;
-    /* &:hover {
-        transform: scale(1.2);
-        transition: 2s;
-
-    } */
 `
 
 //===============
@@ -620,22 +589,10 @@ export const CardImg11 = styled.img`
     width: 100%;
     height: 100%;
     border-radius: 0px 20px 0px 0px;
-    transition: 1s;
-    /* &:hover {
-        transform: scale(1.2);
-        transition: 2s;
-
-    } */
 `
 export const CardImg22 = styled.img`
     width: 100%;
     height: 100%;
-    transition: 1s;
-    /* &:hover {
-        transform: scale(1.2);
-        transition: 2s;
-
-    } */
 `
 
 // Second div start ======================================
@@ -665,22 +622,14 @@ export const CardDivIn2 = styled.div`
 `
 
 export const CardDivInImg1 = styled.img`
-    width: 100% !important;
+    width: 100%;
     height: 100%;
-    transition: 1s;
-    /* margin-left: -56px; */
-    /* &:hover {
-        transform: scale(1.2);
-        transition: 2s;
-
-    } */
 `
 
 export const CardDivInImg2 = styled.img`
     width: 100%;
     height: 100%;
     border-radius: 0px 0px 0px 14px;
-    
 `
 
 //========================

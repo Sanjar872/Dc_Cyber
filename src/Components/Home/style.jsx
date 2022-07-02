@@ -18,7 +18,7 @@ export const MainDiv = styled.div`
 
 export const TextDiv = styled.div`
     width: 100%;
-    height: 350px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,6 +172,11 @@ export const Paragraf = styled.p`
     font-weight: 400;
     font-size: 20px;
     letter-spacing: 1px;
+
+
+    @media  (max-width:376px) {
+        font-size: 18px;
+    }
     
 `
 

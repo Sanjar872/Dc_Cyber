@@ -23,7 +23,7 @@ import AvatarLogo from '../S-image/AvatartLogo.png'
 // Forst Div image
 import Img11 from '../F-image/Image-1.png'
 import Img2 from '../F-image/Image-2.png'
-import Img33 from '../F-image/Image-3.png'
+import Img3 from '../F-image/Image-3.png'
 import Img4 from '../F-image/Image-4.png'
 import Img5 from '../F-image/Image-5.png'
 import Img6 from '../F-image/Image-6.png'
@@ -33,6 +33,7 @@ import Img8 from '../F-image/Image-8.png'
 import Img9 from '../F-image/Image-9.png'
 import Img10 from '../F-image/Image-10.png'
 import axios from 'axios'
+import { Apartment, Category, SettingsPowerRounded } from '@mui/icons-material'
 
 const API = 'http://159.65.207.213/api/competition/'
 const APIgame = 'http://159.65.207.213/api/game/'
@@ -49,8 +50,6 @@ const Tournament = () => {
   const [GameCategory, setGameCategory] = useState([])
   const [numberr, setNumberr] = useState([])
   const [Img, setImg] = useState("");
-  const [Img3, setImg3] = useState("");
-
 
   //input rasm quyish
   const [Img1, SettingImg] = useState('');
@@ -112,92 +111,63 @@ const Tournament = () => {
   const [Phone, setPhone] = useState("");
 
 
-//Player 2 Game useState
-const [Isim2, setIsim2] = useState("");
-const [Surname2, setSurname2] = useState("");
-const [Email2, setEmail2] = useState("");
-const [Opit2, setOpit2] = useState("");
-const [To2, setTo2] = useState("");
-const [Naprarvleniya2, setNapravleniya2] = useState(0);
-const [Phone2, setPhone2] = useState("");
-
-
-const [catigory1, setcatigory1] = useState('onegame')
+  // console.log();
+  const [catigory1, setcatigory1] = useState('onegame')
   // const [data1, setData1] = useState([])
 
-  //Data API 1 User1___________________________
   let DATAMAIN = new FormData()
-  DATAMAIN.append('player_type', 1)
+  DATAMAIN.append('player_type', 2)
   DATAMAIN.append('name', Isim)
   DATAMAIN.append('surname', Surname)
   DATAMAIN.append('email', Email)
-  DATAMAIN.append('experience_from', Opit)
-  DATAMAIN.append('experience_to', To)
-  DATAMAIN.append('game', Naprarvleniya)
-  DATAMAIN.append('phone', Phone)
+  DATAMAIN.append('experience_from', 2)
+  DATAMAIN.append('experience_to', 5)
+  DATAMAIN.append('game', 1)
+  DATAMAIN.append('phone', 21312312)
   DATAMAIN.append('img',Img)
-  DATAMAIN.append('team_member',1)
+  DATAMAIN.append('team_member',4)
 
-  //Data API 1 User2__________________________
 
-let DATAMAIN2 = new FormData()
-DATAMAIN2.append('player_type',2)
-DATAMAIN2.append('name',Isim2)
-DATAMAIN2.append('email',Email2)
-DATAMAIN2.append('experience_from', Opit2)
-DATAMAIN2.append('experience_to',To2)
-DATAMAIN2.append('game',Naprarvleniya2)
-DATAMAIN2.append('phone',Phone2)
-DATAMAIN2.append('img',Img)
-DATAMAIN2.append('team_member',Surname2)
 
   const OneGameSubmit = () => {
-  // console.log(Img)
+  console.log(Img)
     try {
       axios.post('http://159.65.207.213/api/user/', DATAMAIN)
         .then((res) => {
-          console.log(res,setIsim(""));
-          // alert('Xush kelibsiz togo')
-          setIsim('')
-          setSurname("")
-          setEmail("")
-          setOpit("")
-          setTo("")
-          setNapravleniya("")
-          // setPhone("")
-          
-
-        })
-    } catch (err) {
-      console.log(err);
-
-    }
-
-//_________________________________________________________________________
-    console.log(Img)
-    try {
-      axios.post('http://159.65.207.213/api/user/', DATAMAIN2)
-        .then((res) => {
           console.log(res);
-
+          setIsim('')
+          setSurname('')
+          setEmail('')
+          setOpit('')
+          setTo('')
+          setNapravleniya('')
+          setPhone('')
+          if(res.data.error){
+            alert(res.data.error)
+          }
         })
     } catch (err) {
-      console.log(err);
+      alert('xato')
     }
+  }
 
-
-    
+  //Scrolling
+  const Scrolling = (value)=> {
+    window.scrollTo({
+      top:value,
+      behavior: 'smooth'
+    })
   }
 
 
 return (
   <MainDiv>
     <NavbarDiv>
-        <NameText >
+        <NameText data-aos="zoom-in">
           <Name>Последние турниры</Name>
         </NameText>
           <ULdiv>
-            <Ul >
+            <Ul data-aos="zoom-in">
               <LI onClick={()=>setCatigory('Все')}>Все</LI>
               {
                 GameCategory?.map((itemm,indexx)=>{
@@ -216,9 +186,8 @@ return (
     {
       data?.map((item, index) => {
         return (
-          <Para data-aos="fade-up"
-          data-aos-anchor-placement="center-center" key={index}>
-            <Conteyner1 >
+          <Para key={index}>
+            <Conteyner1 data-aos="zoom-in">
 
               <Box1>
                 <BoxImg1 src={`http://159.65.207.213${item.user1.img}`} />
@@ -230,7 +199,7 @@ return (
 
             </Conteyner1>
 
-            <Conteyner2>
+            <Conteyner2 data-aos="zoom-in">
               <GroupName> <H2>{item.user1.name}</H2> <HR/> <H2>{item.user2.name}</H2> <H2>{item.game.name}</H2> </GroupName>
               <Data>{item.data}</Data>
             </Conteyner2>
@@ -239,8 +208,8 @@ return (
         )
       })
     }
-      <ButtonDiv>
-        <MuiButton variant='outlined' >Записаться</MuiButton>
+      <ButtonDiv data-aos="flip-up">
+        <MuiButton variant='outlined' onClick={()=>Scrolling(4600)} >Записаться</MuiButton>
       </ButtonDiv>
   </Comands>
 
@@ -250,7 +219,7 @@ return (
     <CardText>Фото Галерея</CardText>
       <CardImageDiv></CardImageDiv>
 
-        <AllPhotoDiv  >
+        <AllPhotoDiv>
           <ForstDiv>
 
             <Card1>
@@ -263,7 +232,7 @@ return (
               </CardIn1>
 
               <CardIn2>
-                <CardImgIn2 src={Img33} />
+                <CardImgIn2 src={Img3} />
               </CardIn2>
             </Card2>
 
@@ -316,7 +285,7 @@ return (
 {/* ========================= Card Number page Start ======================================== */}
 
 
-  <Square >
+  <Square div data-aos="zoom-in">
     {
       numberr?.map((item3,index3)=>{
         return(
@@ -333,7 +302,9 @@ return (
 {/* ========================= Register Page start =========================================== */}
 
 
-  <InpDiv >
+  <InpDiv data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <InputDiv>
 
       <TopDIv>
@@ -377,18 +348,18 @@ return (
                   <OneInpDiv>
                     <LabelVSInputDiv >
                       <LabelText>Имя</LabelText>
-                      <Input type="text" onChange={(e) => setIsim(e.target.value)} />
+                      <Input type="text" value={Isim} onChange={(e) => setIsim(e.target.value)} />
                       {/* <Input type="text" name='name' onChange={} */}
                     </LabelVSInputDiv>
 
                     <LabelVSInputDiv >
                       <LabelText>Фамилия</LabelText>
-                      <Input type="text" onChange={(e) => setSurname(e.target.value)} />
+                      <Input type="text" value={Surname} onChange={(e) => setSurname(e.target.value)} />
                     </LabelVSInputDiv>
 
                     <LabelVSInputDiv >
                       <LabelText>Почта</LabelText>
-                      <Input type="email" onChange={(e) => setEmail(e.target.value)} />
+                      <Input type="email" value={Email} onChange={(e) => setEmail(e.target.value)} />
                     </LabelVSInputDiv>
 
                   </OneInpDiv>
@@ -398,12 +369,12 @@ return (
 
                       <ForstInpDiv>
                         <LabelText>Опыт</LabelText>
-                        <Input type="number" placeholder='От' onChange={(e) => setOpit(e.target.value)} />
+                        <Input type="number" placeholder='От' value={Opit} onChange={(e) => setOpit(e.target.value)} />
                       </ForstInpDiv>
 
                       <SecondInpDiv>
                         <LabelText></LabelText>
-                        <Input type="number" placeholder='До' onChange={(e) => setTo(e.target.value)} />
+                        <Input type="number" placeholder='До' value={To} onChange={(e) => setTo(e.target.value)} />
                       </SecondInpDiv>
 
                     </TwoInputDiv>
@@ -430,7 +401,7 @@ return (
 
                     <LabelVSInputDiv >
                       <LabelText>Телефон</LabelText>
-                      <Input onChange={(e) => setPhone(e.target.value)} />
+                      <Input value={Phone} onChange={(e) => setPhone(e.target.value)} />
                     </LabelVSInputDiv>
 
                   </TwoInpDiv>
@@ -442,17 +413,17 @@ return (
                 <OneInpDiv>
                   <LabelVSInputDiv >
                     <LabelText>Названия</LabelText>
-                    <Input onChange={(e) => setIsim2(e.target.value)} />
+                    <Input />
                   </LabelVSInputDiv>
 
                   <LabelVSInputDiv >
                     <LabelText>Число игроков</LabelText>
-                    <Input onChange={(e) => setSurname2(e.target.value)} />
+                    <Input />
                   </LabelVSInputDiv>
 
                   <LabelVSInputDiv >
                     <LabelText>Почта Лидера</LabelText>
-                    <Input type="email" onChange={(e) => setEmail2(e.target.value)}  />
+                    <Input type="email" />
                   </LabelVSInputDiv>
 
                 </OneInpDiv>
@@ -462,12 +433,12 @@ return (
 
                       <ForstInpDiv>
                         <LabelText>Опыт</LabelText>
-                        <Input type="number" placeholder='От' onChange={(e) => setOpit2(e.target.value)}  />
+                        <Input type="number" placeholder='От' />
                       </ForstInpDiv>
 
                       <SecondInpDiv>
                         <LabelText></LabelText>
-                        <Input type="number" placeholder='До'  onChange={(e) => setTo2(e.target.value)} />
+                        <Input type="number" placeholder='До' />
                       </SecondInpDiv>
 
                     </TwoInputDiv>
@@ -475,21 +446,19 @@ return (
                     <LabelVSInputDiv >
                       <LabelText>Направления</LabelText>
                       {/* <Input /> */}
-                      <Select1 name="" id=""  onChange={(e) => setNapravleniya2(e.target.value)}>
-                      {
-                          GameCategory?.map((itim1,index1)=>{
-                            return(
-                        <option value={itim1.id}>{itim1.name}</option>
+                      <Select1 name="" id="">
 
-                            )
-                          })
-                        }
+                        <option value="">CS:GO</option>
+                        <option value="">DOTA 2</option>
+                        <option value="">R6 SEGA</option>
+                        <option value="">PUBG</option>
+
                       </Select1>
                     </LabelVSInputDiv>
 
                     <LabelVSInputDiv >
                       <LabelText>Телефонn Лидера</LabelText>
-                      <Input onChange={(e) => setPhone2(e.target.value)} />
+                      <Input />
                     </LabelVSInputDiv>
 
                   </TwoInpDiv>
