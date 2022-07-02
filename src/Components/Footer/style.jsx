@@ -81,8 +81,8 @@ export const O_nas = styled.div`
     width: 25%;
     line-height:40px;
     font-weight:500;
-    /* margin-left: 20px; */
-    margin-bottom: 55px;
+    margin-left: 20px;
+    margin-bottom: 50px;
     flex-wrap: wrap !important;
 
     li:hover {
@@ -253,11 +253,11 @@ export const Fut = styled.div`
 
 export const Text = styled.div`
     display: flex;
-    width: 41%;
+    width: 50%;
     justify-content: space-between;
     align-items: center;
     margin-top: 15px;
-    gap: -50px;
+    gap: 20px;
 
     @media (max-width:1250px) {
         /* justify-content: center!important;

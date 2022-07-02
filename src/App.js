@@ -3,7 +3,7 @@ import './App.css'
 
 //Aos import
 import AOS from "aos";
-
+//dasdasdasd
 import "aos/dist/aos.css";
 //components
 import Navbar from './Components/Navbar/Navbar'
