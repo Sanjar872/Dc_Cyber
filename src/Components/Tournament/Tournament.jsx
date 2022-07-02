@@ -173,7 +173,7 @@ DATAMAIN2.append('team_member',Surname2)
 
     }
 
-//_________________________________________________________________________
+//_________________________________________________________________________DATAMAIN
     console.log(Img)
     try {
       axios.post('http://159.65.207.213/api/user/', DATAMAIN2)
@@ -497,7 +497,7 @@ return (
           }
 
           <SendButtonDiv>
-             <SendButton variant='contained' onClick={OneGameSubmit}>Отправить</SendButton>
+             <SendButton variant='contained' onClick={OneGameSubmit}>Отправитьf</SendButton>
           </SendButtonDiv>
 
         </BotomDIv>
