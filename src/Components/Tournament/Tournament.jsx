@@ -11,6 +11,8 @@ import { AllPhotoDiv, BotomDIv, Box1, Box2, BoxImg1,
   RegisterText, SecondDiv, SecondInpDiv, Select1, SendButton, SendButtonDiv, Square,
   ThreeButtonDiv, TopDIv, TwoInpDiv, TwoInputDiv, Ul, ULdiv, VS } from './style'
 
+
+import Snackbar  from '../Snackbar/Snackbar'
 import Inputlar from './INP/inputlar'
 import CardImageDiv from '../Tournament/CardImg/CardImg'
 import BoxImg11 from '../S-image/game1.png'
@@ -49,6 +51,9 @@ const Tournament = () => {
   const [GameCategory, setGameCategory] = useState([])
   const [numberr, setNumberr] = useState([])
   const [Img, setImg] = useState("");
+
+  //Snackbar sueState
+  const [open1, setOpen1] = React.useState(false);
 
   //input rasm quyish
   const [Img1, SettingImg] = useState('');
@@ -149,21 +154,24 @@ DATAMAIN2.append('team_member',Surname2)
 
 const OneGameSubmit = () => {
 // console.log(Img)
-  try {
-    axios.post('http://159.65.207.213/api/user/', DATAMAIN)
-      .then((res) => {
-        console.log(res);
-        setIsim('')
-        setSurname('')
-        setEmail('')
-        setOpit('')
-        setTo('')
-        setPhone('')
-      })
-  } catch (err) {
-    console.log(err);
+    try {
+      axios.post('http://159.65.207.213/api/user/', DATAMAIN)
+        .then((res) => {
+          console.log(res);
+          setOpen1(true)
+          setIsim('')
+          setSurname('')
+          setEmail('')
+          setOpit('')
+          setTo('')
+          setPhone('')
+        })
+    } catch (err) {
+      console.log(err);
+  
+    }
 
-  }
+
 
 //_________________________________________________________________________
   console.log(Img)
@@ -171,6 +179,7 @@ const OneGameSubmit = () => {
     axios.post('http://159.65.207.213/api/user/', DATAMAIN2)
       .then((res) => {
         console.log(res);
+        setOpen1(true)
         setIsim2('')
         setSurname2('')
         setEmail2('')
@@ -507,6 +516,8 @@ return (
     </InputDiv>
   </InpDiv>
 
+
+  <Snackbar open1={open1} setOpen1={setOpen1} />
 
     </MainDiv>
   )
