@@ -10,7 +10,6 @@ import { AllPhotoDiv, BotomDIv, Box1, Box2, BoxImg1,
   Name, NameText, NavbarDiv, Number, OneInpDiv, OneVSTwoDIv, Para, PhotoAlbum,
   RegisterText, SecondDiv, SecondInpDiv, Select1, SendButton, SendButtonDiv, Square,
   ThreeButtonDiv, TopDIv, TwoInpDiv, TwoInputDiv, Ul, ULdiv, VS } from './style'
-// import styles from '../Tournament/INP/style.module.css'
 
 import Inputlar from './INP/inputlar'
 import CardImageDiv from '../Tournament/CardImg/CardImg'
@@ -92,7 +91,6 @@ const Tournament = () => {
     axios.get(APInumber)
     .then(res=>{
       setNumberr(res.data)
-      // console.log(res.data);
     })
 
   }, [category,setCatigory])
@@ -122,7 +120,6 @@ const [Phone2, setPhone2] = useState("");
 
 
 const [catigory1, setcatigory1] = useState('onegame')
-// const [data1, setData1] = useState([])
 
 //Data API 1 User1___________________________
 let DATAMAIN = new FormData()
