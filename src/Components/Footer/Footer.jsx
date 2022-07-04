@@ -3,7 +3,7 @@ import { Container,Fut, Box,Div1,Brendlar,O_nas,Dota,
 MyEmailOutlinedIcon,Input2,Sign,Con,Input,IMglar,Input1,Checkbo
 ,FacebookOutlined1 ,
 Text, Text2,Facebodiv,TelegraDiv ,Telegram1,IntagramDiv,IntagramIcons1,
-YoutubeDiv,YouTubeIcon1 } from './style'
+YoutubeDiv,YouTubeIcon1, MuiFacebook, MuiTelegram, MuiInstagram, MuiYouTube } from './style'
 
 
 // import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -75,25 +75,25 @@ useEffect(() => {
 
   return (
     <Container >
-      <Box data-aos="zoom-in">
+      <Box >
        
         <Text>
           <Brendlar>
             <img src={Brand} alt="" />
             <IMglar>
-              <Facebodiv>
-              <FacebookOutlined1 onClick={Shange}/>
-              </Facebodiv>
-              <TelegraDiv>
-                <Telegram1 />
-              </TelegraDiv>
-              <IntagramDiv>
-                  <IntagramIcons1/>
-              </IntagramDiv>
 
-              <YoutubeDiv>
-                <YouTubeIcon1/>
-              </YoutubeDiv>
+              <MuiFacebook onClick={Shange}/>
+
+
+                <MuiTelegram  onClick={Shange2} />
+
+
+                  <MuiInstagram   onClick={Shange3}/>
+
+
+
+                <MuiYouTube   onClick={Shange4}/>
+
 
             </IMglar>
           </Brendlar>
