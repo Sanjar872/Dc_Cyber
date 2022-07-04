@@ -1,19 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Container,Fut, Box,Div1,Brendlar,O_nas,Dota,
-MyEmailOutlinedIcon,Input2,Sign,Con,Input,IMglar,Input1,Checkbo
-,FacebookOutlined1 ,
-Text, Text2,Facebodiv,TelegraDiv ,Telegram1,IntagramDiv,IntagramIcons1,
-YoutubeDiv,YouTubeIcon1, MuiFacebook, MuiTelegram, MuiInstagram, MuiYouTube } from './style'
+MyEmailOutlinedIcon,Input2,Sign,Con,Input,IMglar,Input1,Checkbo,
+Text, Text2,MuiFacebook, MuiTelegram, MuiInstagram, MuiYouTube } from './style'
 
 
-// import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import Brand from '../S-image/brand.png'
-// import Facebook from '../S-image/Facebook.png'
-import Telegram from '../S-image/la_telegram.png'
-import instagram from '../S-image/instagram.png'
-import youtube from '../S-image/youtube.png'
 import { FacebookOutlined, SettingsPowerRounded, SettingsSystemDaydreamOutlined } from '@mui/icons-material';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import axios from 'axios'
 
 
