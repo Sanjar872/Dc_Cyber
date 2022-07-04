@@ -84,7 +84,7 @@ const Tournament = () => {
     axios.get(APIgame)
     .then(res=>{
     setGameCategory(res.data)
-    console.log('GameCategory', res.data);
+    // console.log('GameCategory', res.data);
     })
 
 
@@ -92,7 +92,7 @@ const Tournament = () => {
     axios.get(APInumber)
     .then(res=>{
       setNumberr(res.data)
-      console.log(res.data);
+      // console.log(res.data);
     })
 
   }, [category,setCatigory])
@@ -102,76 +102,92 @@ const Tournament = () => {
 
 //Player 1 One game useState
 
-  const [Isim, setIsim] = useState("");
-  const [Surname, setSurname] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Opit, setOpit] = useState("");
-  const [To, setTo] = useState("");
-  const [Naprarvleniya, setNapravleniya] = useState(0);
-  const [Phone, setPhone] = useState("");
+const [Isim, setIsim] = useState("");
+const [Surname, setSurname] = useState("");
+const [Email, setEmail] = useState("");
+const [Opit, setOpit] = useState("");
+const [To, setTo] = useState("");
+const [Naprarvleniya, setNapravleniya] = useState(0);
+const [Phone, setPhone] = useState("");
 
 
-  // console.log();
-  const [catigory1, setcatigory1] = useState('onegame')
-  // const [data1, setData1] = useState([])
-
-  let DATAMAIN = new FormData()
-  DATAMAIN.append('player_type', 2)
-  DATAMAIN.append('name', Isim)
-  DATAMAIN.append('surname', Surname)
-  DATAMAIN.append('email', Email)
-  DATAMAIN.append('experience_from', 2)
-  DATAMAIN.append('experience_to', 5)
-  DATAMAIN.append('game', 1)
-  DATAMAIN.append('phone', 21312312)
-  DATAMAIN.append('img',Img)
-  DATAMAIN.append('team_member',4)
+//Player 2 Game useState
+const [Isim2, setIsim2] = useState("");
+const [Surname2, setSurname2] = useState("");
+const [Email2, setEmail2] = useState("");
+const [Opit2, setOpit2] = useState("");
+const [To2, setTo2] = useState("");
+const [Naprarvleniya2, setNapravleniya2] = useState(0);
+const [Phone2, setPhone2] = useState("");
 
 
+const [catigory1, setcatigory1] = useState('onegame')
+// const [data1, setData1] = useState([])
 
-  const OneGameSubmit = () => {
-  console.log(Img)
-    try {
-      axios.post('http://159.65.207.213/api/user/', DATAMAIN)
-        .then((res) => {
-          console.log(res,setIsim(""));
-          // alert('Xush kelibsiz togo')
-          setIsim('')
-          setSurname("")
-          setEmail("")
-          setOpit("")
-          setTo("")
-          setNapravleniya("")
-          // setPhone("")
-          
+//Data API 1 User1___________________________
+let DATAMAIN = new FormData()
+DATAMAIN.append('player_type', 1)
+DATAMAIN.append('name', Isim)
+DATAMAIN.append('surname', Surname)
+DATAMAIN.append('email', Email)
+DATAMAIN.append('experience_from', Opit)
+DATAMAIN.append('experience_to', To)
+DATAMAIN.append('game', Naprarvleniya)
+DATAMAIN.append('phone', Phone)
+DATAMAIN.append('img',Img)
+DATAMAIN.append('team_member',1)
 
-        })
-    } catch (err) {
-      console.log(err);
+//Data API 1 User2__________________________
 
-    }
+let DATAMAIN2 = new FormData()
+DATAMAIN2.append('player_type',2)
+DATAMAIN2.append('name',Isim2)
+DATAMAIN2.append('email',Email2)
+DATAMAIN2.append('experience_from', Opit2)
+DATAMAIN2.append('experience_to',To2)
+DATAMAIN2.append('game',Naprarvleniya2)
+DATAMAIN2.append('phone',Phone2)
+DATAMAIN2.append('img',Img)
+DATAMAIN2.append('team_member',Surname2)
 
-//_________________________________________________________________________DATAMAIN
-    console.log(Img)
-    try {
-      axios.post('http://159.65.207.213/api/user/', DATAMAIN2)
-        .then((res) => {
-          console.log(res);
-          setIsim('')
-          setSurname('')
-          setEmail('')
-          setOpit('')
-          setTo('')
-          setNapravleniya('')
-          setPhone('')
-          if(res.data.error){
-            alert(res.data.error)
-          }
-        })
-    } catch (err) {
-      alert('xato')
-    }
+const OneGameSubmit = () => {
+// console.log(Img)
+  try {
+    axios.post('http://159.65.207.213/api/user/', DATAMAIN)
+      .then((res) => {
+        console.log(res);
+        setIsim('')
+        setSurname('')
+        setEmail('')
+        setOpit('')
+        setTo('')
+        setPhone('')
+      })
+  } catch (err) {
+    console.log(err);
+
   }
+
+//_________________________________________________________________________
+  console.log(Img)
+  try {
+    axios.post('http://159.65.207.213/api/user/', DATAMAIN2)
+      .then((res) => {
+        console.log(res);
+        setIsim2('')
+        setSurname2('')
+        setEmail2('')
+        setOpit2('')
+        setTo2('')
+        setPhone2('')
+      })
+  } catch (err) {
+    console.log(err);
+  }
+
+
+  
+}
 
   //Scrolling
   const Scrolling = (value)=> {
@@ -408,16 +424,11 @@ return (
                         {
                           GameCategory?.map((itim1,index1)=>{
                             return(
-                        <option value={itim1.id}>{itim1.name}</option>
+                        <option key={index1} value={itim1.id}>{itim1.name}</option>
 
                             )
                           })
                         }
-
-                        {/* <option value="">DOTA 2</option>
-                        <option value="">R6 SEGA</option>
-                        <option value="">PUBG</option> */}
-
                       </Select1>
                     </LabelVSInputDiv>
 
@@ -435,17 +446,17 @@ return (
                 <OneInpDiv>
                   <LabelVSInputDiv >
                     <LabelText>Названия</LabelText>
-                    <Input />
+                    <Input value={Isim2} onChange={(e) => setIsim2(e.target.value)}/>
                   </LabelVSInputDiv>
 
                   <LabelVSInputDiv >
                     <LabelText>Число игроков</LabelText>
-                    <Input />
+                    <Input value={Surname2} onChange={(e) => setSurname2(e.target.value)} />
                   </LabelVSInputDiv>
 
                   <LabelVSInputDiv >
                     <LabelText>Почта Лидера</LabelText>
-                    <Input type="email" />
+                    <Input type="email" value={Email2} onChange={(e) => setEmail2(e.target.value)} />
                   </LabelVSInputDiv>
 
                 </OneInpDiv>
@@ -455,12 +466,12 @@ return (
 
                       <ForstInpDiv>
                         <LabelText>Опыт</LabelText>
-                        <Input type="number" placeholder='От' />
+                        <Input type="number" placeholder='От' value={Opit2} onChange={(e) => setOpit2(e.target.value)} />
                       </ForstInpDiv>
 
                       <SecondInpDiv>
                         <LabelText></LabelText>
-                        <Input type="number" placeholder='До' />
+                        <Input type="number" placeholder='До'  value={To2} onChange={(e) => setTo2(e.target.value)} />
                       </SecondInpDiv>
 
                     </TwoInputDiv>
@@ -468,19 +479,23 @@ return (
                     <LabelVSInputDiv >
                       <LabelText>Направления</LabelText>
                       {/* <Input /> */}
-                      <Select1 name="" id="">
+                      <Select1 name="" id="" onChange={(e) => setNapravleniya2(e.target.value)}>
 
-                        <option value="">CS:GO</option>
-                        <option value="">DOTA 2</option>
-                        <option value="">R6 SEGA</option>
-                        <option value="">PUBG</option>
+                      {
+                          GameCategory?.map((itim1,index1)=>{
+                            return(
+                        <option key={index1} value={itim1.id}>{itim1.name}</option>
+
+                            )
+                          })
+                      }
 
                       </Select1>
                     </LabelVSInputDiv>
 
                     <LabelVSInputDiv >
                       <LabelText>Телефонn Лидера</LabelText>
-                      <Input />
+                      <Input value={Phone2} onChange={(e) => setPhone2(e.target.value)} />
                     </LabelVSInputDiv>
 
                   </TwoInpDiv>
@@ -488,7 +503,7 @@ return (
           }
 
           <SendButtonDiv>
-             <SendButton variant='contained' onClick={OneGameSubmit}>Отправитьf</SendButton>
+             <SendButton variant='contained' onClick={OneGameSubmit}>Отправить</SendButton>
           </SendButtonDiv>
 
         </BotomDIv>
