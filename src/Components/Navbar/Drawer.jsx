@@ -56,8 +56,9 @@ export default function TemporaryDrawer({
     }
 
   const list = (anchor) => (
-    <Box  style={{backgroundColor: '#001d3d', color: 'white'}}
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+    <Box  style={{backgroundColor: '#1D044F', color: 'white'}}
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 ,
+    height:'100vh'}}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -80,7 +81,7 @@ export default function TemporaryDrawer({
   );
 
   return (
-    <div >
+    <div style={{backgroundColor:'red'}} >
       {['left', 'right', 'top', 'bottom'].map((anchor) => (
         <React.Fragment key={anchor}>
           {/* <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button> */}
