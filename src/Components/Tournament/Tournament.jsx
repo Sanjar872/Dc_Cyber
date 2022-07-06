@@ -500,7 +500,7 @@ return (
                     </LabelVSInputDiv>
 
                     <LabelVSInputDiv >
-                      <LabelText>Телефонn Лидера</LabelText>
+                      <LabelText>Телефон Лидера</LabelText>
                       <Input value={Phone2} onChange={(e) => setPhone2(e.target.value)} />
                     </LabelVSInputDiv>
 
