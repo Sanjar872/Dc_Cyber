@@ -32,4 +32,9 @@ export const Localniset = styled.div`
         align-items: center;
         gap: 25px;
     }
+
+    div img {
+        width:25px ;
+        /* transform: skew(-20deg); */
+    }
 `
