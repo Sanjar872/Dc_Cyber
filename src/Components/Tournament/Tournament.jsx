@@ -16,6 +16,7 @@ import Snackbar  from '../Snackbar/Snackbar'
 import Inputlar from './INP/inputlar'
 import CardImageDiv from '../Tournament/CardImg/CardImg'
 import BoxImg11 from '../S-image/game1.png'
+
 import BoxImg22 from '../S-image/game2.png'
 
 import AvatarLogo from '../S-image/AvatartLogo.png'
@@ -231,7 +232,7 @@ return (
       data?.map((item, index) => {
         return (
           <Para key={index}>
-            <Conteyner1 data-aos="zoom-in">
+            <Conteyner1 data-aos="zoom-in" >
 
               <Box1>
                 <BoxImg1 src={`http://159.65.207.213${item.user1.img}`} />
@@ -243,7 +244,7 @@ return (
 
             </Conteyner1>
 
-            <Conteyner2 data-aos="zoom-in">
+            <Conteyner2 data-aos="zoom-in" >
               <GroupName> <H2>{item.user1.name}</H2> <HR/> <H2>{item.user2.name}</H2> <H2>{item.game.name}</H2> </GroupName>
               <Data>{item.data}</Data>
             </Conteyner2>
@@ -252,7 +253,7 @@ return (
         )
       })
     }
-      <ButtonDiv data-aos="flip-up">
+      <ButtonDiv>
         <MuiButton variant='outlined' onClick={()=>Scrolling(4600)} >Записаться</MuiButton>
       </ButtonDiv>
   </Comands>
