@@ -153,7 +153,7 @@ DATAMAIN2.append('img',Img)
 DATAMAIN2.append('team_member',Surname2)
 
 const OneGameSubmit = () => {
-console.log(Img)
+// console.log(Img)
     try {
       axios.post('http://159.65.207.213/api/user/', DATAMAIN)
         .then((res) => {
@@ -500,7 +500,7 @@ return (
                     </LabelVSInputDiv>
 
                     <LabelVSInputDiv >
-                      <LabelText>Телефон Лидера</LabelText>
+                      <LabelText>Телефонn Лидера</LabelText>
                       <Input value={Phone2} onChange={(e) => setPhone2(e.target.value)} />
                     </LabelVSInputDiv>
 
