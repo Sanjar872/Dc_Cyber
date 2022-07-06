@@ -10,7 +10,7 @@ export const MainDiv = styled.div`
     align-items: center;
     display: none;
 
-    @media (max-width:768px) {
+    @media (max-width:796px) {
         display: block;
         display: flex;
         flex-direction: column;
