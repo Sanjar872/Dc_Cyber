@@ -88,8 +88,9 @@ export const NavbarDiv = styled.div`
     }
 
     @media (max-width:391px) {
-        
         width: 100% !important;
+        align-items: flex-start;
+        padding-top: 30px;;
     }
 `
 
@@ -98,8 +99,8 @@ export const LogoDiv = styled.div`
     height: 45px;
     /* border: 1px solid yellow; */
     @media (max-width:391px) {
-       width :150px ;
-       height: 35px;
+       width :180px ;
+       /* height: 35px; */
        margin-left: -20px;
        
     }

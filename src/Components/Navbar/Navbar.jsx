@@ -94,7 +94,7 @@ useEffect(() => {
 
          <Btnwrap>
             <MenuBtn onClick={toggleDrawer("right", true)}>
-                <Menu />
+                <Menu  sx={{fontSize:'2rem'}}/>
             </MenuBtn>
          </Btnwrap>
          </NavbarDiv>
