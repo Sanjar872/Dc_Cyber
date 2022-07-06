@@ -52,7 +52,7 @@ const Submit = () => {
   .then((res)=>{
     console.log(res);
     setEmail('')
-    // SettingsPowerRounded()
+    SettingsPowerRounded()
   })
 }
 
@@ -60,7 +60,7 @@ useEffect(() => {
   axios.get('http://159.65.207.213/api/game')
   .then(res=>{
     setGame(res.data)
-    console.log('Hello',res.data);
+    // console.log('Hello',res.data);
   })
 }, [])
 
