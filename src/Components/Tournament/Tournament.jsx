@@ -159,7 +159,9 @@ const OneGameSubmit = () => {
       axios.post('http://159.65.207.213/api/user/', DATAMAIN)
         .then((res) => {
           console.log(res);
-          setOpen1(true)
+          if (!res.data.error) {
+            setOpen1(true)
+          }          
           setIsim('')
           setSurname('')
           setEmail('')
@@ -180,7 +182,9 @@ const OneGameSubmit = () => {
     axios.post('http://159.65.207.213/api/user/', DATAMAIN2)
       .then((res) => {
         console.log(res);
-        setOpen1(true)
+        if (!res.data.error) {
+          setOpen1(true)
+        }          
         setIsim2('')
         setSurname2('')
         setEmail2('')
