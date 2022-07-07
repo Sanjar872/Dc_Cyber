@@ -85,6 +85,13 @@ export const O_nas = styled.div`
     margin-bottom: 80px;
     flex-wrap: wrap !important;
 
+    @media (max-width:390px) {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        width: 100%;
+    }
+
     li:hover {
         color: gold;
     cursor: pointer;
@@ -212,10 +219,24 @@ export const Input1 = styled.input`
 
 export const Checkbo = styled.div`
     display: flex;
-    width: 50%;
+    width: 70%;
     align-items: center;
     gap: 20px;
     margin-top: 15px;
+    @media (max-width: 390px) {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+        }
+    p {
+        font-size: 18px;
+        @media (max-width: 390px) {
+            font-size: 13px;
+        }
+    }
+
+
 @media (max-width:1250px) {
     width: 100%;
     display: flex;

@@ -76,7 +76,7 @@ const Tournament = () => {
           if (item.game.name === category) {
             return item
           }
-          if (category === 'Все') {
+          if (category === 'All') {
             return item
           }
         })
@@ -213,11 +213,11 @@ return (
   <MainDiv>
     <NavbarDiv>
         <NameText data-aos="zoom-in">
-          <Name>Последние турниры</Name>
+          <Name>Eng so'nggi turnirlar</Name>
         </NameText>
           <ULdiv>
             <Ul data-aos="zoom-in">
-              <LI onClick={()=>setCatigory('Все')}>Все</LI>
+              <LI onClick={()=>setCatigory('All')}>All</LI>
               {
                 GameCategory?.map((itemm,indexx)=>{
                   return(
@@ -258,14 +258,14 @@ return (
       })
     }
       <ButtonDiv>
-        <MuiButton variant='outlined' onClick={()=>Scrolling(4600)} >Записаться</MuiButton>
+        <MuiButton variant='outlined' onClick={()=>Scrolling(4600)}>Ro'yxatdan o'tish</MuiButton>
       </ButtonDiv>
   </Comands>
 
 {/* ==================================================================== */}
 
   <PhotoAlbum>
-    <CardText>Фото Галерея</CardText>
+    <CardText>Rasmlar Galereyasi</CardText>
       <CardImageDiv></CardImageDiv>
 
         <AllPhotoDiv>
@@ -351,18 +351,16 @@ return (
 {/* ========================= Register Page start =========================================== */}
 
 
-  <InpDiv data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
+  <InpDiv >
     <InputDiv>
 
       <TopDIv>
-        <RegisterText>Регистрация</RegisterText>
+        <RegisterText>Ro'yxatdan o'tish</RegisterText>
           <ButonsDiv>
             <MuiButtons1 onClick={() => setcatigory1('onegame')} variant='outlined' style={{
-            backgroundColor: catigory1 === 'onegame' ? '#724edf' : '#200A50'}}>Один игрок</MuiButtons1>
+            backgroundColor: catigory1 === 'onegame' ? '#724edf' : '#200A50'}}>Bitta o'yinchi</MuiButtons1>
 
-            <MuiButtons2 onClick={() => setcatigory1('command')} variant='outlined' style={{ backgroundColor: catigory1 === 'command' ? '#724edf ' : '#200A50' }}>Команда</MuiButtons2>
+            <MuiButtons2 onClick={() => setcatigory1('command')} variant='outlined' style={{ backgroundColor: catigory1 === 'command' ? '#724edf ' : '#200A50' }}>Jamoa</MuiButtons2>
           </ButonsDiv>
       </TopDIv>
       {/* <Inputlar/> */}
@@ -396,18 +394,18 @@ return (
                 <OneVSTwoDIv>
                   <OneInpDiv>
                     <LabelVSInputDiv >
-                      <LabelText>Имя</LabelText>
+                      <LabelText>Ism</LabelText>
                       <Input type="text" value={Isim} onChange={(e) => setIsim(e.target.value)} />
                       {/* <Input type="text" name='name' onChange={} */}
                     </LabelVSInputDiv>
 
                     <LabelVSInputDiv >
-                      <LabelText>Фамилия</LabelText>
+                      <LabelText>Familiya</LabelText>
                       <Input type="text" value={Surname} onChange={(e) => setSurname(e.target.value)} />
                     </LabelVSInputDiv>
 
                     <LabelVSInputDiv >
-                      <LabelText>Почта</LabelText>
+                      <LabelText>Pochta</LabelText>
                       <Input type="email" value={Email} onChange={(e) => setEmail(e.target.value)} />
                     </LabelVSInputDiv>
 
@@ -417,19 +415,19 @@ return (
                     <TwoInputDiv>
 
                       <ForstInpDiv>
-                        <LabelText>Опыт</LabelText>
-                        <Input type="number" placeholder='От' value={Opit} onChange={(e) => setOpit(e.target.value)} />
+                        <LabelText>Tajriba</LabelText>
+                        <Input type="number" placeholder='Dan' value={Opit} onChange={(e) => setOpit(e.target.value)} />
                       </ForstInpDiv>
 
                       <SecondInpDiv>
                         <LabelText></LabelText>
-                        <Input type="number" placeholder='До' value={To} onChange={(e) => setTo(e.target.value)} />
+                        <Input type="number" placeholder='Gacha' value={To} onChange={(e) => setTo(e.target.value)} />
                       </SecondInpDiv>
 
                     </TwoInputDiv>
 
                     <LabelVSInputDiv >
-                      <LabelText>Направления</LabelText>
+                      <LabelText>Yo'nalishlar</LabelText>
                       {/* <Input /> */}
                       <Select1 onChange={(e) => setNapravleniya(e.target.value)} name="" id="">
                         {
@@ -444,7 +442,7 @@ return (
                     </LabelVSInputDiv>
 
                     <LabelVSInputDiv >
-                      <LabelText>Телефон</LabelText>
+                      <LabelText>Telefon</LabelText>
                       <Input value={Phone} onChange={(e) => setPhone(e.target.value)} />
                     </LabelVSInputDiv>
 
@@ -456,17 +454,17 @@ return (
               <OneVSTwoDIv>
                 <OneInpDiv>
                   <LabelVSInputDiv >
-                    <LabelText>Названия</LabelText>
+                    <LabelText>Nomi</LabelText>
                     <Input value={Isim2} onChange={(e) => setIsim2(e.target.value)}/>
                   </LabelVSInputDiv>
 
                   <LabelVSInputDiv >
-                    <LabelText>Число игроков</LabelText>
+                    <LabelText>O'yinchilar soni</LabelText>
                     <Input value={Surname2} onChange={(e) => setSurname2(e.target.value)} />
                   </LabelVSInputDiv>
 
                   <LabelVSInputDiv >
-                    <LabelText>Почта Лидера</LabelText>
+                    <LabelText>Yetakchi pochtasi</LabelText>
                     <Input type="email" value={Email2} onChange={(e) => setEmail2(e.target.value)} />
                   </LabelVSInputDiv>
 
@@ -476,19 +474,19 @@ return (
                     <TwoInputDiv>
 
                       <ForstInpDiv>
-                        <LabelText>Опыт</LabelText>
-                        <Input type="number" placeholder='От' value={Opit2} onChange={(e) => setOpit2(e.target.value)} />
+                        <LabelText>Tajriba</LabelText>
+                        <Input type="number" placeholder='Dan' value={Opit2} onChange={(e) => setOpit2(e.target.value)} />
                       </ForstInpDiv>
 
                       <SecondInpDiv>
                         <LabelText></LabelText>
-                        <Input type="number" placeholder='До'  value={To2} onChange={(e) => setTo2(e.target.value)} />
+                        <Input type="number" placeholder='Gacha'  value={To2} onChange={(e) => setTo2(e.target.value)} />
                       </SecondInpDiv>
 
                     </TwoInputDiv>
 
                     <LabelVSInputDiv >
-                      <LabelText>Направления</LabelText>
+                      <LabelText>Yo'nalishlar</LabelText>
                       {/* <Input /> */}
                       <Select1 name="" id="" onChange={(e) => setNapravleniya2(e.target.value)}>
 
@@ -505,7 +503,7 @@ return (
                     </LabelVSInputDiv>
 
                     <LabelVSInputDiv >
-                      <LabelText>Телефонn Лидера</LabelText>
+                      <LabelText>Yetakchining Telefon raqami</LabelText>
                       <Input value={Phone2} onChange={(e) => setPhone2(e.target.value)} />
                     </LabelVSInputDiv>
 
@@ -514,7 +512,7 @@ return (
           }
 
           <SendButtonDiv>
-             <SendButton variant='contained' onClick={OneGameSubmit}>Отправить</SendButton>
+             <SendButton variant='contained' onClick={OneGameSubmit}>Yuborish</SendButton>
           </SendButtonDiv>
 
         </BotomDIv>

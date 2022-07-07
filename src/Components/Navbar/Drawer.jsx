@@ -1,17 +1,12 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import { color } from '@mui/system';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Brendimg, Localniset, MenuBrend } from './drstyle';
 import Brendimgg from '../F-image/Logotip-img.png'
 
@@ -30,7 +25,7 @@ export default function TemporaryDrawer({
   let maindata = [
     {
       id:1,
-      name:'О нас',
+      name:'Biz haqimizda',
       son:600,
       icon:<GroupsIcon/>
       
@@ -39,20 +34,20 @@ export default function TemporaryDrawer({
     },
     {
       id:1,
-      name:'Турниры',
+      name:'Turnirlar',
       son:2650,
       icon:<SportsEsportsIcon/>
  
     },
     {
       id:1,
-      name:'Счёты',
+      name:'Xisob',
       son:9200,
       icon:<ScoreboardIcon/>
     }
     , {
       id:1,
-      name:'Фото',
+      name:'Rasmlar',
       son:4670,
       icon:<CameraAltIcon/>
 

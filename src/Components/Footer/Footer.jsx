@@ -13,22 +13,22 @@ const Footer = () => {
   const [email, setEmail] = useState('')
   const [game, setGame] = useState([])
 
-function Shange() {
-  window.location.href = "https://ru-ru.facebook.com/";
+// function Shange() {
+//   window.location.href = "https://ru-ru.facebook.com/";
 
-}
-function Shange2() {
-  window.location.href = "https://telegram.org/android?setln=ru";
+// }
+// function Shange2() {
+//   window.location.href = "https://telegram.org/android?setln=ru";
 
-}
-function Shange3() {
-  window.location.href = "https://www.instagram.com/";
+// }
+// function Shange3() {
+//   window.location.href = "https://www.instagram.com/";
 
-}
+// }
 
-function Shange4(params) {
-  window.location.href = "https://www.youtube.com/results?search_query=dc+andijan"
-}
+// function Shange4(params) {
+//   window.location.href = "https://www.youtube.com/results?search_query=dc+andijan"
+// }
 
 
 function DcSayt(params) {
@@ -74,27 +74,27 @@ useEffect(() => {
             <img src={Brand} alt="" />
             <IMglar>
 
-              <MuiFacebook onClick={Shange}/>
+              <MuiFacebook onClick={()=>window.open('https://ru-ru.facebook.com/')}/>
 
 
-                <MuiTelegram  onClick={Shange2} />
+                <MuiTelegram  onClick={()=>window.open('https://telegram.org/android?setln=ru')} />
 
 
-                  <MuiInstagram   onClick={Shange3}/>
+                  <MuiInstagram   onClick={()=>window.open('https://www.instagram.com/')}/>
 
 
 
-                <MuiYouTube   onClick={Shange4}/>
+                <MuiYouTube   onClick={()=>window.open('https://www.youtube.com/results?search_query=dc+andijan')}/>
 
 
             </IMglar>
           </Brendlar>
           <O_nas>
             <ul>
-              <li onClick={()=>Scrolling(0)}>     О нас</li>
-              <li onClick={()=>Scrolling(1850)}>  Турниры</li>
-              <li onClick={()=>Scrolling(700)}>   Счёты</li>
-              <li onClick={()=>Scrolling(3270)}>  Фото</li>
+              <li onClick={()=>Scrolling(0)}>Bizhaqimizda</li>
+              <li onClick={()=>Scrolling(1850)}>Turnirlar</li>
+              <li onClick={()=>Scrolling(700)}>Xisob</li>
+              <li onClick={()=>Scrolling(3270)}>Rasmlar</li>
             </ul>
           </O_nas>
         </Text>
@@ -114,9 +114,8 @@ useEffect(() => {
                 </Dota>
                   <Input>
                     <Sign>
-                      <h3>Sign up to our newsletter!</h3>
-                        <p>Do you want to receve the latest updates and special affers? Enter your
-                          email below to receive our weekly newsletter. </p>
+                      <h3>Bizning xabarnomamizga obuna bo'ling!</h3>
+                        <p>Eng so'nggi yangilanishlar va maxsus takliflarni olishni xohlaysizmi? Haftalik xabarnomamizni olish uchun quyida elektron pochtangizni kiriting.  </p>
                     </Sign>
                         <Div1>
                       <Input1 value={email} onChange={(e)=>setEmail(e.target.value)} type='email' placeholder='Your email' />
@@ -125,7 +124,7 @@ useEffect(() => {
                       <Checkbo>
 
                       <Input2 type="checkbox" name="" id="" />
-                    <p>I accept <span> newsletter terms</span></p>
+                    <p>Men axborotnoma <span>shartlarini qabul qilaman</span></p>
                       </Checkbo>
                   
                   </Input>
@@ -133,7 +132,8 @@ useEffect(() => {
           </Text2>
       </Box>
         <Fut>
-          <p onClick={DcSayt}>Copyright by Digital City 2022</p>
+          <p onClick={()=>window.open('https://www.gazeta.uz/ru/2020/05/22/digital-city/')}>Copyright by Digital City 2022</p>
+          
         </Fut>
     </Container>
   )

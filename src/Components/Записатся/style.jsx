@@ -73,6 +73,7 @@ export const BO = styled.div`
     width: 100%;
     height: auto;
     padding:0 5%;
+    line-height:40px ;
 
     @media (max-width:600px) {
         font-size: 14px !important;
@@ -87,7 +88,7 @@ export const BO = styled.div`
     button {
         border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -98,7 +99,7 @@ export const BO = styled.div`
     color: #fff;
     width: 171px;
     height: 45px;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 42px;
     padding: 0;
     border: 0.3px dotted grey;

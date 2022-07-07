@@ -416,7 +416,6 @@ export const Data = styled.p`
 export const ButtonDiv = styled.div`
     width: 80%;
     height: 40px;
-    /* border: 1px solid black; */
     display: flex;
     justify-content: end;
     /* padding: 0px 80px 0px 0px; */
@@ -428,9 +427,9 @@ export const ButtonDiv = styled.div`
 `
 
 export const MuiButton = styled(Button)`
-    width: 175px !important;
+    width: 185px !important;
     height: 45px !important;
-    font-size: 21px !important;
+    font-size: 18px !important;
     color: white !important;
     font-weight: 500 !important;
     border-radius: 5px !important;
@@ -438,6 +437,7 @@ export const MuiButton = styled(Button)`
     linear-gradient(45deg, rgba(173, 0, 255, 1), rgba(0, 224, 255, 1)) border-box !important;
     border: 3px solid transparent !important;
     backdrop-filter: blur(40px) !important;
+    text-transform: capitalize !important;
 `
 
 ///======== Photo albom ================================================================================================

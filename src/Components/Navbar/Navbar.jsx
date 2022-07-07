@@ -1,6 +1,6 @@
 import React from 'react'
 import { Contener,  LI, LogoDiv, LogoImg, MainDiv, MenuIcon, MuiButton, NavbarDiv, UL, 
-  MenuBtn, Btnwrap, CenterText, TextDiv, SpanText, Text, Buttons } from './style'
+  MenuBtn, Btnwrap, CenterText, TextDiv, SpanText, Text, Buttons, Spantextt, LI1 } from './style'
 import axios from 'axios'
 //img
 import LogotipImg from './../F-image/Logotip-img.png'
@@ -84,12 +84,12 @@ useEffect(() => {
         </LogoDiv>
         <Contener>
         <UL>
-          <LI onClick={()=>Scrolling(0)}>    О нас</LI>
-          <LI onClick={()=>Scrolling(1850)}> Турниры</LI>
-          <LI onClick={()=>Scrolling(4100)}>  Счёты</LI>
-          <LI onClick={()=>Scrolling(3270)}> Фото</LI>
+          <LI1 onClick={()=>Scrolling(0)}>Biz  <Spantextt>haqimizda</Spantextt> </LI1>
+          <LI onClick={()=>Scrolling(1850)}>Turnirlar</LI>
+          <LI onClick={()=>Scrolling(4100)}>Xisob</LI>
+          <LI onClick={()=>Scrolling(3270)}>Rasmlar</LI>
         </UL>
-          <Buttons onClick={()=>Scrolling(4750)}>Регистрация</Buttons>
+          <Buttons onClick={()=>Scrolling(4750)}>Roʻyxatdan oʻtish</Buttons>
            </Contener> 
 
          <Btnwrap>
@@ -101,7 +101,7 @@ useEffect(() => {
       <TemporaryDrawer state={state} setState={setState}/>
         <CenterText>
           <TextDiv div data-aos="zoom-in" data-aos-duration="3000">
-            <Text>ДОБРО ПОЖАЛОВАТЬ В ИГРУ <SpanText>DC cyber</SpanText> В <br /> КИБЕРСПОРТИВНЫХ ИГРАХ</Text>
+            <Text><SpanText>DC-CYBER</SpanText><br />KIBERSPORT O'YINLARIGA <br /> XUSH KELIBSIZ</Text>
           </TextDiv>
         </CenterText>
     </MainDiv>

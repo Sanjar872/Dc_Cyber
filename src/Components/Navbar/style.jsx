@@ -22,7 +22,7 @@ export const MainDiv = styled.div`
 export const Buttons = styled.button`
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -32,7 +32,7 @@ export const Buttons = styled.button`
     color: #fff;
     width: 171px;
     height: 45px;
-    font-size: 22px;
+    font-size: 17px;
     line-height: 42px;
     padding: 0;
     border: none;
@@ -112,7 +112,7 @@ export const LogoImg = styled.img`
 `
 
 export const Contener = styled.div`
-    width: 550px;
+    width: 650px;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -125,16 +125,41 @@ export const Contener = styled.div`
 `
 
 export const UL = styled.ul`
-    width: 380px;
+    width: 500px;
     height: 70px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 `
 
+export const LI1 = styled.li`
+    width: 120px;
+    height: 30px;
+    transition: 1s;
+    /* border: 1px solid red; */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    margin-left: -15px;
+    font-size: 16px;
+    color: white;
+
+    &:hover{
+        cursor: pointer;
+        /* transition: 1s; */
+        opacity: 0.89;
+        border-bottom: 3px solid ;
+        border-image-slice: 1;
+        border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
+    }
+`
 export const LI = styled.li`
     width: 80px;
     height: 30px;
+    transition: 1s;
+    /* border: 1px solid red; */
     list-style: none;
     display: flex;
     justify-content: center;
@@ -152,7 +177,6 @@ export const LI = styled.li`
         border-image-source: linear-gradient( to left, rgba(219, 0, 255, 1), rgba(0, 224, 255, 1));
     }
 `
-
 export const MuiButton = styled(Button)`
     background-color: #8F00FF !important;
     
@@ -189,8 +213,10 @@ export const CenterText = styled.div`
 export const TextDiv = styled.div`
     width: 72%;
     height: 270px;
+    justify-content: center;
     box-sizing: border-box;
     display: flex;
+    line-height: 90px;
     align-items: center;
 
 
@@ -198,13 +224,16 @@ export const TextDiv = styled.div`
         width: 100%;
         display: flex;
         justify-content: center;
-        font-size: 50px !important;
+        font-size: 60px !important;
+        line-height: 50px;
     }
 `
 export const Text = styled.h1`
     color: white;
-    font-size: 60px;
+    font-size: 70px;
     text-align: center;
+    font-family:'Russo One' !important;
+    letter-spacing:4px ;
 
     @media screen and (max-width:1033px) {
         /* font-size: 50px; */
@@ -232,4 +261,10 @@ export const Text = styled.h1`
 `
 export const SpanText = styled.span`
     color: #8F00FF;
+    font-family:'Russo One' !important;
+
+`
+
+export const Spantextt = styled.span`
+    margin-left: 10px;
 `

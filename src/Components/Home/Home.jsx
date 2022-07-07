@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <MainDiv>
       <TextDiv data-aos="fade-down" data-aos-duration="1000">
-        <Bio>Digital City — профессиональная игровая организация, созданная в 2019 году. Наша цель — объединить самых талантливых киберспортсменов со всего мира.</Bio>
+        <Bio>Digital City - bu 2019 yilda tashkil etilgan professional o'yin tashkiloti. Bizning maqsadimiz butun dunyodagi eng iqtidorli kisportchilarni birlashtirishdir.</Bio>
       </TextDiv>
       <CardDiv>
 

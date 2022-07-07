@@ -22,14 +22,13 @@ const App = () => {
   }, []);
   
   return (
-    <>
+    <div className='ContainerG'>
     <Navbar />
     <Home/>
     <запис/>
     <Tournament />
-    {/* <CardImg /> */}
     <Footer/>
-    </>
+    </div>
   )
 }
 
