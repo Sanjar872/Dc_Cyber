@@ -69,14 +69,14 @@ export const CardDiv = styled.div`
 
 export const InfoCard = styled.div`
     width: 400px;
-    height: 300px;
+    height: 320px;
     border-radius: 20px !important;
     box-shadow: 0px 0px 20px rgb(60, 60, 175);
     background: linear-gradient(rgba(27, 4, 79, 1), rgba(27, 4, 79, 1)) padding-box,
     linear-gradient(45deg, rgba(173, 0, 255, 1), rgba(0, 224, 255, 1)) border-box;
     border: 3px solid transparent;
     backdrop-filter: blur(40px);
-
+    padding: 0 5px;
 
         @media (max-width:1202px) {
             margin: 50px 0px;
@@ -98,16 +98,22 @@ export const InfoCard = styled.div`
 
         @media (max-width:441px) {
             width:300px ;
+            height: auto;
+            padding-bottom: 20px;
+
         }
 
         @media (max-width:406px) {
             width: 270px;
-            height: 270px;
+            height: auto;
+            padding-bottom: 20px;
+
         }
 
         @media (max-width:373px) {
-            height: 250px;
+            height: auto;
             width:290px;
+            padding-bottom: 20px;
         }
 `
 
@@ -176,6 +182,8 @@ export const Paragraf = styled.p`
 
     @media  (max-width:376px) {
         font-size: 18px;
+        /* width: 100%; */
+        height: auto;
     }
     
 `

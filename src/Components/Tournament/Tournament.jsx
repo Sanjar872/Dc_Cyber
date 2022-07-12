@@ -265,6 +265,7 @@ return (
 {/* ==================================================================== */}
 
   <PhotoAlbum>
+    
     <CardText>Rasmlar Galereyasi</CardText>
       <CardImageDiv></CardImageDiv>
 
